@@ -1,0 +1,112 @@
+{
+    "applications": [
+        {
+            "id": "test_1758405624541",
+            "tamAd": "Test User",
+            "email": "test@test.com",
+            "razılıq": true
+        },
+        {
+            "id": "app_1758405640945_7xikm",
+            "akademikDərəcə": "a",
+            "tamAd": "Cavad Huseynli",
+            "telefonNömrəsi": {
+                "ölkəKodu": "+994",
+                "nömrə": "504122160",
+                "tam": "+994 504122160"
+            },
+            "email": "test@gmail.com",
+            "tibbiİxtisas": "as",
+            "işTəcrübəsi": "3-6 ay",
+            "üstünlükVerilənKurs": "endodontics",
+            "qoşulmaSəbəbi": "aaad",
+            "şərtlərləRazılıq": true,
+            "təqdimTarixi": "2025-09-20T22:00:40.946Z",
+            "təqdimTarixiFormatted": "2025-09-21 02:00"
+        },
+        {
+            "id": "test_1758405685684",
+            "tamAd": "Test User",
+            "email": "test@test.com",
+            "razılıq": true
+        },
+        {
+            "id": "app_1758405702728_p9ypr",
+            "akademikDərəcə": "profesor",
+            "tamAd": "b",
+            "telefonNömrəsi": {
+                "ölkəKodu": "+994504122160",
+                "nömrə": "",
+                "tam": "+994504122160"
+            },
+            "email": "b@bb.b",
+            "tibbiİxtisas": "kamran",
+            "işTəcrübəsi": "6-12 ay",
+            "üstünlükVerilənKurs": "Vinir",
+            "qoşulmaSəbəbi": "abb",
+            "şərtlərləRazılıq": true,
+            "təqdimTarixi": "2025-09-20T22:01:42.729Z",
+            "təqdimTarixiFormatted": "2025-09-21 02:01"
+        },
+        {
+            "id": "test_1758405781833",
+            "tamAd": "Test User",
+            "email": "test@test.com",
+            "razılıq": true
+        },
+        {
+            "id": "app_1758405798561_dvqih",
+            "akademikDərəcə": "dos",
+            "tamAd": "Javad",
+            "telefonNömrəsi": {
+                "ölkəKodu": "+994",
+                "nömrə": "504122160",
+                "tam": "+994 504122160"
+            },
+            "email": "musderi@mail.com",
+            "tibbiİxtisas": "as",
+            "işTəcrübəsi": "3-6 ay",
+            "üstünlükVerilənKurs": "Vinir",
+            "qoşulmaSəbəbi": "ssssssss",
+            "şərtlərləRazılıq": true,
+            "təqdimTarixi": "2025-09-20T22:03:18.561Z",
+            "təqdimTarixiFormatted": "2025-09-21 02:03"
+        },
+        {
+            "id": "app_1758405900258_harxk",
+            "akademikDərəcə": "a",
+            "tamAd": "Javad",
+            "telefonNömrəsi": {
+                "ölkəKodu": "+994",
+                "nömrə": "504122160",
+                "tam": "+994 504122160"
+            },
+            "email": "freelancer1@test.com",
+            "tibbiİxtisas": "as",
+            "işTəcrübəsi": "3-6 ay",
+            "üstünlükVerilənKurs": "endodontics",
+            "qoşulmaSəbəbi": "cccc",
+            "şərtlərləRazılıq": true,
+            "təqdimTarixi": "2025-09-20T22:05:00.258Z",
+            "təqdimTarixiFormatted": "2025-09-21 02:05"
+        },
+        {
+            "id": "app_1764492846607_zcyq2",
+            "akademikDərəcə": "prof",
+            "tamAd": "tttt",
+            "telefonNömrəsi": {
+                "ölkəKodu": "+994",
+                "nömrə": "77788899",
+                "tam": "+994 77788899"
+            },
+            "email": "teacher1@test.com",
+            "tibbiİxtisas": "sasa",
+            "işTəcrübəsi": "3-6 ay",
+            "üstünlükVerilənKurs": "Vinir",
+            "qoşulmaSəbəbi": "saass",
+            "şərtlərləRazılıq": true,
+            "təqdimTarixi": "2025-11-30T08:54:06.607Z",
+            "təqdimTarixiFormatted": "2025-11-30 12:54"
+        }
+    ]
+}

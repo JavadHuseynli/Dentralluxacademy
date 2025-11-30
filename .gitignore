@@ -1,0 +1,264 @@
+# Dental Academy - Git Ignore File
+
+# ═══════════════════════════════════════════════════════════════
+# SENSITIVE DATA - NEVER COMMIT
+# ═══════════════════════════════════════════════════════════════
+
+# Environment files
+.env
+.env.local
+.env.*.local
+config.local.php
+
+# API Credentials
+api/credentials.php
+api/keys.php
+**/secrets/
+
+# ═══════════════════════════════════════════════════════════════
+# LOGS & DATA
+# ═══════════════════════════════════════════════════════════════
+
+# Log files
+logs/*.txt
+logs/*.log
+*.log
+
+# Keep log directory but ignore contents
+!logs/.gitkeep
+
+# Runtime data
+data/*.json
+data/backup-codes.json
+data/login-attempts.json
+data/sessions/
+
+# Keep data directory
+!data/.gitkeep
+
+# ═══════════════════════════════════════════════════════════════
+# UPLOADS & MEDIA
+# ═══════════════════════════════════════════════════════════════
+
+# Uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# User uploaded images
+img/uploaded/
+img/temp/
+
+# Generated files
+generated/
+
+# ═══════════════════════════════════════════════════════════════
+# DATABASE
+# ═══════════════════════════════════════════════════════════════
+
+# Database dumps
+*.sql
+*.sqlite
+*.db
+
+# Database config (keep schema)
+database/config.php
+!database/schema.sql
+
+# ═══════════════════════════════════════════════════════════════
+# CACHE & TEMPORARY
+# ═══════════════════════════════════════════════════════════════
+
+# Cache directories
+cache/
+*.cache
+.cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Session files
+sessions/
+
+# ═══════════════════════════════════════════════════════════════
+# DEPENDENCIES & PACKAGES
+# ═══════════════════════════════════════════════════════════════
+
+# Composer
+vendor/
+composer.lock
+
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# Bower
+bower_components/
+
+# ═══════════════════════════════════════════════════════════════
+# OPERATING SYSTEM
+# ═══════════════════════════════════════════════════════════════
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ═══════════════════════════════════════════════════════════════
+# IDE & EDITORS
+# ═══════════════════════════════════════════════════════════════
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PHPStorm / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ═══════════════════════════════════════════════════════════════
+# BUILD & DISTRIBUTION
+# ═══════════════════════════════════════════════════════════════
+
+# Build directories
+build/
+dist/
+
+# Compiled files
+*.compiled
+
+# Minified files (keep originals)
+# *.min.js
+# *.min.css
+
+# ═══════════════════════════════════════════════════════════════
+# BACKUP FILES
+# ═══════════════════════════════════════════════════════════════
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ═══════════════════════════════════════════════════════════════
+# DOCUMENTATION BUILDS
+# ═══════════════════════════════════════════════════════════════
+
+# Generated docs
+docs/_build/
+site/
+
+# ═══════════════════════════════════════════════════════════════
+# TESTING
+# ═══════════════════════════════════════════════════════════════
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Test results
+test-results/
+*.test.log
+
+# ═══════════════════════════════════════════════════════════════
+# SECURITY
+# ═══════════════════════════════════════════════════════════════
+
+# Private keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# SSH keys
+id_rsa
+id_rsa.pub
+known_hosts
+
+# SSL certificates
+ssl/
+
+# ═══════════════════════════════════════════════════════════════
+# PROJECT SPECIFIC
+# ═══════════════════════════════════════════════════════════════
+
+# SMS gateway credentials
+**/twilio-credentials.php
+**/smsc-credentials.php
+
+# Email credentials
+mail-config.php
+
+# Backup codes
+backup-codes-*.txt
+
+# Local development
+local.php
+dev.php
+
+# Custom
+custom/
+local/
+private/
+
+# ═══════════════════════════════════════════════════════════════
+# KEEP THESE FILES (Important)
+# ═══════════════════════════════════════════════════════════════
+
+# Keep sample/example files
+!*-sample.php
+!*.example
+!.env.example
+
+# Keep README and documentation
+!README.md
+!CONTRIBUTING.md
+!LICENSE
+
+# Keep .gitkeep files to preserve directory structure
+!.gitkeep
+
+# Keep schemas
+!database/schema.sql
+
+# ═══════════════════════════════════════════════════════════════
+# END
+# ═══════════════════════════════════════════════════════════════

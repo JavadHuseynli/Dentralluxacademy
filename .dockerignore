@@ -1,0 +1,60 @@
+# Docker ignore file for Dental Academy
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs (will be volume mounted)
+logs/*.txt
+logs/*.log
+
+# Data (will be volume mounted)
+data/*.json
+
+# Uploads (will be volume mounted)
+uploads/*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.cache
+
+# Node modules
+node_modules/
+
+# Composer
+vendor/
+
+# Test files
+tests/
+*.test.php
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Environment
+.env.local
+.env.*.local

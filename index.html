@@ -1,0 +1,5141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+
+    <title>Dental Academy - Professional Training Center</title>
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+      <!-- jQuery və Owl Carousel JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+   <style>
+      :root {
+  --purple-dark: #1a388b;
+  --purple-medium: #7c4585;
+  --pink: #c95792;
+  --gold: #f8b55f;
+  --white: #ffffff;
+  --gray-light: #EFF6FF;
+  --gray: #888888;
+  --black: #333333;
+  --transition: all 0.3s ease;
+  --orange : #f2994a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  background-color: #EEF6FF;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--purple-dark);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--purple-medium);
+  border-color: var(--purple-medium);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--purple-dark);
+}
+
+.btn-secondary:hover {
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.has-dropdown .btn-secondary:after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+  vertical-align: middle;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center;
+  color: white;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold));
+}
+
+/* TOP BAR RESPONSIVE */
+.top-bar {
+  background-color: #1a388b;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 30%;
+  right: 0;
+  z-index: 1200;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  transform: skew(-20deg);
+  transform-origin: top;
+}
+
+.top-bar .container {
+  transform: skew(20deg);
+}
+
+.top-bar a {
+  color: var(--white);
+  margin-right: 5px;
+}
+
+.drop_a{
+  color: var(--black);
+  margin-right: 5px;
+  text-decoration: none;
+}
+.top-bar a:hover {
+  color: var(--gold);
+}
+
+.top-bar-right {
+  text-align: right;
+}
+
+.top-bar i {
+  margin-right: 15px;
+}
+
+.top-bar .dropdown {
+  position: relative;
+}
+
+
+
+/* MAIN HEADER RESPONSIVE */
+.main-header {
+  margin: 100px 90px 30px 90px;
+  background-color: #ffffff;
+  padding: 10px 30px 5px;
+  z-index: 200;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  transform: skew(-20deg);
+  transform-origin: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  z-index: -1;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #1c3e97;
+}
+
+.logo-slogan {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #4c4c4c;
+  margin-top: -10px;
+  font-style: italic;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--purple-dark);
+  padding: 13px 18px;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  background-color: #3366FF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover:after,
+.navbar-nav .nav-link.active:after {
+  transform: scaleX(1);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #3366FF;
+}
+/* Desktop versiyada normal navbar */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+  
+  .navbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Tablet və mobile versiyalarda hamburger menu */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block !important;
+    border: none;
+    padding: 4px 8px;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-toggler-icon {
+    background: none;
+    color: var(--purple-dark);
+    font-size: 1.2rem;
+  }
+  
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(51, 102, 255, 0.1);
+  }
+  
+ 
+}
+/* Bootstrap-in default navbar davranışını override et */
+@media (max-width: 1199px) {
+  .navbar-collapse {
+    display: none !important; /* Default olaraq gizli */
+  }
+  
+  .navbar-collapse.show {
+    display: block !important; /* Show class varsa göstər */
+  }
+  
+  .navbar-collapse.collapsing {
+    display: block !important; /* Transition zamanı */
+  }
+  
+  /* Hamburger toggle göstər */
+  .navbar-toggler {
+    display: block !important;
+    border: none;
+    padding: 4px 8px;
+    background: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    background: none;
+    color: var(--purple-dark);
+    font-size: 1.2rem;
+  }
+  
+  /* Collapse açıldıqda styling */
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Desktop versiyada normal göstər */
+@media (min-width: 1200px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+  
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+/* Kiçik ekranlar üçün əlavə düzəlişlər */
+@media (max-width: 576px) {
+  .main-header {
+    margin: 15px;
+    border-radius: 20px;
+    padding: 12px 15px 8px;
+  }
+  
+  .logo-text .logo-title {
+    font-size: 1.2rem;
+  }
+  
+  .logo-text .logo-slogan {
+    font-size: 0.6rem;
+  }
+}
+
+/* HERO SECTION RESPONSIVE */
+.hero-section {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  margin-top: -130px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('img/ADS (29).png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+.hero-staff {
+  position: absolute;
+  bottom: 75%;
+  right: 5%;
+  z-index: 1;
+  text-align: right;
+}
+
+.hero-staff h2 {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* INSTAGRAM STYLE STORY VIEWER */
+.story-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-container {
+  position: relative;
+  width: 400px;
+  height: 700px;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.story-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.story-progress {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+
+.story-progress-bar {
+  flex: 1;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.story-progress-fill {
+  height: 100%;
+  background-color: white;
+  width: 0%;
+  transition: width 3s linear;
+}
+
+.story-progress-fill.active {
+  width: 100%;
+}
+
+.story-user-info {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.story-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 12px;
+}
+
+.story-username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.story-time {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: auto;
+}
+
+.story-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.story-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.story-navigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.story-nav-prev {
+  left: 0;
+}
+
+.story-nav-next {
+  right: 0;
+}
+
+.story-category-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* MULTIPLE STORIES PER CATEGORY */
+.story-circle[data-stories-count]:after {
+  content: attr(data-stories-count);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--pink);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.story-circle.has-multiple-stories {
+  background: linear-gradient(135deg, #00FFDE, #0B99FE, #2233FB, #4300FF, #FF1744, #FF9800);
+  padding: 3px;
+}
+
+.story-circle.viewed {
+  background: linear-gradient(135deg, #ccc, #999);
+  opacity: 0.6;
+}
+
+/* RESPONSIVE STORY VIEWER */
+@media (max-width: 768px) {
+  .story-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  
+  .story-content {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-header {
+    padding: 10px 15px;
+  }
+  
+  .story-user-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .story-username {
+    font-size: 13px;
+  }
+  
+  .story-time {
+    font-size: 11px;
+  }
+  
+  .story-close {
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+  }
+}
+
+/* STORIES SECTION - UPDATED TO BE BELOW MENU */
+.stories-section {
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.stories-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px 20px;
+  width: max-content;
+  min-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stories-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.stories-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.stories-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.stories-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.story-item:hover {
+  transform: translateY(-5px);
+}
+
+.story-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--purple-dark);
+  text-align: center;
+  margin-top: 10px;
+  max-width: 100px;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+}
+
+.story-item:hover .story-title {
+  color: #3366FF;
+}
+
+.story-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding: 3px;
+  background: linear-gradient(45deg, #3366FF, #5C85FF);
+  margin-bottom: 8px;
+  box-shadow: 0 4px 15px rgba(51, 102, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.story-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(51, 102, 255, 0.3);
+}
+
+.story-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.story-item:hover .story-circle-inner {
+  border-color: #3366FF;
+}
+
+.story-circle-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE ADJUSTMENTS FOR STORIES */
+@media (max-width: 768px) {
+  .stories-section {
+    padding: 15px 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .stories-wrapper {
+    gap: 15px;
+    padding: 10px 15px;
+  }
+  
+  .story-item {
+    min-width: 80px;
+  }
+  
+  .story-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .story-title {
+    font-size: 11px;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stories-section {
+    padding: 10px 0;
+  }
+  
+  .stories-wrapper {
+    gap: 12px;
+    padding: 8px 10px;
+  }
+  
+  .story-item {
+    min-width: 70px;
+  }
+  
+  .story-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .story-title {
+    font-size: 10px;
+    max-width: 70px;
+    margin-top: 6px;
+  }
+}
+/* THREE COLUMN SECTION RESPONSIVE */
+.three-col-section {
+  background-color: var(--gray-light);
+  padding: 30px 0;
+  margin-bottom: -120px;
+  margin-top: -130px;
+  position: relative;
+  z-index: 2;
+}
+
+.calendar-day.prev-month,
+.calendar-day.next-month {
+  color: #b0b0b0;
+}
+
+.calendar-day.current {
+  background-color: #3366FF;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.calendar-wrapper {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 
+              0 -3px 8px rgba(0, 0, 0, 0.05); 
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+}
+
+.calendar-nav button {
+  background: none;
+  border: none;
+  color: var(--purple-medium);
+  cursor: pointer;
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.calendar-nav button:hover {
+  color: var(--pink);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--purple-medium);
+  padding: 5px 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.calendar-day:hover {
+  background-color: rgba(201, 87, 146, 0.1);
+}
+
+.calendar-day.current {
+  background-color: var(--pink);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.calendar-day.has-event {
+  position: relative;
+  font-weight: 600;
+}
+
+.calendar-day.has-event:after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--gold);
+}
+
+.calendar-day.highlighted {
+  border: 2px solid var(--gold);
+  font-weight: 600;
+}
+
+.courses-wrapper {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 
+              0 -3px 8px rgba(0, 0, 0, 0.05); 
+}
+
+#courses-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding-right: 5px;
+}
+
+.courses-wrapper h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+}
+
+.course-item-mini {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+}
+
+.course-item-mini:last-child {
+  border-bottom: none;
+}
+
+.course-date-mini {
+  color: #7c4585;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.course-title-mini {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.course-title-mini a {
+  color: var(--purple-dark);
+}
+
+.course-title-mini a:hover {
+  color: var(--pink);
+}
+
+.course-info-mini {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.course-info-mini i {
+  margin-right: 5px;
+  color: var(--pink);
+}
+
+.course-info-mini span {
+  margin-right: 15px;
+}
+
+.form-wrapper {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 
+              0 -3px 8px rgba(0, 0, 0, 0.05); 
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.form-wrapper h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+}
+
+.form-control {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--pink);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.form-col {
+  flex: 1;
+}
+/* COURSES SLIDER SECTION RESPONSIVE */
+.courses-slider-section {
+  padding: 130px 0 60px 0;
+  background-color: #1a388b;
+}
+
+.courses-slider-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: var(--gray-light);
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin: 15px;
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-thumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.course-card:hover .course-thumb img {
+  transform: scale(1.1);
+}
+
+.course-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--gold);
+  color: var(--purple-dark);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-instructor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.instructor-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.instructor-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instructor-name {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.instructor-name strong {
+  display: block;
+  color: var(--purple-dark);
+  font-size: 16px;
+}
+
+.course-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.course-title a {
+  color: var(--purple-dark);
+}
+
+.course-title a:hover {
+  color: var(--pink);
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.course-detail {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.course-detail i {
+  margin-right: 5px;
+  color: var(--pink);
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(61, 54, 92, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.course-card:hover .course-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.course-btn {
+  background-color: var(--gold);
+  color: var(--purple-dark);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.course-btn:hover {
+  background-color: var(--white);
+  color: var(--purple-dark);
+  transform: scale(1.05);
+}
+
+/* PARTNERS SECTION RESPONSIVE */
+.partners-section {
+  padding: 60px 0;
+  background-color: var(--gray-light);
+}
+
+.partner-item {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-item:hover {
+  transform: translateY(-5px);
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 100px;
+  opacity: 0.6;
+}
+
+.partner-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* TELIMLER SECTION RESPONSIVE */
+.telimler-dropdown {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .telimler-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.has-dropdown:hover .telimler-dropdown {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.telimler-dropdown button:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.telimler {
+  width: 100%;
+  padding: 2rem;
+}
+
+.telimler > div:first-child {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.telimler > div:first-child h1 {
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.telimler > div:first-child h1:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #0066cc;
+}
+
+.telimler > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.telimler button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--purple-dark);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.telimler button:hover {
+  background-color: var(--pink);
+  transform: translateY(-3px);
+}
+
+.telimler button.active {
+  background-color: var(--gold);
+  color: var(--purple-dark);
+}
+
+.istirakci, .telimci, .partnyorlar {
+  display: none;
+  flex-direction: row;
+  gap: 30px;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color:#fff;
+  align-items: center;
+}
+
+.istirakci.active, .telimci.active, .partnyorlar.active {
+  display: flex;
+}
+
+.istirakci > div, .telimci > div, .partnyorlar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.istirakci > div:first-child, .telimci > div:first-child, .partnyorlar > div:first-child {
+  flex: 0 0 40%;
+}
+
+.istirakci > div:last-child, .telimci > div:last-child, .partnyorlar > div:last-child {
+  flex: 0 0 60%;
+}
+
+.istirakci img, .telimci img, .partnyorlar img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.istirakci h2, .telimci h2, .partnyorlar h2 {
+  margin-bottom: 1rem;
+  color: var(--purple-dark);
+}
+
+.istirakci p, .telimci p, .partnyorlar p {
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+.istirakci .btn, .telimci .btn, .partnyorlar .btn {
+  width: auto;
+  padding: 8px 20px;
+  font-size: 13px;
+  align-self: flex-start;
+}
+
+.telimler-dropdown button {
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  text-align: center;
+  color: var(--purple-dark);
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: 500;
+  position: relative;
+  font-size: 14px;
+}
+
+.telimler-dropdown button:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.telimler-dropdown button:hover {
+  background-color: rgba(201, 87, 146, 0.1);
+  color: var(--pink);
+}
+
+.telimler-dropdown button::after {
+  content: '→';
+  position: absolute;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.telimler-dropdown button:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* FOOTER RESPONSIVE */
+.footer {
+  background-color: var(--purple-dark);
+  color: var(--white);
+  padding: 70px 0 0;
+}
+
+.footer-widget {
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-height: 50px;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background-color: var(--pink);
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.footer-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--gold);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-links a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+  padding-left: 20px;
+}
+
+.footer-contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.footer-contact-icon {
+  margin-right: 15px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.footer-contact-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact-text a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+}
+
+.footer-contact-text a:hover {
+  color: var(--gold);
+}
+
+.footer-newsletter p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.footer-newsletter-form {
+  position: relative;
+}
+
+.footer-newsletter-form input {
+  width: 100%;
+  padding: 12px 15px;
+  padding-right: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+.footer-newsletter-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-newsletter-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: var(--gold);
+  color: var(--purple-dark);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  transition: var(--transition);
+}
+
+.footer-newsletter-form button:hover {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: var(--gold);
+  transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--pink);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Large screens - 1200px and up */
+@media (max-width: 1200px) {
+  .main-header {
+    margin: 100px 50px 30px 50px;
+    border-radius: 60px;
+  }
+  
+  .hero-section {
+    height: 60vh;
+    margin-top: -100px;
+  }
+  
+  .hero-content {
+    max-width: 60%;
+    padding: 1.5rem;
+  }
+}
+
+/* Medium screens - 992px and down */
+@media (max-width: 992px) {
+  .top-bar {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+  
+  .main-header {
+    margin: 90px 30px 20px 30px;
+    border-radius: 40px;
+    padding: 8px 15px;
+  }
+  
+  .logo-img {
+    width: 50px;
+  }
+  
+  .logo-title {
+    font-size: 1.4rem;
+  }
+  
+  .logo-slogan {
+    font-size: 0.6rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .hero-section {
+    height: 50vh;
+    margin-top: -80px;
+  }
+  
+  .hero-content {
+    max-width: 70%;
+    bottom: 10%;
+    left: 15%;
+    right: 15%;
+    padding: 1.2rem;
+  }
+  
+  .hero-staff {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .three-col-section {
+    margin-top: -100px;
+    margin-bottom: -80px;
+    padding: 20px 0;
+  }
+  
+  .courses-slider-section {
+    padding: 100px 0 50px 0;
+  }
+  
+  .courses-slider-section:before {
+    height: 80px;
+  }
+  
+  .course-card {
+    margin: 10px;
+  }
+  
+  .course-content {
+    padding: 15px;
+  }
+  
+  .course-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .instructor-name strong {
+    font-size: 14px;
+  }
+  
+  .course-thumb img {
+    height: 140px;
+  }
+  
+  .course-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  
+  .telimler {
+    padding: 0.8rem;
+  }
+  
+  .telimler > div:first-child {
+    margin-bottom: 1.5rem;
+  }
+  
+  .telimler > div:first-child h1 {
+    font-size: 1.5rem;
+  }
+  
+  .telimler > div:nth-child(2) {
+    gap: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .telimler button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  .istirakci, .telimci, .partnyorlar {
+    padding: 0.8rem;
+    gap: 10px;
+  }
+  
+  .istirakci h2, .telimci h2, .partnyorlar h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .istirakci p, .telimci p, .partnyorlar p {
+    font-size: 13px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .istirakci .btn, .telimci .btn, .partnyorlar .btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens - 480px and down */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .hero-content h1,
+  .hero-staff h2 {
+    font-size: 1rem;
+  }
+  
+  .hero-content h1 span,
+  .hero-staff h2 span {
+    font-size: 1.3rem;
+  }
+  
+  .hero-content p,
+  .hero-staff p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Modal responsive adjustments */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 15px;
+    max-width: none;
+  }
+  
+  .modal-lg {
+    max-width: 95%;
+  }
+  
+  .modal-xl {
+    max-width: 95%;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .table-responsive {
+    font-size: 12px;
+  }
+  
+  .form-check-label {
+    font-size: 13px;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-body {
+    padding: 10px;
+  }
+  
+  .modal-title {
+    font-size: 16px;
+  }
+  
+  .table-responsive {
+    font-size: 11px;
+  }
+  
+  .form-label {
+    font-size: 13px;
+  }
+  
+  .form-control {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  .btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}
+  /* Update these styles in your existing <style> tag */
+.language-selector {
+    color: var(--white);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.language-selector:hover {
+    color: var(--gold);
+}
+
+.dropdown {
+    position: relative;
+    z-index: 1100;
+}
+
+.dropdown-menu {
+    min-width: 120px;
+    background-color: var(--white);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 8px 0;
+}
+
+.dropdown-item {
+    padding: 8px 15px;
+    color: var(--purple-dark) !important;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(201, 87, 146, 0.1);
+    color: var(--pink) !important;
+}
+
+.dropdown-item.active {
+    display: none; /* Hide active language from dropdown */
+}
+
+.dropdown-item i {
+    font-size: 12px;
+    width: 12px;
+}
+   /* Owl Carousel Custom Styling */
+.courses-carousel {
+    position: relative;
+}
+
+.courses-carousel .owl-stage-outer {
+    overflow: visible;
+    padding: 20px 0;
+}
+
+.courses-carousel .owl-item {
+    opacity: 0.7;
+    transform: scale(0.9);
+    transition: all 0.4s ease;
+}
+
+.courses-carousel .owl-item.active.center {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Owl Navigation Buttons */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.owl-nav button {
+    pointer-events: all;
+    width: 50px;
+    height: 50px;
+    background: var(--white) !important;
+    color: var(--purple-dark) !important;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.owl-nav button:hover {
+    background: var(--pink) !important;
+    color: var(--white) !important;
+    transform: scale(1.1);
+}
+
+.owl-nav button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Owl Dots */
+.owl-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.owl-dot.active {
+    background: var(--gold);
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Course Card Adjustments */
+.course-card {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .owl-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .courses-carousel .owl-item {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 576px) {
+    .owl-nav {
+        display: none;
+    }
+    
+    .course-card {
+        margin: 0 5px;
+    }
+}     
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .instructor-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .instructor-profile-img {
+                margin-right: 0;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .instructor-profile-info .instructor-social-modal {
+                justify-content: center;
+            }
+            
+            .footer-widget {
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .top-bar {
+                text-align: center;
+            }
+            
+            .top-bar-right {
+                text-align: center;
+                margin-top: 5px;
+            }
+            
+            .page-banner h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="mailto:info@dentalacademy.com"
+              ><i class="fas fa-envelope"></i> info@dentalacademy.com</a
+            >
+            <a href="tel:+994773263223"
+              ><i class="fas fa-phone"></i> 0773263223</a
+            >
+            <a href="tel:+994503263223"
+              ><i class="fas fa-phone"></i> 0503263223</a
+            >
+          </div>
+          <div class="col-md-6 top-bar-right">
+            <a href="https://www.facebook.com/dentaluxacademy/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/dentalux_academy/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="dropdown d-inline-block ms-3">
+              <a href="#" class="dropdown-toggle language-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-globe"></i>
+                  <span id="current-lang-text">English</span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item active drop_a" href="#"  style="color: #000;" data-lang="en">English</a></li>
+                  <li><a class="dropdown-item drop_a" style="color: #000;" href="#" data-lang="az">Azərbaycanca</a></li>
+                  <li><a class="dropdown-item drop_a"  style="color: #000;"href="#" data-lang="ru">Русский</a></li>
+              </ul>
+          </div>
+          
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="img/IMG_2764_2.pdf-removebg-preview.png" alt="Dental Academy" class="logo-img" />
+            <div class="logo-text ms-3">
+              <div class="logo-title">Dentalux Academy</div>
+              <div class="logo-slogan">Dental Professionals Advancement Platform</div>
+            </div>
+          </div>
+        
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav rounded-pill px-4 py-2  " >
+              <li class="nav-item mx-3" style="white-space: nowrap;">
+                <a id="nave_home_page" class="nav-link active" href="#">Ana səhifə</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_portfolio" class="nav-link" href="about.html">Portfolio</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_courses" class="nav-link" href="course.html">Courses</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_instr" class="nav-link" href="Instructors.html">Instructors</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_gallery" class="nav-link" href="Gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_contact" class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <style>
+/* Dropdown məcburi olaraq önə çıxarmaq */
+.force-dropdown-front {
+  position: static !important;
+}
+
+.force-dropdown-menu {
+  position: fixed !important; /* Fixed position istifadə et */
+  top: auto !important;
+  left: auto !important;
+  right: 20px !important; /* Sağdan 20px */
+  transform: none !important;
+  z-index: 2147483647 !important; /* Ən yüksək z-index */
+  background-color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3) !important;
+  padding: 10px 0 !important;
+  margin: 0 !important;
+  min-width: 220px !important;
+  max-width: 300px !important;
+}
+
+/* Dropdown itemlər */
+.force-dropdown-menu .dropdown-item {
+  color: var(--purple-dark) !important;
+  padding: 14px 22px !important;
+  transition: all 0.3s ease !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  margin: 3px 10px !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  font-size: 15px !important;
+}
+
+.force-dropdown-menu .dropdown-item:hover {
+  background-color: rgba(51, 102, 255, 0.1) !important;
+  color: #3366FF !important;
+  transform: translateX(8px) !important;
+}
+
+.force-dropdown-menu .dropdown-item i {
+  color: var(--pink) !important;
+  width: 18px !important;
+  margin-right: 12px !important;
+}
+
+.force-dropdown-menu .dropdown-item:hover i {
+  color: #3366FF !important;
+}
+
+
+/* JavaScript ilə dropdown position */
+</style>
+              <li class="nav-item dropdown mx-3 force-dropdown-front">
+  <a id="qeydiyyat" class="nav-link dropdown-toggle" 
+     href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Qeydiyyat
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end force-dropdown-menu" aria-labelledby="qeydiyyat">
+    <li>
+      <a id="telimciler" class="dropdown-item" href="#" onclick="activateTelimci(); return false;">
+        <i class="fas fa-chalkboard-teacher me-2"></i>Təlimçi
+      </a>
+    </li>
+    <li>
+      <a id="partnyorlar" class="dropdown-item" href="#" onclick="activatePartner(); return false;">
+        <i class="fas fa-handshake me-2"></i>Partnyor
+      </a>
+    </li>
+    <li>
+      <a id="header_istirak_btn" class="dropdown-item" href="#" onclick="activateParticipant(); return false;">
+        <i class="fas fa-user-graduate me-2"></i>İştirakçı
+      </a>
+    </li>
+  </ul>
+</li>
+
+
+
+<script>
+// Dropdown position düzəltmə
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdown = document.querySelector('.force-dropdown-front');
+  const dropdownMenu = document.querySelector('.force-dropdown-menu');
+  
+  if (dropdown && dropdownMenu) {
+    dropdown.addEventListener('shown.bs.dropdown', function() {
+      const rect = dropdown.getBoundingClientRect();
+      dropdownMenu.style.top = (rect.bottom + 10) + 'px';
+      dropdownMenu.style.right = (window.innerWidth - rect.right) + 'px';
+      document.body.classList.add('dropdown-open');
+    });
+    
+    dropdown.addEventListener('hidden.bs.dropdown', function() {
+      document.body.classList.remove('dropdown-open');
+    });
+  }
+});
+
+function activatePartner() {
+  document.querySelectorAll(".telim-btn").forEach(btn => btn.classList.remove("active"));
+  const partnerBtn = document.querySelector('.telim-btn[data-target="partnyorlar"]');
+  if (partnerBtn) partnerBtn.classList.add("active");
+  
+  document.querySelectorAll(".istirakci, .telimci, .partnyorlar").forEach(section => section.classList.remove("active"));
+  const partnerSection = document.querySelector(".partnyorlar");
+  if (partnerSection) partnerSection.classList.add("active");
+  
+  const telimlerSection = document.querySelector(".telimler");
+  if (telimlerSection) {
+    telimlerSection.scrollIntoView({ behavior: "smooth" });
+  }
+  
+  // Dropdown bağla
+  const dropdownToggle = document.getElementById('qeydiyyat');
+  const dropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
+  if (dropdown) dropdown.hide();
+}
+
+function activateTelimci() {
+  document.querySelectorAll(".telim-btn").forEach(btn => btn.classList.remove("active"));
+  const instructorBtn = document.querySelector('.telim-btn[data-target="telimci"]');
+  if (instructorBtn) instructorBtn.classList.add("active");
+  
+  document.querySelectorAll(".istirakci, .telimci, .partnyorlar").forEach(section => section.classList.remove("active"));
+  const instructorSection = document.querySelector(".telimci");
+  if (instructorSection) instructorSection.classList.add("active");
+  
+  const telimlerSection = document.querySelector(".telimler");
+  if (telimlerSection) {
+    telimlerSection.scrollIntoView({ behavior: "smooth" });
+  }
+  
+  // Dropdown bağla
+  const dropdownToggle = document.getElementById('qeydiyyat');
+  const dropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
+  if (dropdown) dropdown.hide();
+}
+
+function activateParticipant() {
+  document.querySelectorAll(".telim-btn").forEach(btn => btn.classList.remove("active"));
+  const participantBtn = document.querySelector('.telim-btn[data-target="istirakci"]');
+  if (participantBtn) participantBtn.classList.add("active");
+  
+  document.querySelectorAll(".istirakci, .telimci, .partnyorlar").forEach(section => section.classList.remove("active"));
+  const participantSection = document.querySelector(".istirakci");
+  if (participantSection) participantSection.classList.add("active");
+  
+  const telimlerSection = document.querySelector(".telimler");
+  if (telimlerSection) {
+    telimlerSection.scrollIntoView({ behavior: "smooth" });
+  }
+  
+  // Dropdown bağla
+  const dropdownToggle = document.getElementById('qeydiyyat');
+  const dropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
+  if (dropdown) dropdown.hide();
+}
+</script>
+
+
+              </ul>
+                
+            </ul>
+          </div>
+          
+        </nav>
+      </div>
+    </header>
+
+ <!-- Stories/Reels Section - NOW BELOW MENU -->
+<section class="stories-section">
+  <div class="container">
+    <div class="stories-wrapper">
+      
+      <div class="story-item" data-story="implant">
+        <div class="story-circle" data-story-id="implant">
+          <div class="story-circle-inner">
+                      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEhISDxAPEhUQEhUSEg8PEA8VFQ8XFhUXFxUSFhUYHiggGBolGxUWITEhJiorLi4uFx8zODUtNygtLisBCgoKDg0OGhAQGismHyUtLS4tNystKy8tLS0tLS0tLy0rLy01MC0tLS0tLS0tKystLS0tLS4tKy0uLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwQCBQYBB//EAEUQAAEDAwEFBAYGCAMJAQAAAAEAAgMEESExBRJBUXEiYYGRBhMyUqHRFCNCsbLBBxYkYnKi4fAzU2M0Q1RzksLS0/EV/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAECAwQGBf/EAC0RAQACAgECAwcDBQAAAAAAAAABAgMRIQQSMTJRBRNBcYGhsTNSkRUiJGHh/9oADAMBAAIRAxEAPwD7iiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiLwlB6i8ul0HqLEvHMLJAReXXqAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgKN0w4ZSc48Vg0a9QEHhqFE6odzHkvavUdFWIJQWY68aOFu/gpHVbdFqp2EarS7LqnevlaSew8AZ0BaDb4oOuNRyVeV19VlIcM6KFzT3oIjKWnB8FjHXN3t0kg2vYWyvJmkarTVhtNGebXA+BHzQdSZRjFri+VC+YjTyyo2SXLe6wViTRBXkqzwWwopt9gJ1yD4LSPW22UPqx3kn42/JBcREQEREBERAREQEREBERAREQEREBERAREQQ1Xs9CCsQcHwKne24I5iypMdix4YPggyrDooo9ElcsDIANUEFa7A6rmNlPvUTn/AFAPJrR+S3tdOLEnAAJXM+jLy7eedXvc7zN7InTt2uuB3KUHA6KtCcKxwHREKVY7PQLR1DrztHut+8/0C29U7JXP7Nk35Hv95xt0GB8AiYh0kJV2XQ9FQiKnMhtZBVkK31LHusaOQF+vFaWmj3pGjhe56D+7eK36IEREBERAREQEREBERAREQEREBERARF4Sg9RYueBqV42Vp0I6cUGaoVYs7+LPzVh1SOGVC6oa/G7p73BBVc5V5Crrdy9nMPcQT+ayMcX2mm3O5t96ChQUwked4Xa0doHR18Afn4LVUuwpYHlrWOc2/ZcBe44X5FdhDE1oswADXHHvUiJ20kJtg3B5EWKzkmNrLbOYDqAeoWH0dnuN/wCkIhz76R8oc2O2ntOJA6X5qvSbClj+x5Ob811jQBgC3cFHVVDI2OkkdutY0uc7OANcDJ6ImLa4allK/wBw/BZupZDow+Y+a1w/SFs29vXScc/Rqq2Nfsd4810Gzq+KeNssDw9j77rgCL2Njg5BuDgoItm0ZZvOda7sY4D+/uV5ERAiIgIiICIiAiIgIiICKvU1QZwJ59yidXttxB7/AJoLL5mjBIWbXA5BB7wtNO7GNdeq8a46i7Seo8Cg2ctUBp8TZRCtJNg21lrHlzTdzm2PW/Tkqj9sgEsyHAYyLG+h6ImImW7dWPB0BB0JxZRzSHXBxlaZ+0SR7RvyVefaLiLEqO5pGKW5gq47ntHByPdSWoj1ucd2FwbNo2nkF+X4Qtq2uxxUTZeuHu4h0tRXM3dbnhbgtVFt1we5nKxHj/ZWqfV96oFo3zIXHNsWGLDmq98OivRX9G42p6S1LWyvipHSxwtL3yCaJlg0PLjuuzYerf34GMhV6T0ofK8QywvhLohLHvOBEjToRYaa+SzeCNm7QLuNNP8AClhDv53SLSbVk3XbHl/zKIMPg2P/ANhV/g4ondtPq2zTeKO/uN+5WVxWxvSYxM3JryWJ3XCwLW8Gkcbc+VluYfSqmOpez+Jt/wAJKiLw3v0mas+X+G8RU6fasD/YmjPcXAHyOVcVnNas18YFo/TCp3IWj3pWu8IQahw8WwkeK3i4H05mnimY+aSN9PJvMihbHZ0ZLA17nOv2rgvF8WD9DbIiNrU1ExlXQRbrSN2rNiAbuayBpd1vdRfokktTTwf8NVSxgchi3xDlUk2jPJW0BEEYcGVrg315IdvuZvXduC27u8sqp+j1lT9Nrfo74PVCpd9KY8SktdvyWZEbC5B3ruIA01RD6eiIgIsHSAanwUZqm6DXyQToqj64DUeWVOyZpFw4WQSIo/XN5/AogkREQF4SvVi/Q9EGo2nNuvaDo64N/gqEdTHkb7f771t62na9j2uFwezbnfGq5z9UZY8xzNfbg5pb8Rf7kWjUrU9c0YZfrda//wDXcHlpcbaj5KvVQysduvYQTyyD0stHU1VpiDg7owddSqTZ01xRp0ElUTkklc/tKstM3+D8yp3VYstBWh8kwLPsgAuOmpwqzOm1MXfOodE2vxqsXSuPcqtPEB3nmp1Sb+jtxdJ8bo46djSXAXc43Ljk/wBFMXFeJdUmdu2tK1jUQ8JVTaVMJGFpdI3U3jcWk2BwbajuVwMuvTYY58FCbRFomJezVssmz5917AySGq3wY95x3ntEhBBAFycYxpla3bsJNLsgPe4iWItiADW+oaYmHJAu87thqMi+dFYYS2GeFttxlNI4NOS7e3nFt+rB5ptGPekjp3m7NmiNsBbgnfp43Ev5nNsWXVNo7dvOU6e3vvd/FNTsYxjWDefui2/I4ucep4r0vHIKIlAFyvRxGo0k9Z3BWabacsf+HI9vcHG3loqzIlM1gCmJlS0VniWwZ6T1Q/3t+rGfJa/0kr5KtjGyFgMZLmkNIvcaHPcvS5vJQyOYrd0sJw4v2ws0W0bOjrCy7aanqnmMO7TgZGXAxa93C3jotv6HbPdSmqk32uNZO6cgNP1Yc5zgy98kb2vcuUhqWAepDxuS/Vubdty172lzQdRcgLs9nkOvm1rWsVvW23xc2Ccc8tw/aLuOB+7hY/SXH2Set1rg9xItbPxWyhisAb6m1lZzsBK8G7s7xzf5rOVlxcH+nQqd8GP/AKqZxhBLBO3kSRg3Usg4gW6LUsd9b4Nv5lblx7J6IIfpLu5FASvUG+REQFjJp4hZKGqkDW3PMDxOB8SEI5Rv0YPeePhn8lLM6w6qCY9uId5/CVJLlwCCLdsXHjcN8mg/eSn0Vsg+sa1w5OaD96NddpPN7vgbfkrMIwEHM7Y9Fad7mNjHqi52THgWAJPZ04fFe/qZTtGHS447zf8AxW6e+80Y/dkPxYPmrNToomsS1rmyV8Jcx+qLD7L5B13D+QWn2xsR8Fu1vhxsAG2NzpjN19DjGFrahodUR3zubzx1DbD8SrOOJb4+uy1nmdw0myPRW4Dqgn/lg6fxEce4K7V7Bp/ZDN3k5pII+a38WgVOq9oqYpEM79VltbfdP0cHtbZz4TnLTo8fceRWuXfV8IfG9rtN0ny0Xyzb4JhNnvZYgkxmxI0tfllY3pqX1Ol6u18czMcx920dbjYXFuVxy6ILEkjJdq7UusLC544AHgtE70YlbE8tqGPaWMks+mY0u3tAXA8N3XKg21sKdtCNoSVLSCQBFHC0O7Um5/i3uLWvgK3uv9sP6lG99n3/AOOmDFIAAtfsqX6mPec4nd9p5u48rnivZqzllZPpxM2ja6+Wyp1FcB3qjNOTqVr5HFxs0XKbTNV2XaZOhstbNDvuD/WPHaAN91wbxFmuBsMLCaimsXbtwORB+Cgp27wOmoG8WyWb1c29vJWrPPDmz1rNdXjh1VL6PVDqiOJtU0evYJC804xuC4bu71jrzCpeufTV0lH6x8nqWgmU2aH3a11txuABvDvwths15+kQjt2MDnER1NU7TF9+weD+6Md60VXJapqHNLsybrSd4nshoc0l5LjY31J6reZ1G3xKY5tfth3+x6ousTwXUU8mB3LgfRmvaey4hruAOjunyXa0z0idpyYrUnUw2xdi61sinDlVqHgAkmwAuTyA1VmWlBrvrXd1h8P6rbRyG1lyGxdsNkcb9lziTuniCeC6mJ+FWJ20vjmk6mGRXqjL0VmTo0REBaX0nqN1sLf8yojHg128fiB5rdLiP0gTO9bTtabFrXOBHAlzbH+VUyTqrq6LH7zNEfP8N/UVo+lQxDXcc93diwH3q+49o9PyXzzZ+0i2rjnmdcbzmyOtwLd29hwGPALpdv7fjYx3qZGPe8WaWODg249okKtckamZbZ+ivW9KVje4+/xbOgkDogQb/WSjykePyV8us3wXO+iM4dSht8xvc0+Pbv8AzLevOFpWdxtyZsfu8lq+ktY6b9sjb/oPP88XzW4n08R965OOrD9o40ZFJGDzN2l34beBXUyO+8JE7Rkxzj1v4xtMTYLSMqB9KjB+1HKfIx/NbOZ+CuP2hXhtbAb4iJY498otbw7JS1tJxYrZJmI9Jl2sJ1HJVKk9oqxG7PUKpUHJUslTaEoZDM86NjcfJpJXy2qkD4nci068Oq7/ANMZf2d0QOZbM8Dl38oPwXzbaV4mvuDuuBBtbsm1r54HCxyT/dEPrdDjtGK120pj+yb+9a0F7evlcbsJBuwt1Pu3Fuap7RcTQwAufd0jQ1vrZt1/acSBGR6th8yeBCx2XW79LKL5EMg1qHHnbt256G/edFV2rLu0dNfGSbEE3ADuDuyVp8Hz4iYyaQQVkhI3j2cANHcFfqH2Fxpz5LSbFBec6arqBAN2xGCuW3i9HgiZruXPyzlx3W5JVuljtgG54lKil9X7LcE5cL3PcTyUYqeQtbAVW2vRsoHEeCr1lECHOaLOcPaBe0+JaQpqQ3BJUpdkBInSLUi0alU9G5S6oja4OvHA9pBEr/tDi46Z4YWnqprzOsdZZTw96w/eGmh8F0Zg3HCRrWlwBF3NuLHXC5uLZ0vrC54FuFnX4knhjJ436rbviavl16S2PN3RzDbwtwuk2L6Rujs2a7m8H6ub194fHqufBwBjHJTUzbmyzi0xPD6F8NcldXh9KpK6OQXje1w7jp1HBaP0xr92IxtPalO7biG/aP5eK5aan3cgkd4wqrhxOe8q85eNOKns2K3i3dxDGNq2NPtepjw2Z1uTgHfiBKoR6qWRZbmPB9G2Ot/NG1h+16km5mfnlugeQCKminun1R7jH+2P4fdERF2vJC4P04P7XGOUAP8AO/5LvFwfpyP2qM84APJ7/mss3lfQ9mfr/SWhBwT3n71A03IvzwFnfsef3rCn1HiuV6Ja2btSSnkc5liHYcw6Otoe4i5z3rcVPpTLI0tjjEeO0/fLiP4cCxXNu9rxVx7tAOqtF5iNbYZemxXtF7V5S09QYnRzNF/Vuy3m03BHkSu9pNoRzNDontcO45HcRwK+exO4HiFWdC2+itTJNWHU9HXPzvUw+g7Z2wyJpFw6Qjsxg56u91veuIqGF7XXN3O7V+Z1+awgjA4ADkOPVZul0KXvNk9P0tcEajmXa+ju0vXQtcT229l/UcfEZVydy+fRVMsD/WQG29qDkHuIVmo25UyjdcWRtPtFgNyOVycLSMsa5cGX2bacm6THbP2S7TqfWyk3u2Pst7zxPmPh3rV7TpwRci4Is4cwo3VGQ1ug+KvusQR3LGZ3O31ceOMdYrHg4OSmkpTJuhzopGOaA31riy40LLkeNuqx9InvdBTRRseSWXt6lzTc8buOR32HVdO7BIK9jibwAV4yTrTmv0Fe/vidNZ6P7OMbAHe19r5LdzDsletZZH6Hos3XGo1EKYtocgqnPssXu29tVbCtUpxbkohrbjlQY3dFuSwBythVtwtepVhtgLhUquEDI4q5CeyOiirdEVjxa4rOlPaHVYFIjkdUXbSo9krWOWyqD2StY5EV8GLdVK9Qt1UrlC0MERFI+6oiLueNFwv6QBaaE84yPJ39V3S4n9Ire1TnukH4Fnl8ru9mz/kV+v4cow9kpBqo2HVZArkelk+14qZzs+ChGqzdqiJZsOR0XjjlYjh0XhOUQne/Cie7AXjzheO4IRC1G+4yqlS+2FJG7Cr1GqERyiYcjqtpG/K1bBlXQ7KJtG1esHaK9pl5V6r2lQnyrDljfBXr3KGJ+qllCBqsUupULVJT6qG1vBJU+yVrCthUOwteVKlW0pj2Qoq04XlO/sqKqfdERHKqUj1QrxmqLL0z8Kk5TvKgcgxbqpCo2KQqEsUXi9UofdURF3PHC5H9IrPq4XcpHN823/7V1y5r0+jvTA+5K0+Yc381TJ5ZdfQzrqKfN89asisQsiuJ6mXrVmVG1ZlSiXoQrxCiB6FHIiHrVFKpQopESjZqrPFV2aqwiUdRqsYCspVECiJ8Gc0iihcsZCsYipViE7Vkw5WLUJULsJnKuVK8qJSqnjOFhIUasXIMCvI9UKRqBK5RuWZUbkHjFmVhGsypGKLxEQ+7oiLuePFofTf/AGOT+KP8bV6irfyy6Ol/Xp84/L5oFkvUXC9aNWZRFKsiFERDxy9REBRvREGDNVYXiII5VCURBG9eRoiIWGrxyIiyFyjRFKqRqxciIlGV7GiIhmVG5EUEvI1kURSMCiIiH//Z" alt="Implant" />
+         </div>
+        </div>
+        <div class="story-title" id="story-title-implant">İmplant</div>
+      </div>
+      
+      <div class="story-item" data-story="endo">
+        <div class="story-circle" data-story-id="endo">
+          <div class="story-circle-inner">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyQO1dxNW9wT2mo9yNnQ8FGzanmV6_WQ0E2AI1nVh8FaLILzShFjqwBiU0RSMGMYDmneE&usqp=CAU" alt="Endodontics" />
+          </div>
+        </div>
+        <div class="story-title" id="story-title-endo">Endodontiya</div>
+      </div>
+
+      <div class="story-item" data-story="vinir">
+        <div class="story-circle" data-story-id="vinir">
+          <div class="story-circle-inner">
+            <img src="https://btk.az/uploads/posts/2023-11/1700136445_keramika-laminat-dis.jpg" alt="Vinir" />
+          </div>
+        </div>
+        <div class="story-title" id="story-title-vinir">Vinir</div>
+      </div>
+
+      <div class="story-item" data-story="restoration">
+        <div class="story-circle" data-story-id="restoration">
+          <div class="story-circle-inner">
+            <img src="https://static.wixstatic.com/media/e17c8f_add554cad0dd408db70cd7e40966d98e~mv2.png/v1/fill/w_289,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e17c8f_add554cad0dd408db70cd7e40966d98e~mv2.png" alt="Estetik Restavrasiya" />
+          </div>
+        </div>
+        <div class="story-title" id="story-title-restoration">Estetik restavrasiya</div>
+      </div>
+
+      <div class="story-item" data-story="orthopedic">
+        <div class="story-circle" data-story-id="orthopedic">
+          <div class="story-circle-inner">
+            <img src="https://www.laurichdentistry.com/wp-content/uploads/2019/12/implant-supported-bridge.jpg" alt="Prosthetic" />
+          </div>
+        </div>
+        <div class="story-title" id="story-title-orthopedic">Ortopediya</div>
+      </div>
+
+      <div class="story-item" data-story="orthodontic">
+        <div class="story-circle" data-story-id="orthodontic">
+          <div class="story-circle-inner">
+            <img src="https://www.thantakit.com/wp-content/uploads/2020/03/ing_19047_01455.jpeg" alt="Orthodontic" />
+          </div>
+        </div>
+        <div class="story-title" id="story-title-orthodontic">Ortodontiya</div>
+      </div>
+      
+      <div class="story-item" data-story="pediatric">
+        <div class="story-circle" data-story-id="pediatric">
+          <div class="story-circle-inner">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6F6Ymklgs3MzvW3hKOqnhdKf7rSFAvrz4Sx_lMbLBV40CWwvoWtA8Q_kGIeFdVe8Ct8&usqp=CAU" alt="Pediatric" />
+          </div>
+        </div>
+        <div class="story-title" id="story-title-pediatric">Pedodontiya</div>
+      </div>
+      
+      <div class="story-item" data-story="emergency">
+        <div class="story-circle" data-story-id="emergency">
+          <div class="story-circle-inner">
+            <img src="https://www.carolinasmilesdentist.com/wp-content/uploads/emergency-dentist-1912.jpg" alt="Emergency">
+          </div>
+        </div>
+        <div class="story-title" id="story-title-emergency">Təcili tibbi yardım</div>
+      </div>
+      
+      <div class="story-item" data-story="management">
+        <div class="story-circle" data-story-id="management">
+          <div class="story-circle-inner">
+            <img src="https://www.demandhub.co/assets/images/demandhub/articles/dental-practice-management/dental-practice-management-8.png" alt="Management">
+          </div>
+        </div>
+        <div class="story-title" id="story-title-management">Dental klinik idarəçiliyi</div>
+      </div>
+
+      <div class="story-item" data-story="satisfaction">
+        <div class="story-circle" data-story-id="satisfaction">
+          <div class="story-circle-inner">
+            <img src="https://denticalc.com/assets/img/blog/shutterstock_171440846.jpg" alt="Satisfaction">
+          </div>
+        </div>
+        <div class="story-title" id="story-title-satisfaction">Xəstə məmnuniyyəti</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .story-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Video tam görünsün, kəsilməsin */
+  border-radius: 20px;
+  background-color: #000; /* Boşluqlar üçün qara fon */
+}
+
+/* Alternativ: Video-nu tam doldurmaq istəyirsinizsə */
+.story-video.cover-mode {
+  object-fit: cover; /* Video konteynerı tam doldurur, kəsilə bilər */
+}
+</style>
+<!-- Instagram Story Viewer -->
+<div class="story-viewer" id="storyViewer">
+  <div class="story-container">
+    <div class="story-header">
+      <div class="story-progress" id="storyProgress"></div>
+      <div class="story-user-info">
+        <img class="story-user-avatar" id="storyAvatar" src="" alt="Avatar">
+        <div>
+          <div class="story-username" id="storyUsername"></div>
+        </div>
+        <div class="story-time">2s</div>
+      </div>
+    </div>
+    <button class="story-close" id="closeStory">&times;</button>
+    <img class="story-content" id="storyContent" src="" alt="Story" style="display: none;">
+    <video class="story-video" id="storyVideo" playsinline style="display: none;">
+  Your browser does not support the video tag.
+</video>
+    <button class="story-navigation story-nav-prev" id="prevStory"></button>
+    <button class="story-navigation story-nav-next" id="nextStory"></button>
+    <div class="story-category-indicator" id="categoryIndicator"></div>
+  </div>
+</div>
+<section class="hero-section">
+  <div class="hero-background">
+    <!-- <img src="img/ADS.png " alt="Academic Staff" /> -->
+  </div>
+  
+  <!-- <div class="hero-staff">
+    <h2>Competent International <span>ACADEMIC STAFF</span></h2>
+  </div> -->
+</section>
+  <!-- Three Column Section -->
+<section class="three-col-section">
+  <div class="container">
+    <div class="row">
+      <!-- Calendar Column -->
+      <div class="col-lg-4 mb-4">
+        <div class="calendar-wrapper">
+          <div class="calendar-header">
+            <h3 id="calendar-month-year"></h3>
+            <div class="calendar-nav">
+              <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+              <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="calendar-weekdays" id="calendar-weekdays"></div>
+          <div class="calendar-days" id="calendar-days"></div>
+        </div> <!-- Bu bağlanma taq əksik idi -->
+      </div>
+
+      <!-- Upcoming Courses Column -->
+      <div class="col-lg-4 mb-4">
+        <div class="courses-wrapper">
+          <h3 id="courses-title">Upcoming Courses</h3>
+          <div id="courses-list">
+            <!-- Statik kurs məlumatları -->
+            <!-- <div class="course-item-mini">
+              <div class="course-date-mini">
+                <span><i class="fas fa-calendar-alt"></i> <span id="course-date-1">Jan 15, 2025 (Monday)</span></span>
+              </div>
+              <h4 class="course-title-mini">
+                <a href="#" id="course-title-1">Advanced Implant Techniques</a>
+              </h4>
+              <div class="course-info-mini">
+                <span><i class="fas fa-map-marker-alt"></i> <span id="course-location-1">Baku Medical Center</span></span>
+                <span><i class="fas fa-clock"></i> 09:00</span><br>
+                <span><i class="fas fa-money-bill-wave"></i> 500 AZN</span>
+              </div>
+            </div>
+            
+            <div class="course-item-mini">
+              <div class="course-date-mini">
+                <span><i class="fas fa-calendar-alt"></i> <span id="course-date-2">Jan 18, 2025 (Thursday)</span></span>
+              </div>
+              <h4 class="course-title-mini">
+                <a href="#" id="course-title-2">Endodontic Therapy Workshop</a>
+              </h4>
+              <div class="course-info-mini">
+                <span><i class="fas fa-map-marker-alt"></i> <span id="course-location-2">Dental Training Center</span></span>
+                <span><i class="fas fa-clock"></i> 10:30</span><br>
+                <span><i class="fas fa-money-bill-wave"></i> 350 AZN</span>
+              </div>
+            </div> -->
+          </div>
+          <div class="text-center mt-4">
+            <a href="#" id="view-all-btn" class="btn btn-primary">View All Courses</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Column -->
+      <div class="col-lg-4 mb-4" >
+        <div class="form-wrapper">
+          <h3 id="newsletter-title">Subscribe to Newsletter</h3>
+          <form>
+            <input
+              type="text"
+              class="form-control"
+              id="newsletter-name"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="newsletter-email"
+              placeholder="Email Address"
+              required
+            />
+            <input
+              type="tel"
+              class="form-control"
+              id="newsletter-phone"
+              placeholder="Phone Number"
+              required
+            />
+            <div class="form-row">
+              <div class="form-col">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="newsletter-city"
+                  placeholder="City"
+                />
+              </div>
+              <div class="form-col">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="newsletter-graduation"
+                  placeholder="Graduation Year"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-secondary w-100" id="newsletter-submit">
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+    
+   <!-- Courses Slider Section -->
+
+<!-- Course Slider bölməsində -->
+<section class="courses-slider-section" id="coursess">
+    <div class="container">
+        <h2 class="section-title">Our Popular Courses</h2>
+        <div class="owl-carousel courses-carousel"  id="courses-carousel">
+            <!-- Cards buraya JS ilə əlavə olunacaq -->
+        </div>
+    </div>
+</section>
+
+<script>
+const lang = "az";
+// Global dil dəyişəni
+
+
+// Upcoming Courses yükləmə
+document.addEventListener('DOMContentLoaded', function() {
+    loadUpcomingCourses();
+});
+
+function loadUpcomingCourses() {
+    fetch('upcoming-courses.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('JSON yüklənmədi');
+            }
+            return response.json();
+        })
+        .then(courses => {
+            renderUpcomingCourses(courses);
+        })
+        .catch(error => {
+            console.error('Kurslar yüklənmədi:', error);
+            const coursesList = document.getElementById('courses-list');
+            if (coursesList) {
+                coursesList.innerHTML = '<p class="text-center text-muted">Kurslar yüklənir...</p>';
+            }
+        });
+}
+
+function renderUpcomingCourses(courses) {
+    const coursesList = document.getElementById('courses-list');
+
+    if (!coursesList) {
+        console.error('courses-list elementi tapılmadı');
+        return;
+    }
+
+    coursesList.innerHTML = '';
+
+    // Vaxtı keçməmiş kursları filtrələ
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const activeCourses = courses.filter(course => {
+        const courseDate = new Date(course.date);
+        courseDate.setHours(0, 0, 0, 0);
+        return courseDate >= today;
+    });
+
+    // İlk 5 aktiv kursu göstər
+    const upcomingCourses = activeCourses.slice(0, 5);
+    
+    upcomingCourses.forEach((course) => {
+        const courseDiv = document.createElement('div');
+        courseDiv.classList.add('course-item-mini');
+        
+        // Tarixi format et
+        const dateObj = new Date(course.date);
+        const formattedDate = dateObj.toLocaleDateString('en-US', { 
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric' 
+        });
+        
+        // İlk schedule saatını al
+        const startTime = course.schedule && course.schedule.length > 0
+            ? course.schedule[0].time.split(' - ')[0]
+            : '09:00';
+        
+        courseDiv.innerHTML = `
+            <div class="course-date-mini">
+                <span>
+                    <i class="fas fa-calendar-alt"></i> 
+                    ${formattedDate} (${course.day[currentLang]})
+                </span>
+            </div>
+            <h4 class="course-title-mini">
+                <a href="viewcourse.html?id=${course.id}">${course.title[currentLang]}</a>
+            </h4>
+            <div class="course-info-mini">
+                <span><i class="fas fa-map-marker-alt"></i> ${course.location[currentLang]}</span>
+                <span><i class="fas fa-clock"></i> ${startTime}</span><br>
+                <span><i class="fas fa-money-bill-wave"></i> ${course.payment[currentLang]}</span>
+            </div>
+        `;
+        
+        coursesList.appendChild(courseDiv);
+    });
+    
+    if (upcomingCourses.length === 0) {
+        coursesList.innerHTML = '<p class="text-center text-muted">Hal-hazırda gələcək kurs yoxdur.</p>';
+    }
+}
+
+// Dil dəyişdikdə upcoming courses-ı yenilə
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        const selectedLang = this.dataset.lang;
+
+        if (selectedLang) {
+            currentLang = selectedLang;
+
+            // Upcoming courses yenilə
+            loadUpcomingCourses();
+
+            // Digər funksiyalar
+            if (typeof updateStaticTexts === 'function') {
+                updateStaticTexts();
+            }
+            if (typeof renderCalendar === 'function' && typeof currentMonth !== 'undefined') {
+                renderCalendar(currentMonth, currentYear);
+            }
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  
+
+  fetch("upcoming-courses.json")
+    .then(res => res.json())
+    .then(courses => {
+      const carousel = document.getElementById("courses-carousel");
+
+      // Vaxtı keçməmiş kursları filtrələ
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const activeCourses = courses.filter(course => {
+        const courseDate = new Date(course.date);
+        courseDate.setHours(0, 0, 0, 0);
+        return courseDate >= today;
+      });
+
+      activeCourses.forEach(course => {
+            const card = `
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <img src="${course.image}" alt="${course.category?.[currentLang] || course.category?.az || ''}" loading="lazy" />
+                        <div class="course-category">${course.category?.[currentLang] || course.category?.az || ''}</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-instructor">
+                            <div class="instructor-name">
+                                <strong>${course.participants?.join(", ") || ''}</strong><br/>
+                                ${course.location?.[currentLang] || course.location?.az || ''}
+                            </div>
+                        </div>
+                        <h3 class="course-title">
+                            <a href="about.html?id=${course.id}">${course.title?.[currentLang] || course.title?.az || ''}</a>
+                        </h3>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="far fa-calendar-alt"></i> ${course.date}
+                            </div>
+                            <div class="course-detail">
+                                <i class="fas fa-users"></i> ${course.seat || 0}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-overlay">
+                        <a href="about.html?id=${course.id}" class="course-btn">${uiTexts[currentLang].view_details}</a>
+                    </div>
+                </div>
+            `;
+
+            carousel.append(card);
+        });
+
+      // əvvəlcə təmizlə, sonra init et
+      $(".courses-carousel").owlCarousel("destroy"); // köhnəni sil
+    carousel.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            center: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                    center: false,
+                    nav: false,
+                    margin: 10
+                },
+                576: {
+                    items: 1,
+                    center: false,
+                    margin: 15
+                },
+                768: {
+                    items: 2,
+                    center: false,
+                    margin: 20
+                },
+                992: {
+                    items: 2,
+                    center: true,
+                    margin: 20
+                },
+                1200: {
+                    items: 3,
+                    center: true,
+                    margin: 20
+                }
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Error loading courses:', error);
+    });
+    // Touch events for better mobile experience
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+        $('.courses-carousel').trigger('next.owl.carousel');
+    }
+    if (touchEndX > touchStartX + 50) {
+        $('.courses-carousel').trigger('prev.owl.carousel');
+    }
+}
+</script>
+
+
+<section class="telimler">
+  <div>
+    <h1 id="header_telim">Qeydiyyatdan keçin</h1>
+  </div>
+  <div class="telimler-buttons">
+    <button class="telim-btn active" id="header_istirak_btn" data-target="istirakci">İştirakçı</button>
+    <button class="telim-btn" id="header_telimci_btn" data-target="telimci">Təlimci</button>
+    <button class="telim-btn" id="header_partner_btn" data-target="partnyorlar">Partnyorlar</button>
+  </div>
+  <div class="istirakci active">
+    <div>
+        <img src="img/doc1.jpg" alt="İştirakçı" class="img-fluid">
+    </div>
+    <div>
+      <h2 id="participant_head">Təlimə qoşulun</h2>
+      <p id="participant_description">Peşəkar stomatologiya təlimlərimizə qatılaraq bilik və bacarıqlarınızı inkişaf etdirin. Müasir dental texnologiyalar və metodlar haqqında öyrənin.</p>
+      <div id="participant_description_section" class="participant-description">
+          <p id="participant_details">Akademiyamızın təlim proqramlarına qatılaraq stomatologiya sahəsində ən son texnologiyalar və metodlarla tanış olacaqsınız. Təcrübəli təlimçilərimizin rəhbərliyi altında praktiki bacarıqlarınızı təkmilləşdirəcək, beynəlxalq standartlara uyğun sertifikatlar əldə edəcəksiniz. Hands-on təlim yanaşması ilə real klinik vəziyyətlərdə çalışmaq imkanı əldə edəcək və peşəkar karyeranızı irəli aparmaq üçün lazım olan bilik və təcrübəni qazanacaqsınız.</p>
+      </div>
+      <ul id="participant_benefits">
+          <li id="participant_benefit_certificate">Beynəlxalq tanınan sertifikatlar əldə etmə imkanı</li>
+          <li id="participant_benefit_practical">Müasir avadanlıqlarla praktiki təlim</li>
+          <li id="participant_benefit_experts">Sahənin tanınmış mütəxəssislərindən öyrənmə</li>
+          <li id="participant_benefit_networking">Peşəkar həkimlərlə əlaqə qurma və şəbəkə yaratma</li>
+          <li id="participant_benefit_materials">Təlim materialları və resurslara çıxış</li>
+          <li id="participant_benefit_support">Təlim sonrası dəstək və məsləhət xidməti</li>
+      </ul>
+      <a id="participant_apply_btn" class="btn btn-primary"  href="#coursess">Təlimə qeydiyyat</a>        </div>
+  </div>
+  <div class="telimci">
+    <div>
+        <img src="https://www.shutterstock.com/image-photo/middle-eastern-man-microphone-listening-600nw-2419228727.jpg" alt="Təlimci" class="img-fluid">
+    </div>
+    <div>
+      <h2 id="telimci_head">Təlimci olun</h2>
+      <p id="telimci_description">Təlimçi kimi bizə qoşulun və bilik və təcrübənizi paylaşın. Akademiyamızda tədris edərək stomatologiya sahəsinin inkişafına töhfə verin.</p>
+      <div id="instructor_description" class="instructor-description">
+          <p id="instructor_details">Təlimçi kimi akademiyamızda siz peşəkar təcrübənizi gələcək həkimlərlə bölüşərək dental təhsilin keyfiyyətinin artırılmasına töhfə verəcəksiniz. Müasir tədris metodları və hands-on təlim yanaşması ilə tələbələrin praktik bacarıqlarının inkişafında aparıcı rol oynayacaqsınız. Beynəlxalq sertifikatlaşdırma sistemləri çərçivəsində akademik karyeranızı inkişaf etdirərək dental sahənin lideri ola biləcəksiniz.</p>
+      </div>
+      <ul id="instructor_benefits">
+          <li id="benefit_status">Təlimçi statusu və akademik dərəcə imkanı</li>
+          <li id="benefit_materials">Kurs materiallarının hazırlanmasında aktiv iştirak</li>
+          <li id="benefit_presentations">Beynəlxalq seminar və konfranslarda təqdimat hüququ</li>
+          <li id="benefit_rewards">Tədris fəaliyyəti üçün müvafiq maddi mükafat</li>
+          <li id="benefit_research">Dental sahədə elmi araşdırma layihələrində iştirak</li>
+      </ul>
+      <button id="apply_now_btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applicationModal">İndi müraciət et</button>
+     </div>
+  </div>
+  <div class="partnyorlar">
+    <div>
+        <img src="img/doc5.jpg" alt="Partnyorlar" class="img-fluid">
+    </div>
+    <div>
+      <h2 id="partner_head">Partnyor olun</h2>
+      <p id="partner_description">Bizim akademiya ilə partnyorluq edərək stomatologiya sahəsində birgə inkişafa töhfə verin. Texnologiya, avadanlıq və ya xidmət sahəsində əməkdaşlıq imkanları.</p>
+      <div id="partner_description_section" class="partner-description">
+          <p id="partner_details">Partnyorluq proqramımız vasitəsilə stomatologiya təhsili və texnologiyalarının inkişafında bizimlə əməkdaşlıq edə bilərsiniz. Tibbi avadanlıq təchizatı, innovativ texnologiyaların tətbiqi, elmi tədqiqat layihələri və beynəlxalq əməkdaşlıq imkanları ilə sahənin gələcəyinə töhfə verəcəksiniz. Uzunmüddətli strateji partnyorluq münasibətləri quraraq dental təhsilin keyfiyyətini artırmaqda mühüm rol oynayacaqsınız.</p>
+      </div>
+      <ul id="partner_benefits">
+          <li id="partner_benefit_brand">Brendinizi akademiya tələbələri və həkimləri arasında tanıtma imkanı</li>
+          <li id="partner_benefit_research">Birgə elmi tədqiqat və inkişaf layihələrində iştirak</li>
+          <li id="partner_benefit_training">Məhsul və xidmətlər üzrə təlim proqramlarının təşkili</li>
+          <li id="partner_benefit_network">Geniş peşəkar şəbəkəyə çıxış və əlaqələr qurma</li>
+          <li id="partner_benefit_events">Seminar və konfranslarda sponsor və ya təqdimatçı olaraq iştirak</li>
+          <li id="partner_benefit_innovation">Yeni texnologiya və metodların sınaq sahəsi imkanı</li>
+      </ul>
+      <button id="partner_apply_btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#partnerApplicationModal">Partnyor müraciəti</button>        </div>
+  </div>
+</section>
+    <!-- Partners Section -->
+    <section class="partners-section" style="background-color: white;">
+      <div class="container">
+        <h2 class="section-title"style="color:#1a388b">Our Partners</h2>
+
+        <div class="owl-carousel partners-carousel">
+          <div class="partner-item" hidden>
+            <img
+              src=""
+              alt="Partner 4"
+            />
+          </div>
+          <div class="partner-item">
+            <img
+              src="img/lll.png"
+              alt="Partner 1"
+            />
+          </div>
+          <div class="partner-item">
+            <img style="height: 150px;"
+              src="img/meridian.jpg"
+              alt="Partner 2"
+            />
+          </div>
+          <div class="partner-item">
+            <img 
+            style="padding-left: 20px; padding-right: 20px;"
+              src="img/logolimondental.png"
+              alt="Partner 3"
+            />
+          </div>
+          
+          <div class="partner-item" >
+            <img
+              src="img/realdental.png "
+              alt="Partner 5"
+            />
+          </div>
+          <div class="partner-item" hidden>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <div class="footer-logo">
+            <a href="index.html">
+              <h3 style="color: white; font-family: 'DM Sans', sans-serif;">Dentalux Academy</h3>
+            </a>
+          </div>
+          <div class="footer-text" id="footer_text">
+            The first private dentistry training center in AZERBAIJAN. We
+            provide high-quality continuing dental education with a focus on
+            practical skills.
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-2">
+        <div class="footer-widget">
+          <h3 class="footer-title" id="footer_newsletter_title">Newsletter</h3>
+          <div class="footer-newsletter">
+            <p id="footer_newsletter_text">
+              Subscribe to our newsletter to receive updates about upcoming
+              courses and events.
+            </p>
+            <div class="footer-newsletter-form">
+              <input type="email" id="footer_email_placeholder" placeholder="Your Email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 order-lg-1 order-md-1 order-1">
+        <div class="footer-widget">
+          <h3 class="footer-title" id="footer_contact_title">Contact Info</h3>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="footer-contact-text">
+              Dentallux, Hazi aslanov, BAKU, AZERBAIJAN
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="footer-contact-text">
+              <a href="tel:+994773263223">0773263223</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="footer-contact-text">
+              <a href="tel:+994503263223">0503263223</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="footer-contact-text">
+              <a href="mailto:info@dentalacademy.com">info@dentalacademy.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="footer-contact-text" id="footer_hours">
+              Mon-Fri: 9:00 AM - 6:00 PM<br />
+              Sat-Sun: Closed
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p id="footer_copyright">
+        © 2025 Dental Academy. All Rights Reserved. Designed with
+        <i class="fas fa-heart"></i> by <a href="https://www.npe.az" target="_blank">Javad Huseynli - NPE.az</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!-- Video Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: var(--purple-dark); color: var(--white)"
+          >
+            <h5 class="modal-title" id="videoModalLabel">Dental Story</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="storyVideo"
+                src=""
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Modal -->
+    <div
+      class="modal fade"
+      id="applicationModal"
+      tabindex="-1"
+      aria-labelledby="applicationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered" style="max-width: 650px;">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: var(--purple-dark); color: var(--white)"
+          >
+          <h5 class="modal-title" style="color: white;" id="applicationModalLabel">Təlimçi müraciəti</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            id="modal_close_btn"
+          ></button>
+          </div>
+          <div class="modal-body">
+            <form id="applicationForm">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="academicTitle" class="form-label" id="academic_title_label">Akademik dərəcə</label>
+                  <input type="text" class="form-control" id="academicTitle" placeholder="Akademik dərəcəniz seçin">
+                </div>
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label" id="full_name_label">Tam Ad</label>
+                  <input type="text" class="form-control" id="fullName" placeholder="Tam adınızı daxil edin" required>
+                </div>
+              </div>
+          
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label" id="phone_number_label">Telefon Nömrəsi</label>
+                <div class="input-group">
+                  <select class="form-select" style="max-width: 120px; height: 38px;" id="country_code_select">
+                    <option value="+994">🇦🇿 +994</option>
+                    <option value="+90">🇹🇷 +90</option>
+                    <option value="+7">🇷🇺 +7</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+49">🇩🇪 +49</option>
+                  </select>
+                  <input type="tel" class="form-control" id="phoneNumber" placeholder="50 123 45 67" pattern="[0-9\s\-\(\)]+" style="height: 38px;" required>
+                </div>
+              </div>
+          
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="email" class="form-label" id="email_label">Email Ünvanı</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email ünvanınızı daxil edin" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="medicalSpecialty" class="form-label" id="medical_specialty_label">Tibbi İxtisas</label>
+                  <input type="text" class="form-control" id="medicalSpecialty" placeholder="İxtisasınızı seçin">
+                </div>
+              </div>
+          
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="workExperience" class="form-label" id="work_experience_label">İş Təcrübəsi</label>
+                  <select class="form-select" id="workExperience">
+                    <option value="" id="work_exp_placeholder">İş təcrübəsi müddətini seçin</option>
+                    <option value="1-3 ay" id="work_exp_1_3">1-3 ay</option>
+                    <option value="3-6 ay" id="work_exp_3_6">3-6 ay</option>
+                    <option value="6-12 ay" id="work_exp_6_12">6-12 ay</option>
+                    <option value="1-2 il" id="work_exp_1_2">1-2 il</option>
+                    <option value="2-5 il" id="work_exp_2_5">2-5 il</option>
+                    <option value="5+ il" id="work_exp_5_plus">5+ il</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="preferredCourse" class="form-label" id="preferred_course_label">Üstünlük verilən Kurs</label>
+                  <select class="form-select" id="preferredCourse">
+                    <option value="" id="course_placeholder">Üstünlük verilən kursu seçin</option>
+                    <option value="implantology" id="course_implantology">İmplantologiya</option>
+                    <option value="Vinir" id="course_aesthetic">Estetik Stomatologiya</option>
+                    <option value="endodontics" id="course_endodontics">Endodontiya</option>
+                    <option value="prosthetic" id="course_prosthetic">Prostetik Stomatologiya</option>
+                    <option value="orthodontics" id="course_orthodontics">Ortodontiya</option>
+                  </select>
+                </div>
+              </div>
+          
+              <div class="mb-3">
+                <label for="joinReason" class="form-label" id="join_reason_label">Nə üçün Tibb Akademiyasına qoşulmaq istəyirsiniz?</label>
+                <textarea class="form-control" id="joinReason" rows="3" placeholder="Səbəblərinizi burada yazın..."></textarea>
+              </div>
+          
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="termsAgreement" required>
+                <label class="form-check-label" for="termsAgreement" id="terms_agreement_label">
+                  Şərtlər və qaydalarla razıyam
+                </label>
+              </div>
+          
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal_cancel_btn">Bağla</button>
+                <button type="submit" class="btn btn-primary" id="modal_submit_btn">Müraciəti Göndər</button>
+              </div>
+            </form> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partnership Application Modal -->
+    <div
+      class="modal fade"
+      id="partnershipModal"
+      tabindex="-1"
+      aria-labelledby="partnershipModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered" style="max-width: 650px;">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: var(--purple-dark); color: var(--white)"
+          >
+            <h5 class="modal-title" id="partnershipModalLabel">Tərəfdaşlıq müraciəti</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="partnershipForm">
+              <!-- Organization Information -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="organizationName" class="form-label">Təşkilat Adı</label>
+                  <input type="text" class="form-control" id="organizationName" placeholder="Təşkilat adını daxil edin" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="organizationType" class="form-label">Təşkilat Növü</label>
+                  <select class="form-select" id="organizationType" required>
+                    <option value="">Təşkilat növünü seçin</option>
+                    <option value="hospital">Xəstəxana</option>
+                    <option value="clinic">Klinika</option>
+                    <option value="university">Universitet</option>
+                    <option value="company">Şirkət</option>
+                    <option value="other">Digər</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="website" class="form-label">Veb sayt</label>
+                  <input type="url" class="form-control" id="website" placeholder="https://www.example.com">
+                </div>
+                <div class="col-md-6">
+                  <label for="yearFounded" class="form-label">Qurulduğu il</label>
+                  <input type="number" class="form-control" id="yearFounded" placeholder="2020" min="1900" max="2025">
+                </div>
+              </div>
+
+              <!-- Contact Person Information -->
+              <h6 class="mb-3" style="color: black; font-weight: normal;">Əlaqə Şəxsinin Məlumatları</h6>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="contactPersonName" class="form-label">Əlaqə Şəxsinin Adı</label>
+                  <input type="text" class="form-control" id="contactPersonName" placeholder="Tam ad" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="position" class="form-label">Vəzifə</label>
+                  <input type="text" class="form-control" id="position" placeholder="Vəzifəni daxil edin" required>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="partnerEmail" class="form-label">Email Ünvanı</label>
+                  <input type="email" class="form-control" id="partnerEmail" placeholder="Email ünvanı" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="partnerPhone" class="form-label">Telefon Nömrəsi</label>
+                  <div class="input-group">
+                    <select class="form-select" style="max-width: 120px; height: 38px;">
+                      <option value="+994">🇦🇿 +994</option>
+                      <option value="+90">🇹🇷 +90</option>
+                      <option value="+7">🇷🇺 +7</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+49">🇩🇪 +49</option>
+                    </select>
+                    <input type="tel" class="form-control" id="partnerPhone" placeholder="50 123 45 67" pattern="[0-9\s\-\(\)]+" style="height: 38px;" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Partnership Details -->
+              <h6 class="mb-3" style="color: black; font-weight: normal;">Tərəfdaşlıq Təfərrüatları</h6>
+              <div class="mb-3">
+                <label class="form-label">Tərəfdaşlıq Maraqları (hamısını seçin)</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="researchCollaboration">
+                      <label class="form-check-label" for="researchCollaboration">
+                        Araşdırma Əməkdaşlığı
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="educationalPrograms">
+                      <label class="form-check-label" for="educationalPrograms">
+                        Təhsil Proqramları
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="staffTraining">
+                      <label class="form-check-label" for="staffTraining">
+                        Kadr Hazırlığı və İnkişafı
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="eventSponsorship">
+                      <label class="form-check-label" for="eventSponsorship">
+                        Tədbir Sponsorluğu
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="equipmentSharing">
+                      <label class="form-check-label" for="equipmentSharing">
+                        Avadanlıq/Resurs Bölgüsü
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="partnershipProposal" class="form-label">Qısa Tərəfdaşlıq Təklifi</label>
+                <textarea class="form-control" id="partnershipProposal" rows="3" placeholder="Təşkilatınız və Tibb Akademiyası arasında tərəfdaşlığı necə təsəvvür edirsiniz?"></textarea>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="partnershipTerms" required>
+                <label class="form-check-label" for="partnershipTerms">
+                  Təşkilatımı tərəfdaşlıq müzakirələrində təmsil etməyə səlahiyyətim olduğunu təsdiq edirəm
+                </label>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
+                <button type="submit" class="btn btn-primary">Tərəfdaşlıq Müraciətini Göndər</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Participant Registration Modal -->
+    <div
+      class="modal fade"
+      id="participantModal"
+      tabindex="-1"
+      aria-labelledby="participantModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 900px;">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: var(--purple-dark); color: var(--white)"
+          >
+            <h5 class="modal-title" id="participantModalLabel">Mühazirə Qeydiyyatı</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Course Schedule Section -->
+            <h6 class="mb-3" style="color: black; font-weight: normal;">Qarşıdan Gələn Mühazirə Cədvəli</h6>
+            <div class="table-responsive mb-4">
+              <table class="table table-bordered">
+                <thead style="background-color: #f8f9fa;">
+                  <tr>
+                    <th>Tarix</th>
+                    <th>Saat</th>
+                    <th>Mühazirə</th>
+                    <th>Məruzəçi</th>
+                    <th>İxtisas</th>
+                    <th>Qiymət</th>
+                    <th>Qeydiyyat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2025<br>M08 7</td>
+                    <td>10:53:00</td>
+                    <td></td>
+                    <td></td>
+                    <td>Yenidoğulmuşların<br>Reanimasiyası</td>
+                    <td>100 AZN</td>
+                    <td><button class="btn btn-sm btn-primary">Qeydiyyat</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Registration Form Section -->
+            <h6 class="mb-3" style="color: black; font-weight: normal;">Sizin Məlumatınız</h6>
+            <form id="participantForm">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="participantFullName" class="form-label">Tam Ad</label>
+                  <input type="text" class="form-control" id="participantFullName" placeholder="Tam adınızı daxil edin" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="participantEmail" class="form-label">Email Ünvanı</label>
+                  <input type="email" class="form-control" id="participantEmail" placeholder="Email ünvanınızı daxil edin" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="participantPhone" class="form-label">Telefon Nömrəsi</label>
+                <div class="input-group">
+                  <select class="form-select" style="max-width: 120px; height: 38px;">
+                    <option value="+994">🇦🇿 +994</option>
+                    <option value="+90">🇹🇷 +90</option>
+                    <option value="+7">🇷🇺 +7</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+49">🇩🇪 +49</option>
+                  </select>
+                  <input type="tel" class="form-control" id="participantPhone" placeholder="50 123 45 67" pattern="[0-9\s\-\(\)]+" style="height: 38px;" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="participantProfession" class="form-label">Peşə</label>
+                <select class="form-select" id="participantProfession">
+                  <option value="">Peşənizi seçin</option>
+                  <option value="dentist">Həkim-Stomatoloq</option>
+                  <option value="student">Tibb Tələbəsi</option>
+                  <option value="nurse">Tibb Bacısı</option>
+                  <option value="technician">Dental Texnik</option>
+                  <option value="other">Digər</option>
+                </select>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="participantExperience" class="form-label">Xüsusi İstəklər və ya Qeydlər</label>
+                  <textarea class="form-control" id="participantExperience" rows="3" placeholder="Hər hansı xüsusi istəkləriniz varsa qeyd edin..."></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Kurslar</label>
+                  <div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="implantCourse">
+                      <label class="form-check-label" for="implantCourse">
+                        İmplantologiya Kursu
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="VinirCourse">
+                      <label class="form-check-label" for="VinirCourse">
+                        Estetik Stomatologiya
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="endoCourse">
+                      <label class="form-check-label" for="endoCourse">
+                        Endodontiya Kursu
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="participantTerms" required>
+                <label class="form-check-label" for="participantTerms">
+                  Qarşıdan gələn mühazirələr və tədbirlər haqqında email almağa razıyam
+                </label>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bağla</button>
+                <button type="submit" class="btn btn-primary">Qeydiyyatdan Keç</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+
+  
+
+<script>
+
+
+// Kalendar sistemini düzəlt
+
+
+const months = {
+    en: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+    az: ["Yanvar","Fevral","Mart","Aprel","May","İyun","İyul","Avqust","Sentyabr","Oktyabr","Noyabr","Dekabr"],
+    ru: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"]
+};
+
+const weekdays = {
+    en: ["MON","TUE","WED","THU","FRI","SAT","SUN"],
+    az: ["B.e","Ç.a","Ç","C.a","C","Ş","B"],
+    ru: ["ПН","ВТ","СР","ЧТ","ПТ","СБ","ВС"]
+};
+// Başlanğıc ay və il
+   let today = new Date();
+ 
+let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
+
+// Həftənin günlərini render et
+function renderWeekdays() {
+    const calendarWeekdays = document.getElementById('calendar-weekdays');
+    if (!calendarWeekdays) return;
+    
+    calendarWeekdays.innerHTML = '';
+    weekdays[currentLang].forEach(day => {
+        const div = document.createElement('div');
+        div.classList.add('calendar-weekday');
+        div.textContent = day;
+        calendarWeekdays.appendChild(div);
+    });
+}
+
+// Kalendarı render et
+function renderCalendar(month, year) {
+    renderWeekdays();
+
+    const calendarDays = document.getElementById('calendar-days');
+    const monthYearDisplay = document.getElementById('calendar-month-year');
+
+    if (!calendarDays || !monthYearDisplay) return;
+
+    calendarDays.innerHTML = '';
+
+    // Ayın ilk gününü tap (Bazar=0, Bazar ertəsi=1, ...)
+    let firstDay = new Date(year, month, 1).getDay();
+    // Monday-first üçün düzəliş (0=Bazar -> 6, 1=Bazar ertəsi -> 0)
+    firstDay = firstDay === 0 ? 6 : firstDay - 1;
+
+    // Ayın son gününü tap
+    const lastDate = new Date(year, month + 1, 0).getDate();
+
+    // Əvvəlki ayın son günlərini tap
+    const prevMonthLastDate = new Date(year, month, 0).getDate();
+
+    // Əvvəlki ayın günlərini əlavə et
+    for (let i = firstDay - 1; i >= 0; i--) {
+        const div = document.createElement('div');
+        div.classList.add('calendar-day', 'prev-month');
+        div.textContent = prevMonthLastDate - i;
+        calendarDays.appendChild(div);
+    }
+
+    // Cari ayın günlərini əlavə et və kursları yüklə
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Kursları yüklə və günləri işarələ
+    fetch('upcoming-courses.json')
+        .then(res => res.json())
+        .then(courses => {
+            // Vaxtı keçməmiş kursları filtrələ
+            const activeCourses = courses.filter(course => {
+                const courseDate = new Date(course.date);
+                courseDate.setHours(0, 0, 0, 0);
+                return courseDate >= today;
+            });
+
+            // Günləri render et
+            for (let i = 1; i <= lastDate; i++) {
+                const div = document.createElement('div');
+                div.classList.add('calendar-day');
+
+                // Bugünü highlight et
+                if (i === today.getDate() &&
+                    month === today.getMonth() &&
+                    year === today.getFullYear()) {
+                    div.classList.add('current');
+                }
+
+                // Bu gündə kurs varmı yoxla
+                const currentDate = new Date(year, month, i);
+                const hasActiveCourse = activeCourses.some(course => {
+                    const courseDate = new Date(course.date);
+                    return courseDate.getDate() === i &&
+                           courseDate.getMonth() === month &&
+                           courseDate.getFullYear() === year;
+                });
+
+                if (hasActiveCourse) {
+                    div.classList.add('has-event');
+                    div.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                    div.style.color = 'white';
+                    div.style.fontWeight = '700';
+                    div.style.cursor = 'pointer';
+                    div.title = 'Bu gündə kurs var';
+                }
+
+                div.textContent = i;
+                calendarDays.appendChild(div);
+            }
+
+            // Növbəti ayın günlərini əlavə et
+            const totalCells = calendarDays.children.length;
+            const remainingCells = 42 - totalCells;
+
+            for (let i = 1; i <= remainingCells; i++) {
+                const div = document.createElement('div');
+                div.classList.add('calendar-day', 'next-month');
+                div.textContent = i;
+                calendarDays.appendChild(div);
+            }
+        })
+        .catch(error => {
+            console.error('Kurslar yüklənmədi:', error);
+            // Xəta olsa belə günləri göstər
+            for (let i = 1; i <= lastDate; i++) {
+                const div = document.createElement('div');
+                div.classList.add('calendar-day');
+
+                if (i === today.getDate() &&
+                    month === today.getMonth() &&
+                    year === today.getFullYear()) {
+                    div.classList.add('current');
+                }
+
+                div.textContent = i;
+                calendarDays.appendChild(div);
+            }
+
+            const totalCells = calendarDays.children.length;
+            const remainingCells = 42 - totalCells;
+
+            for (let i = 1; i <= remainingCells; i++) {
+                const div = document.createElement('div');
+                div.classList.add('calendar-day', 'next-month');
+                div.textContent = i;
+                calendarDays.appendChild(div);
+            }
+        });
+
+    // Ay və ili göstər
+    monthYearDisplay.textContent = `${months[currentLang][month]} ${year}`;
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    renderCalendar(currentMonth, currentYear);
+    
+    // Əvvəlki ay düyməsi
+    const prevBtn = document.getElementById('prev-month');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar(currentMonth, currentYear);
+        });
+    }
+    
+    // Növbəti ay düyməsi
+    const nextBtn = document.getElementById('next-month');
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        });
+    }
+});
+
+// Dil dəyişdikdə kalendarı yenilə
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const selectedLang = this.dataset.lang;
+        if (selectedLang) {
+            currentLang = selectedLang;
+            renderCalendar(currentMonth, currentYear);
+        }
+    });
+});
+
+   let currentLang = localStorage.getItem('selectedLang') || 'az'; // Default Azərbaycan dili
+
+// Səhifə yükləndikdə dili tətbiq et
+document.addEventListener('DOMContentLoaded', function() {
+    applyLanguage(currentLang);
+    updateLanguageDisplay(currentLang);
+});
+
+// Dil seçimi event listener
+document.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const selectedLang = this.dataset.lang;
+        
+        if (selectedLang) {
+            // Dili saxla
+            localStorage.setItem('selectedLang', selectedLang);
+            currentLang = selectedLang;
+            
+            // Dili tətbiq et
+            applyLanguage(selectedLang);
+            updateLanguageDisplay(selectedLang);
+        }
+    });
+});
+
+// Dili tətbiq edən funksiya
+function applyLanguage(lang) {
+    currentLang = lang;
+    
+    // Bütün funksiyaları çağır
+    if (typeof updateStaticTexts === 'function') {
+        updateStaticTexts();
+    }
+    
+    if (typeof renderCalendar === 'function' && typeof currentMonth !== 'undefined') {
+        renderCalendar(currentMonth, currentYear);
+    }
+    
+    if (typeof loadUpcomingCourses === 'function') {
+        loadUpcomingCourses();
+    }
+    
+    // Courses carousel yenilə
+    if (typeof renderCoursesCarousel === 'function') {
+        renderCoursesCarousel();
+    }
+}
+
+// Dil display-ni yenilə
+function updateLanguageDisplay(lang) {
+    const langNames = {
+        en: 'English',
+        az: 'Azərbaycanca',
+        ru: 'Русский'
+    };
+    
+    const langText = langNames[lang] || 'English';
+    const langSelector = document.getElementById('current-lang-text');
+    
+    if (langSelector) {
+        langSelector.textContent = langText;
+    }
+    
+    // Dropdown active state
+    document.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
+        item.classList.remove('active');
+        if (item.dataset.lang === lang) {
+            item.classList.add('active');
+        }
+    });
+}
+
+// Courses carousel render funksiyası
+function renderCoursesCarousel() {
+    fetch('upcoming-courses.json')
+        .then(res => res.json())
+        .then(courses => {
+            const carousel = document.getElementById('courses-carousel');
+            if (!carousel) return;
+
+            // Vaxtı keçməmiş kursları filtrələ
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            const activeCourses = courses.filter(course => {
+                const courseDate = new Date(course.date);
+                courseDate.setHours(0, 0, 0, 0);
+                return courseDate >= today;
+            });
+
+            carousel.innerHTML = activeCourses.map(course => `
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <img src="${course.image}" alt="${course.category[currentLang]}" />
+                        <div class="course-category">${course.category[currentLang]}</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-instructor">
+                            <div class="instructor-name">
+                                <strong>${course.participants.join(", ")}</strong><br/>
+                                ${course.location[currentLang]}
+                            </div>
+                        </div>
+                        <h3 class="course-title">
+                            <a href="viewcourse.html?id=${course.id}">${course.title[currentLang]}</a>
+                        </h3>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="far fa-calendar-alt"></i> ${course.date}
+                            </div>
+                            <div class="course-detail">
+                                <i class="fas fa-users"></i> ${course.seat}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-overlay">
+                        <a href="viewcourse.html?id=${course.id}" class="course-btn">View Details</a>
+                    </div>
+                </div>
+            `).join("");
+            
+            // Owl Carousel yenidən başlat
+            $(".courses-carousel").owlCarousel("destroy");
+            $(".courses-carousel").owlCarousel({
+                loop: false,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3500,
+                responsive: {
+                    0: { items: 1 },
+                    576: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+        })
+        .catch(err => console.error("JSON yüklənmə xətası:", err));
+}
+   // Statik yazılar
+   const staticTexts = {
+    en: {  newsletter_title: "Subscribe ",
+        newsletter_name_placeholder: "Full Name",
+        newsletter_email_placeholder: "Email Address",
+        newsletter_phone_placeholder: "Phone Number",
+        newsletter_city_placeholder: "City",
+        newsletter_graduation_placeholder: "Graduation Year",
+        newsletter_submit: "Register",footer_text: "The first private dentistry training center in AZERBAIJAN. We provide high-quality continuing dental education with a focus on practical skills.",
+        footer_newsletter_title: "Newsletter",
+        footer_newsletter_text: "Subscribe to our newsletter to receive updates about upcoming courses and events.",
+        footer_email_placeholder: "Your Email",
+        footer_contact_title: "Contact Info",
+        footer_hours: "Mon-Fri: 9:00 AM - 6:00 PM<br />Sat-Sun: Closed",
+        footer_copyright: "© 2025 Dental Academy. All Rights Reserved. Designed with <i class='fas fa-heart'></i> by <a href='https://www.npe.az' target='_blank'>Javad Huseynli - NPE.az</a>",
+
+  
+        story_title_implant: 'Implant',
+        story_title_endo: 'Endodontics',
+        story_title_vinir: 'Veneer',
+        story_title_restoration: 'Aesthetic Restoration',
+        story_title_orthopedic: 'Orthopedics',
+        story_title_orthodontic: 'Orthodontics',
+        story_title_pediatric: 'Pedodontics',
+        story_title_emergency: 'Emergency Care',
+        story_title_management: 'Dental Clinic Management',
+        story_title_satisfaction: 'Patient Satisfaction',
+        coursesTitle: "Upcoming Courses", 
+        viewAll: "View All Courses",
+        nave_home_page: "Home page",
+        nav_portfolio: "Portfolio",
+        nav_courses: "Courses",
+        nav_instr: "Instructors",
+        nav_gallery: "Gallery",
+        nav_contact: "Contact",
+        telimciler: "Instructor",
+        partnyorlar: "Partner",
+        qeydiyyat: 'Registration',
+        telimci_head: 'Become an Instructor',
+        telimci_description: 'Join us as an instructor and share your knowledge and experience. Contribute to the development of the field of dentistry by teaching at our academy.',
+        instructor_details: 'As an instructor at our academy, you will contribute to enhancing the quality of dental education by sharing your professional expertise with future dentists. With modern teaching methods and a hands-on training approach, you will play a leading role in developing students\' practical skills. You will have the opportunity to advance your academic career within international certification systems and become a leader in the dental field.',
+        benefit_status: 'Opportunity for instructor status and academic degree',
+        benefit_materials: 'Active participation in the preparation of course materials',
+        benefit_presentations: 'Right to present at international seminars and conferences',
+        benefit_rewards: 'Appropriate financial rewards for teaching activities',
+        benefit_research: 'Participation in scientific research projects in the dental field',
+
+          // Header buttons
+          header_istirak_btn: 'Participant',
+        header_telimci_btn: 'Instructor',
+        header_partner_btn: 'Partners',
+        
+         // Partner Section
+         partner_head: 'Become a Partner',
+        partner_description: 'Partner with our academy and contribute to joint development in the field of dentistry. Cooperation opportunities in technology, equipment, or services.',
+        partner_details: 'Through our partnership program, you can collaborate with us in the development of dental education and technologies. You will contribute to the future of the field through medical equipment supply, implementation of innovative technologies, scientific research projects, and international cooperation opportunities. By establishing long-term strategic partnerships, you will play an important role in improving the quality of dental education.',
+        partner_benefit_brand: 'Opportunity to promote your brand among academy students and doctors',
+        partner_benefit_research: 'Participation in joint scientific research and development projects',
+        partner_benefit_training: 'Organization of training programs on products and services',
+        partner_benefit_network: 'Access to extensive professional network and networking opportunities',
+        partner_benefit_events: 'Participation in seminars and conferences as sponsor or presenter',
+        partner_benefit_innovation: 'Opportunity for testing ground of new technologies and methods',
+        partner_apply_btn: 'Partner Application'
+        ,
+        applicationModalLabel: 'Instructor Application',
+        
+        // Form labels
+        academic_title_label: 'Academic Titles',
+        full_name_label: 'Full Name',
+        phone_number_label: 'Phone Number',
+        email_label: 'Email Address',
+        medical_specialty_label: 'Medical Specialty',
+        work_experience_label: 'Work Experience',
+        preferred_course_label: 'Preferred Course',
+        join_reason_label: 'Why do you want to join the Medical Academy?',
+        terms_agreement_label: 'I agree to the terms and conditions',
+        
+        // Placeholders
+        academicTitle: 'Select your academic title',
+        fullName: 'Enter your full name',
+        phoneNumber: '50 123 45 67',
+        email: 'Enter your email address',
+        medicalSpecialty: 'Select your specialty',
+        joinReason: 'Write your reasons here...',
+        
+        // Work experience options
+        work_exp_placeholder: 'Select work experience duration',
+        work_exp_1_3: '1-3 months',
+        work_exp_3_6: '3-6 months',
+        work_exp_6_12: '6-12 months',
+        work_exp_1_2: '1-2 years',
+        work_exp_2_5: '2-5 years',
+        work_exp_5_plus: '5+ years',
+        
+        // Course options
+        course_placeholder: 'Select preferred course',
+        course_implantology: 'Implantology',
+        course_aesthetic: 'Aesthetic Dentistry',
+        course_endodontics: 'Endodontics',
+        course_prosthetic: 'Prosthetic Dentistry',
+        course_orthodontics: 'Orthodontics',
+        
+        // Buttons
+        modal_cancel_btn: 'Close',
+        modal_submit_btn: 'Submit Application',
+          // Participant Section
+          participant_head: 'Join the Training',
+        participant_description: 'Join our professional dentistry training and develop your knowledge and skills. Learn about modern dental technologies and methods.',
+        participant_details: 'By participating in our academy\'s training programs, you will become familiar with the latest technologies and methods in dentistry. Under the guidance of our experienced instructors, you will improve your practical skills, obtain internationally recognized certificates. With a hands-on training approach, you will have the opportunity to work in real clinical situations and gain the knowledge and experience necessary to advance your professional career.',
+        participant_benefit_certificate: 'Opportunity to obtain internationally recognized certificates',
+        participant_benefit_practical: 'Practical training with modern equipment',
+        participant_benefit_experts: 'Learning from renowned experts in the field',
+        participant_benefit_networking: 'Networking and building connections with professional doctors',
+        participant_benefit_materials: 'Access to training materials and resources',
+        participant_benefit_support: 'Post-training support and consultation services',
+        participant_apply_btn: 'Register for Training'
+  
+ 
+    },
+    az: { newsletter_title: "Abunə Olun",
+        newsletter_name_placeholder: "Tam Ad",
+        newsletter_email_placeholder: "Email Ünvanı",
+        newsletter_phone_placeholder: "Telefon Nömrəsi",
+        newsletter_city_placeholder: "Şəhər",
+        newsletter_graduation_placeholder: "Məzuniyyət İli",
+        newsletter_submit: "Qeydiyyat",footer_text: "Azərbaycanda ilk özəl stomatologiya təlim mərkəzi. Praktiki bacarıqlara diqqət yetirərək yüksək keyfiyyətli stomatologiya təhsili təqdim edirik.",
+        footer_newsletter_title: "Xəbər Bülleteni",
+        footer_newsletter_text: "Qarşıdan gələn kurslar və tədbirlər haqqında yenilikləri almaq üçün xəbər bülletenimizə abunə olun.",
+        footer_email_placeholder: "Email ünvanınız",
+        footer_contact_title: "Əlaqə Məlumatları",
+        footer_hours: "B.e-Cü: 9:00 - 18:00<br />Şənbə-Bazar: Bağlı",
+        footer_copyright: "© 2025 Dental Academy. Bütün hüquqlar qorunur. <i class='fas fa-heart'></i> ilə hazırlandı <a href='https://www.npe.az' target='_blank'>Javad Huseynli - NPE.az</a>"
+ ,story_title_implant: 'İmplant',
+        story_title_endo: 'Endodontiya',
+        story_title_vinir: 'Vinir',
+        story_title_restoration: 'Estetik restavrasiya',
+        story_title_orthopedic: 'Ortopediya',
+        story_title_orthodontic: 'Ortodontiya',
+        story_title_pediatric: 'Pedodontiya',
+        story_title_emergency: 'Təcili tibbi yardım',
+        story_title_management: 'Dental klinik idarəçiliyi',
+        story_title_satisfaction: 'Xəstə məmnuniyyəti',  // Modal header
+        applicationModalLabel: 'Təlimçi müraciəti',
+        
+        // Form labels
+        academic_title_label: 'Akademik Titullar',
+        full_name_label: 'Tam Ad',
+        phone_number_label: 'Telefon Nömrəsi',
+        email_label: 'Email Ünvanı',
+        medical_specialty_label: 'Tibbi İxtisas',
+        work_experience_label: 'İş Təcrübəsi',
+        preferred_course_label: 'Üstünlük verilən Kurs',
+        join_reason_label: 'Nə üçün Tibb Akademiyasına qoşulmaq istəyirsiniz?',
+        terms_agreement_label: 'Şərtlər və qaydalarla razıyam',
+        
+        // Placeholders
+        academicTitle: 'Akademik titulunuzu seçin',
+        fullName: 'Tam adınızı daxil edin',
+        phoneNumber: '50 123 45 67',
+        email: 'Email ünvanınızı daxil edin',
+        medicalSpecialty: 'İxtisasınızı seçin',
+        joinReason: 'Səbəblərinizi burada yazın...',
+        
+        // Work experience options
+        work_exp_placeholder: 'İş təcrübəsi müddətini seçin',
+        work_exp_1_3: '1-3 ay',
+        work_exp_3_6: '3-6 ay',
+        work_exp_6_12: '6-12 ay',
+        work_exp_1_2: '1-2 il',
+        work_exp_2_5: '2-5 il',
+        work_exp_5_plus: '5+ il',
+        
+        // Course options
+        course_placeholder: 'Üstünlük verilən kursu seçin',
+        course_implantology: 'İmplantologiya',
+        course_aesthetic: 'Estetik Stomatologiya',
+        course_endodontics: 'Endodontiya',
+        course_prosthetic: 'Prostetik Stomatologiya',
+        course_orthodontics: 'Ortodontiya',
+        
+        // Buttons
+        modal_cancel_btn: 'Bağla',
+        modal_submit_btn: 'Müraciəti Göndər',
+        coursesTitle: "Gələcək Kurslar", 
+        viewAll: "Bütün Kurslara Bax", 
+        nave_home_page: "Ana səhifə",
+        nav_portfolio: "Portfolio",
+        nav_courses: "Kurslar",
+        nav_instr: "Təlimçilər",
+        nav_gallery: "Qalereya",
+        nav_contact: "Əlaqə",
+        telimciler: "Təlimçi",
+        partnyorlar: "Partnyor", 
+        qeydiyyat: 'Qeydiyyat',
+        telimci_head: 'Təlimçi Olun',
+        telimci_description: 'Təlimçi olaraq bizə qoşulun və öz bilik və təcrübənizi paylaşın. Akademiyamızda dərs deyərək diş həkimliyi sahəsinin inkişafına töhfə verin.',
+        instructor_details: 'Akademiyamızda təlimçi olaraq peşəkar təcrübənizi gələcək diş həkimləri ilə paylaşaraq diş həkimliği təhsilinin keyfiyyətinin artırılmasına töhfə verəcəksiniz. Müasir tədris metodları və praktiki təlim yanaşması ilə tələbələrin praktiki bacarıqlarının inkişafında aparıcı rol oynayacaqsınız. Beynəlxalq sertifikat sistemləri çərçivəsində akademik karyeranızı inkişaf etdirmək və diş həkimliyi sahəsində lider olmaq imkanına sahib olacaqsınız.',
+        benefit_status: 'Təlimçi statusu və akademik dərəcə almaq imkanı',
+        benefit_materials: 'Kurs materiallarının hazırlanmasında aktiv iştirak',
+        benefit_presentations: 'Beynəlxalq seminar və konqreslərdə çıxış etmək hüququ',
+        benefit_rewards: 'Tədris fəaliyyətinə görə müvafiq maliyyə mükafatı',
+        benefit_research: 'Diş həkimliyi sahəsində elmi tədqiqat layihələrində iştirak',
+        partner_head: 'Partnyor olun',
+        partner_description: 'Bizim akademiya ilə partnyorluq edərək stomatologiya sahəsində birgə inkişafa töhfə verin. Texnologiya, avadanlıq və ya xidmət sahəsində əməkdaşlıq imkanları.',
+        partner_details: 'Partnyorluq proqramımız vasitəsilə stomatologiya təhsili və texnologiyalarının inkişafında bizimlə əməkdaşlıq edə bilərsiniz. Tibbi avadanlıq təchizatı, innovativ texnologiyaların tətbiqi, elmi tədqiqat layihələri və beynəlxalq əməkdaşlıq imkanları ilə sahənin gələcəyinə töhfə verəcəksiniz. Uzunmüddətli strateji partnyorluq münasibətləri quraraq dental təhsilin keyfiyyətini artırmaqda mühüm rol oynayacaqsınız.',
+        partner_benefit_brand: 'Brendinizi akademiya tələbələri və həkimləri arasında tanıtma imkanı',
+        partner_benefit_research: 'Birgə elmi tədqiqat və inkişaf layihələrində iştirak',
+        partner_benefit_training: 'Məhsul və xidmətlər üzrə təlim proqramlarının təşkili',
+        partner_benefit_network: 'Geniş peşəkar şəbəkəyə çıxış və əlaqələr qurma',
+        partner_benefit_events: 'Seminar və konfranslarda sponsor və ya təqdimatçı olaraq iştirak',
+        partner_benefit_innovation: 'Yeni texnologiya və metodların sınaq sahəsi imkanı',
+        partner_apply_btn: 'Partnyor müraciəti',
+        // Header buttons
+        header_istirak_btn: 'İştirakçı',
+        header_telimci_btn: 'Təlimçi',
+        header_partner_btn: 'Partnyorlar',
+
+        // Participant Section
+        participant_head: 'Təlimə qoşulun',
+        participant_description: 'Peşəkar stomatologiya təlimlərimizə qatılaraq bilik və bacarıqlarınızı inkişaf etdirin. Müasir dental texnologiyalar və metodlar haqqında öyrənin.',
+        participant_details: 'Akademiyamızın təlim proqramlarına qatılaraq stomatologiya sahəsində ən son texnologiyalar və metodlarla tanış olacaqsınız. Təcrübəli təlimçilərimizin rəhbərliyi altında praktiki bacarıqlarınızı təkmilləşdirəcək, beynəlxalq standartlara uyğun sertifikatlar əldə edəcəksiniz. Hands-on təlim yanaşması ilə real klinik vəziyyətlərdə çalışmaq imkanı əldə edəcək və peşəkar karyeranızı irəli aparmaq üçün lazım olan bilik və təcrübəni qazanacaqsınız.',
+        participant_benefit_certificate: 'Beynəlxalq tanınan sertifikatlar əldə etmə imkanı',
+        participant_benefit_practical: 'Müasir avadanlıqlarla praktiki təlim',
+        participant_benefit_experts: 'Sahənin tanınmış mütəxəssislərindən öyrənmə',
+        participant_benefit_networking: 'Peşəkar həkimlərlə əlaqə qurma və şəbəkə yaratma',
+        participant_benefit_materials: 'Təlim materialları və resurslara çıxış',
+        participant_benefit_support: 'Təlim sonrası dəstək və məsləhət xidməti',
+        participant_apply_btn: 'Təlimə qeydiyyat'
+   
+    },
+    ru: {  newsletter_title: "Подписаться на Рассылку",
+        newsletter_name_placeholder: "Полное Имя",
+        newsletter_email_placeholder: "Email Адрес",
+        newsletter_phone_placeholder: "Номер Телефона",
+        newsletter_city_placeholder: "Город",
+        newsletter_graduation_placeholder: "Год Выпуска",
+        newsletter_submit: "Регистрация",footer_text: "Первый частный учебный центр стоматологии в Азербайджане. Мы предоставляем высококачественное стоматологическое образование с акцентом на практические навыки.",
+        footer_newsletter_title: "Рассылка",
+        footer_newsletter_text: "Подпишитесь на нашу рассылку, чтобы получать обновления о предстоящих курсах и мероприятиях.",
+        footer_email_placeholder: "Ваш Email",
+        footer_contact_title: "Контактная Информация",
+        footer_hours: "Пн-Пт: 9:00 - 18:00<br />Сб-Вс: Закрыто",
+        footer_copyright: "© 2025 Dental Academy. Все права защищены. Разработано с <i class='fas fa-heart'></i> <a href='https://www.npe.az' target='_blank'>Javad Huseynli - NPE.az</a>",
+ story_title_implant: 'Имплант',
+        story_title_endo: 'Эндодонтия',
+        story_title_vinir: 'Виниры',
+        story_title_restoration: 'Эстетическая реставрация',
+        story_title_orthopedic: 'Ортопедия',
+        story_title_orthodontic: 'Ортодонтия',
+        story_title_pediatric: 'Педодонтия',
+        story_title_emergency: 'Экстренная помощь',
+        story_title_management: 'Управление клиникой',
+        story_title_satisfaction: 'Удовлетворенность пациентов',
+      applicationModalLabel: 'Заявка инструктора',
+        
+        // Form labels
+        academic_title_label: 'Академические звания',
+        full_name_label: 'Полное имя',
+        phone_number_label: 'Номер телефона',
+        email_label: 'Email адрес',
+        medical_specialty_label: 'Медицинская специальность',
+        work_experience_label: 'Опыт работы',
+        preferred_course_label: 'Предпочитаемый курс',
+        join_reason_label: 'Почему вы хотите присоединиться к Медицинской Академии?',
+        terms_agreement_label: 'Я согласен с условиями и правилами',
+        
+        // Placeholders
+        academicTitle: 'Выберите академическое звание',
+        fullName: 'Введите полное имя',
+        phoneNumber: '50 123 45 67',
+        email: 'Введите email адрес',
+        medicalSpecialty: 'Выберите специальность',
+        joinReason: 'Напишите свои причины здесь...',
+        
+        // Work experience options
+        work_exp_placeholder: 'Выберите опыт работы',
+        work_exp_1_3: '1-3 месяца',
+        work_exp_3_6: '3-6 месяцев',
+        work_exp_6_12: '6-12 месяцев',
+        work_exp_1_2: '1-2 года',
+        work_exp_2_5: '2-5 лет',
+        work_exp_5_plus: '5+ лет',
+        
+        // Course options
+        course_placeholder: 'Выберите предпочитаемый курс',
+        course_implantology: 'Имплантология',
+        course_aesthetic: 'Эстетическая стоматология',
+        course_endodontics: 'Эндодонтия',
+        course_prosthetic: 'Протезирование',
+        course_orthodontics: 'Ортодонтия',
+        
+        // Buttons
+        modal_cancel_btn: 'Закрыть',
+        modal_submit_btn: 'Отправить заявку',
+        coursesTitle: "Предстоящие курсы", 
+        viewAll: "Посмотреть все курсы",
+        nave_home_page: "Главная страница",
+        nav_portfolio: "Портфолио",
+        nav_courses: "Курсы",
+        nav_instr: "Инструкторы",
+        nav_gallery: "Галерея",
+        nav_contact: "Контакт",
+        telimciler: "Инструктор",
+        partnyorlar: "Партнер",
+        qeydiyyat: 'Регистрация',
+        telimci_head: 'Стать инструктором',
+        telimci_description: 'Присоединяйтесь к нам в качестве инструктора и поделитесь своими знаниями и опытом. Внесите вклад в развитие стоматологии, преподавая в нашей академии.',
+        instructor_details: 'Работая инструктором в нашей академии, вы внесете вклад в повышение качества стоматологического образования, делясь своим профессиональным опытом с будущими стоматологами. Благодаря современным методам обучения и практическому подходу к обучению, вы будете играть ведущую роль в развитии практических навыков студентов. У вас будет возможность продвигать свою академическую карьеру в рамках международных систем сертификации и стать лидером в области стоматологии.',
+        benefit_status: 'Возможность получения статуса инструктора и академической степени',
+        benefit_materials: 'Активное участие в подготовке учебных материалов',
+        benefit_presentations: 'Право выступать на международных семинарах и конференциях',
+        benefit_rewards: 'Соответствующее финансовое вознаграждение за преподавательскую деятельность',
+        benefit_research: 'Участие в научно-исследовательских проектах в области стоматологии',
+        partner_head: 'Стать партнером',
+        partner_description: 'Партнерство с нашей академией и вклад в совместное развитие в области стоматологии. Возможности сотрудничества в сфере технологий, оборудования или услуг.',
+        partner_details: 'Через нашу программу партнерства вы можете сотрудничать с нами в развитии стоматологического образования и технологий. Вы внесете вклад в будущее отрасли через поставку медицинского оборудования, внедрение инновационных технологий, научно-исследовательские проекты и возможности международного сотрудничества. Устанавливая долгосрочные стратегические партнерские отношения, вы будете играть важную роль в повышении качества стоматологического образования.',
+        partner_benefit_brand: 'Возможность продвижения вашего бренда среди студентов и врачей академии',
+        partner_benefit_research: 'Участие в совместных научно-исследовательских и опытно-конструкторских проектах',
+        partner_benefit_training: 'Организация учебных программ по продуктам и услугам',
+        partner_benefit_network: 'Доступ к обширной профессиональной сети и возможности нетворкинга',
+        partner_benefit_events: 'Участие в семинарах и конференциях в качестве спонсора или докладчика',
+        partner_benefit_innovation: 'Возможность испытательного полигона для новых технологий и методов',
+        partner_apply_btn: 'Заявка партнера',
+         // Header buttons
+         header_istirak_btn: 'Участник',
+        header_telimci_btn: 'Инструктор',
+        header_partner_btn: 'Партнеры',
+        
+         // Participant Section
+         participant_head: 'Присоединиться к обучению',
+        participant_description: 'Присоединяйтесь к нашим профессиональным курсам стоматологии и развивайте свои знания и навыки. Изучайте современные стоматологические технологии и методы.',
+        participant_details: 'Участвуя в учебных программах нашей академии, вы познакомитесь с новейшими технологиями и методами в стоматологии. Под руководством наших опытных инструкторов вы улучшите свои практические навыки и получите международно признанные сертификаты. Благодаря практическому подходу к обучению вы получите возможность работать в реальных клинических ситуациях и приобрести знания и опыт, необходимые для продвижения в профессиональной карьере.',
+        participant_benefit_certificate: 'Возможность получения международно признанных сертификатов',
+        participant_benefit_practical: 'Практическое обучение с современным оборудованием',
+        participant_benefit_experts: 'Обучение у признанных экспертов в области',
+        participant_benefit_networking: 'Налаживание связей и создание сети с профессиональными врачами',
+        participant_benefit_materials: 'Доступ к учебным материалам и ресурсам',
+        participant_benefit_support: 'Поддержка и консультационные услуги после обучения',
+        participant_apply_btn: 'Регистрация на обучение'
+ 
+    }
+};
+   
+   
+   // Statik yazıları yeniləyir
+   function updateStaticTexts() {
+     document.getElementById('courses-title').textContent = staticTexts[currentLang].coursesTitle;
+     document.getElementById('view-all-btn').textContent = staticTexts[currentLang].viewAll;
+     document.getElementById('nave_home_page').textContent = staticTexts[currentLang].nave_home_page;
+     document.getElementById('nav_portfolio').textContent = staticTexts[currentLang].nav_portfolio;
+     document.getElementById('nav_contact').textContent = staticTexts[currentLang].nav_contact;
+     document.getElementById('nav_instr').textContent = staticTexts[currentLang].nav_instr;
+     document.getElementById('nav_gallery').textContent = staticTexts[currentLang].nav_gallery;
+     document.getElementById('nav_courses').textContent = staticTexts[currentLang].nav_courses;
+     document.getElementById('qeydiyyat').textContent = staticTexts[currentLang].qeydiyyat;
+     document.getElementById('telimciler').textContent = staticTexts[currentLang].telimciler;
+     document.getElementById('partnyorlar').textContent = staticTexts[currentLang].partnyorlar;
+     document.getElementById('header_telim').textContent = staticTexts[currentLang].qeydiyyat;
+     document.getElementById('telimci_head').textContent = staticTexts[currentLang].telimci_head;
+     document.getElementById('telimci_description').textContent = staticTexts[currentLang].telimci_description;
+     document.getElementById('instructor_details').textContent = staticTexts[currentLang].instructor_details;
+     document.getElementById('benefit_status').textContent = staticTexts[currentLang].benefit_status;
+     document.getElementById('benefit_materials').textContent = staticTexts[currentLang].benefit_materials;
+     document.getElementById('benefit_presentations').textContent = staticTexts[currentLang].benefit_presentations;
+     document.getElementById('benefit_rewards').textContent = staticTexts[currentLang].benefit_rewards;
+     document.getElementById('benefit_research').textContent = staticTexts[currentLang].benefit_research;
+     document.getElementById('apply_now_btn').textContent = staticTexts[currentLang].qeydiyyat;
+     document.getElementById('partner_head').textContent = staticTexts[currentLang].partner_head;
+     document.getElementById('partner_description').textContent = staticTexts[currentLang].partner_description;
+     document.getElementById('partner_details').textContent = staticTexts[currentLang].partner_details;
+     document .getElementById('partner_benefit_brand').textContent = staticTexts[currentLang].partner_benefit_brand;
+      document.getElementById('partner_benefit_research').textContent = staticTexts[currentLang].partner_benefit_research;
+      document.getElementById('partner_benefit_training').textContent = staticTexts[currentLang].partner_benefit_training;
+      document.getElementById('partner_benefit_network').textContent = staticTexts[currentLang].partner_benefit_network;
+      document.getElementById('partner_benefit_events').textContent = staticTexts[currentLang].partner_benefit_events;
+      document.getElementById('partner_benefit_innovation').textContent = staticTexts[currentLang].partner_benefit_innovation;
+      document.getElementById('partner_apply_btn').textContent = staticTexts[currentLang].partner_apply_btn;
+      document.getElementById('participant_head').textContent = staticTexts[currentLang].participant_head;
+      document.getElementById('participant_description').textContent = staticTexts[currentLang].participant_description;
+      document.getElementById('participant_details').textContent = staticTexts[currentLang].participant_details;
+      document.getElementById('participant_benefit_certificate').textContent = staticTexts[currentLang].participant_benefit_certificate;
+      document.getElementById('participant_benefit_practical').textContent = staticTexts[currentLang].participant_benefit_practical;
+      document.getElementById('participant_benefit_experts').textContent = staticTexts[currentLang].participant_benefit_experts;
+      document.getElementById('participant_benefit_networking').textContent = staticTexts[currentLang].participant_benefit_networking;
+      document.getElementById('participant_benefit_materials').textContent = staticTexts[currentLang].participant_benefit_materials;
+      document.getElementById('participant_benefit_support').textContent = staticTexts[currentLang].participant_benefit_support;
+      document.getElementById('participant_apply_btn').textContent = staticTexts[currentLang].participant_apply_btn;
+     document.getElementById('header_istirak_btn').textContent = staticTexts[currentLang].header_istirak_btn;
+      document.getElementById('header_telimci_btn').textContent = staticTexts[currentLang].header_telimci_btn;
+      document.getElementById('header_partner_btn').textContent = staticTexts[currentLang].header_partner_btn;
+      document.getElementById('applicationModalLabel').textContent = staticTexts[currentLang].applicationModalLabel;
+      document.getElementById('academic_title_label').textContent = staticTexts[currentLang].academic_title_label;
+      document.getElementById('full_name_label').textContent = staticTexts[currentLang].full_name_label;
+      document.getElementById('phone_number_label').textContent = staticTexts[currentLang].phone_number_label;
+      document.getElementById('email_label').textContent = staticTexts[currentLang].email_label;
+      document.getElementById('medical_specialty_label').textContent = staticTexts[currentLang].medical_specialty_label;
+      document.getElementById('work_experience_label').textContent = staticTexts[currentLang].work_experience_label;
+      document.getElementById('preferred_course_label').textContent = staticTexts[currentLang].preferred_course_label;
+      document.getElementById('join_reason_label').textContent = staticTexts[currentLang].join_reason_label;
+      document.getElementById('terms_agreement_label').textContent = staticTexts[currentLang].terms_agreement_label;
+      document.getElementById('academicTitle').placeholder = staticTexts[currentLang].academicTitle;
+      document.getElementById('fullName').placeholder = staticTexts[currentLang].fullName;
+      document.getElementById('phoneNumber').placeholder = staticTexts[currentLang].phoneNumber;
+      document.getElementById('email').placeholder = staticTexts[currentLang].email;
+      document.getElementById('medicalSpecialty').placeholder = staticTexts[currentLang].medicalSpecialty;
+      document.getElementById('joinReason').placeholder = staticTexts[currentLang].joinReason;
+      document.getElementById('work_exp_placeholder').textContent = staticTexts[currentLang].work_exp_placeholder;
+      document.getElementById('work_exp_1_3').textContent = staticTexts[currentLang].work_exp_1_3;
+
+      document.getElementById('work_exp_3_6').textContent = staticTexts[currentLang].work_exp_3_6;
+      document.getElementById('work_exp_6_12').textContent = staticTexts[currentLang].work_exp_6_12;
+      document.getElementById('work_exp_1_2').textContent = staticTexts[currentLang].work_exp_1_2;
+      document.getElementById('work_exp_2_5').textContent = staticTexts[currentLang].work_exp_2_5;
+      document.getElementById('work_exp_5_plus').textContent = staticTexts[currentLang].work_exp_5_plus;
+      document.getElementById('course_placeholder').textContent = staticTexts[currentLang].course_placeholder;
+      document.getElementById('course_implantology').textContent = staticTexts[currentLang].course_implantology;
+      document.getElementById('course_aesthetic').textContent = staticTexts[currentLang].course_aesthetic;
+      document.getElementById('course_endodontics').textContent = staticTexts[currentLang].course_endodontics;
+      document.getElementById('course_prosthetic').textContent = staticTexts[currentLang].course_prosthetic;
+      document.getElementById('course_orthodontics').textContent = staticTexts[currentLang].course_orthodontics;
+      document.getElementById('modal_cancel_btn').textContent = staticTexts[currentLang].modal_cancel_btn;
+      document.getElementById('modal_submit_btn').textContent = staticTexts[currentLang].modal_submit_btn;
+      document.getElementById('apply_now_btn').textContent = staticTexts[currentLang].modal_submit_btn;
+      document.getElementById('partner_apply_btn').textContent = staticTexts[currentLang].partner_apply_btn;
+      document.getElementById('participant_apply_btn').textContent = staticTexts[currentLang].participant_apply_btn;
+      document.getElementById('header_telim').textContent = staticTexts[currentLang].qeydiyyat;
+      
+         document.getElementById('story-title-implant').textContent = staticTexts[currentLang].story_title_implant;
+    document.getElementById('story-title-endo').textContent = staticTexts[currentLang].story_title_endo;
+    document.getElementById('story-title-vinir').textContent = staticTexts[currentLang].story_title_vinir;
+    document.getElementById('story-title-restoration').textContent = staticTexts[currentLang].story_title_restoration;
+    document.getElementById('story-title-orthopedic').textContent = staticTexts[currentLang].story_title_orthopedic;
+    document.getElementById('story-title-orthodontic').textContent = staticTexts[currentLang].story_title_orthodontic;
+    document.getElementById('story-title-pediatric').textContent = staticTexts[currentLang].story_title_pediatric;
+    document.getElementById('story-title-emergency').textContent = staticTexts[currentLang].story_title_emergency;
+    document.getElementById('story-title-management').textContent = staticTexts[currentLang].story_title_management;
+    document.getElementById('story-title-satisfaction').textContent = staticTexts[currentLang].story_title_satisfaction;
+    document.getElementById('footer_text').textContent = staticTexts[currentLang].footer_text;
+    const footerText = document.getElementById('footer_text');
+    if (footerText) footerText.textContent = staticTexts[currentLang].footer_text;
+    
+    const footerNewsTitle = document.getElementById('footer_newsletter_title');
+    if (footerNewsTitle) footerNewsTitle.textContent = staticTexts[currentLang].footer_newsletter_title;
+    
+    const footerNewsText = document.getElementById('footer_newsletter_text');
+    if (footerNewsText) footerNewsText.textContent = staticTexts[currentLang].footer_newsletter_text;
+    
+    const footerEmailPlaceholder = document.getElementById('footer_email_placeholder');
+    if (footerEmailPlaceholder) footerEmailPlaceholder.placeholder = staticTexts[currentLang].footer_email_placeholder;
+    
+    const footerContactTitle = document.getElementById('footer_contact_title');
+    if (footerContactTitle) footerContactTitle.textContent = staticTexts[currentLang].footer_contact_title;
+    
+    const footerHours = document.getElementById('footer_hours');
+    if (footerHours) footerHours.innerHTML = staticTexts[currentLang].footer_hours;
+    
+    const footerCopyright = document.getElementById('footer_copyright');
+    if (footerCopyright) footerCopyright.innerHTML = staticTexts[currentLang].footer_copyright;
+
+      const newsletterTitle = document.getElementById('newsletter-title');
+    if (newsletterTitle) newsletterTitle.textContent = staticTexts[currentLang].newsletter_title;
+    
+    const newsletterName = document.getElementById('newsletter-name');
+    if (newsletterName) newsletterName.placeholder = staticTexts[currentLang].newsletter_name_placeholder;
+    
+    const newsletterEmail = document.getElementById('newsletter-email');
+    if (newsletterEmail) newsletterEmail.placeholder = staticTexts[currentLang].newsletter_email_placeholder;
+    
+    const newsletterPhone = document.getElementById('newsletter-phone');
+    if (newsletterPhone) newsletterPhone.placeholder = staticTexts[currentLang].newsletter_phone_placeholder;
+    
+    const newsletterCity = document.getElementById('newsletter-city');
+    if (newsletterCity) newsletterCity.placeholder = staticTexts[currentLang].newsletter_city_placeholder;
+    
+    const newsletterGraduation = document.getElementById('newsletter-graduation');
+    if (newsletterGraduation) newsletterGraduation.placeholder = staticTexts[currentLang].newsletter_graduation_placeholder;
+    
+    const newsletterSubmit = document.getElementById('newsletter-submit');
+    if (newsletterSubmit) newsletterSubmit.textContent = staticTexts[currentLang].newsletter_submit;
+
+   
+   }
+   updateStaticTexts();
+   // Calendar render funksiyaları
+   function renderWeekdays() {
+       const calendarWeekdays = document.getElementById('calendar-weekdays');
+       calendarWeekdays.innerHTML = '';
+       weekdays[currentLang].forEach(day => {
+           const div = document.createElement('div');
+           div.classList.add('calendar-weekday');
+           div.textContent = day;
+           calendarWeekdays.appendChild(div);
+       });
+   }
+   
+   function renderCalendar(month, year) {
+     renderWeekdays();
+     const calendarDays = document.getElementById('calendar-days');
+     calendarDays.innerHTML = '';
+     let firstDay = new Date(year, month, 1).getDay();
+     firstDay = firstDay === 0 ? 6 : firstDay - 1; // Monday-first
+     const lastDate = new Date(year, month + 1, 0).getDate();
+   
+     for(let i=0;i<firstDay;i++){
+       const div=document.createElement('div');
+       div.classList.add('calendar-day','empty');
+       div.textContent='';
+       calendarDays.appendChild(div);
+     }
+     for(let i=1;i<=lastDate;i++){
+       const div=document.createElement('div');
+       div.classList.add('calendar-day');
+       if(i===new Date().getDate() && month===new Date().getMonth() && year===new Date().getFullYear()){
+         div.classList.add('current');
+       }
+       div.textContent=i;
+       calendarDays.appendChild(div);
+     }
+     const totalCells=calendarDays.children.length;
+     const nextDays=42-totalCells;
+     for(let i=0;i<nextDays;i++){
+       const div=document.createElement('div');
+       div.classList.add('calendar-day','empty');
+       div.textContent='';
+       calendarDays.appendChild(div);
+     }
+     document.getElementById('calendar-month-year').textContent = `${months[currentLang][month]} ${year}`;
+   }
+   
+   // Kursları render funksiyası
+   function renderCourses(courses) {
+       const coursesList = document.getElementById('courses-list');
+       coursesList.innerHTML = '';
+
+       // Vaxtı keçməmiş kursları filtrələ
+       const today = new Date();
+       today.setHours(0, 0, 0, 0);
+
+       const activeCourses = courses.filter(course => {
+           const courseDate = new Date(course.date);
+           courseDate.setHours(0, 0, 0, 0);
+           return courseDate >= today;
+       });
+
+       activeCourses.forEach(course => {
+           const courseItem = document.createElement('div');
+           courseItem.classList.add('course-item-mini','mb-4','p-3','border','rounded');
+   
+           const participants = course.participants.join(', ');
+           const startTime = course.schedule[0].time.split(' - ')[0];
+   
+           let scheduleHTML = '<ul class="course-schedule">';
+           course.schedule.forEach(sch => {
+               scheduleHTML += `<li><strong>${sch.time}:</strong> ${sch.topic[currentLang]}</li>`;
+           });
+           scheduleHTML += '</ul>';
+   
+           courseItem.innerHTML = `
+       <div class="course-content-scroll">
+           <div class="course-date-mini mb-2">
+               <span><i class="fas fa-calendar-alt"></i> ${course.date} (${course.day[currentLang]})</span>
+           </div>
+           <div class="course-participants mb-2"><a href="#coursess"><strong>${participants}</strong></a></div>
+           
+           <h4 class="course-title-mini"><a href="#coursess">${course.title[currentLang]}</a></h4>
+   
+           <div class="course-info-mini mb-2">
+               <span><i class="fas fa-map-marker-alt"></i> ${course.location[currentLang]}</span>
+               <span><i class="fas fa-clock"></i> ${startTime}</span> <br>
+               <span><i class="fas fa-money-bill-wave"></i> ${course.payment[currentLang]}</span>
+           </div>
+       </div>
+   `;
+   
+           coursesList.appendChild(courseItem);
+       });
+   }
+   
+   
+   // İlk render
+   renderCalendar(currentMonth, currentYear);
+   fetch('upcoming-courses.json')
+       .then(res => res.json())
+       .then(data => renderCourses(data))
+       .catch(err => console.error('Error loading courses:', err));
+   
+   // Dil dəyişimi həm calendar, həm kurs üçün
+   document.querySelectorAll('.dropdown-item').forEach(item => {
+       item.addEventListener('click', e => {
+           e.preventDefault();
+           currentLang = item.dataset.lang;
+   
+           // Calendar yenilə
+           renderCalendar(currentMonth, currentYear);
+        // Statik yazıları yenilə
+        updateStaticTexts();
+           // Kursları yenilə
+           fetch('upcoming-courses.json')
+               .then(res => res.json())
+               .then(data => renderCourses(data))
+               .catch(err => console.error('Error loading courses:', err));
+       });
+   });
+   
+      </script>
+    <script>
+      // Teacher.json sistem - Səssiz rejim (heç bir console log və alert yoxdur)
+let teacherData = {
+    metadata: {
+        fileName: "teacher.json",
+        createdAt: new Date().toISOString(),
+        lastUpdated: new Date().toISOString(),
+        totalApplications: 0
+    },
+    applications: []
+};
+
+// Səhifə yükləndikdə sistemi başlat
+document.addEventListener('DOMContentLoaded', function() {
+    loadExistingJsonFromServer();
+    initializeForm();
+});
+
+// Server-dən mövcud teacher.json faylını yüklə
+async function loadExistingJsonFromServer() {
+    try {
+        const response = await fetch('save_data.php', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            if (data && typeof data === 'object') {
+                if (data.status && data.message) {
+                    teacherData = {
+                        metadata: {
+                            fileName: "teacher.json",
+                            createdAt: new Date().toISOString(),
+                            lastUpdated: new Date().toISOString(),
+                            totalApplications: 0
+                        },
+                        applications: []
+                    };
+                } else {
+                    teacherData = data;
+                }
+            }
+        }
+    } catch (error) {
+        teacherData = {
+            metadata: {
+                fileName: "teacher.json",
+                createdAt: new Date().toISOString(),
+                lastUpdated: new Date().toISOString(),
+                totalApplications: 0
+            },
+            applications: []
+        };
+    }
+}
+
+// Form event-lərini qur
+function initializeForm() {
+    const form = document.getElementById('applicationForm');
+    const submitBtn = document.getElementById('modal_submit_btn');
+    
+    if (form && submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            processFormWithPHP();
+        });
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            processFormWithPHP();
+        });
+    }
+}
+
+// Formu emal et və PHP server-ə göndər
+async function processFormWithPHP() {
+    const formData = {
+        id: 'app_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+        akademikDərəcə: getValue('academicTitle'),
+        tamAd: getValue('fullName'),
+        telefonNömrəsi: {
+            ölkəKodu: getValue('country_code_select'),
+            nömrə: getValue('phoneNumber'),
+            tam: getValue('country_code_select') + ' ' + getValue('phoneNumber')
+        },
+        email: getValue('email'),
+        tibbiİxtisas: getValue('medicalSpecialty'),
+        işTəcrübəsi: getValue('workExperience'),
+        üstünlükVerilənKurs: getValue('preferredCourse'),
+        qoşulmaSəbəbi: getValue('joinReason'),
+        şərtlərləRazılıq: getCheckbox('termsAgreement'),
+        təqdimTarixi: new Date().toISOString(),
+        təqdimTarixiFormatted: new Date().toLocaleString('az-AZ', {
+            year: 'numeric',
+            month: '2-digit', 
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit'
+        })
+    };
+    
+    // Səssiz validasiya
+    if (!formData.tamAd || !formData.email || !formData.şərtlərləRazılıq) {
+        return; // Səssizce çıx
+    }
+    
+    try {
+        await saveDataToPHPServer(formData);
+        await loadExistingJsonFromServer();
+        document.getElementById('applicationForm').reset();
+    } catch (error) {
+        // Səssizce xətanı keç
+    }
+}
+
+// PHP server-ə məlumat göndər
+async function saveDataToPHPServer(newData) {
+    const response = await fetch('save_data.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+        },
+        body: JSON.stringify(newData)
+    });
+    
+    if (!response.ok) {
+        throw new Error('Server xətası');
+    }
+    
+    const result = await response.json();
+    
+    if (!result.success) {
+        throw new Error(result.message || 'Server xətası');
+    }
+}
+
+// Element dəyərini al
+function getValue(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        return '';
+    }
+    return element.value ? element.value.trim() : '';
+}
+
+// Checkbox dəyərini al
+function getCheckbox(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        return false;
+    }
+    return element.checked;
+}
+
+// Manual debug funksiyalar (istəyə görə)
+function showServerTeacherJson() {
+    loadExistingJsonFromServer().then(() => {
+        console.log('Teacher.json məzmunu:');
+        console.log(JSON.stringify(teacherData, null, 2));
+        console.log(`Cəmi müraciət sayı: ${teacherData.applications.length}`);
+    });
+}
+
+function reloadFromServer() {
+    loadExistingJsonFromServer();
+}
+
+function testConnection() {
+    fetch('save_data.php')
+        .then(r => r.json())
+        .then(data => console.log('Server test:', data))
+        .catch(e => console.error('Server xətası:', e));
+}
+     
+    </script>
+<script>
+// Instagram Story Viewer JavaScript
+const storiesData = {
+    implant: {
+        title: "İmplant",
+        // avatar: "img/implant.png",
+        stories: [
+            { type: "image", src: "img/implan1.jpg" },
+            { type: "image", src: "img/implant3.jpg" },
+            { type: "image", src: "img/implant2.jpg" }
+        ]
+    },
+    endo: {
+        title: "Endodontiya",
+        // avatar: "https://media.istockphoto.com/id/1367325952/pt/foto/endodontic-root-canal-treatment-process-medically-accurate-tooth-3d-illustration.jpg?s=100x100&w=0&k=20&c=_yFPjBAnbZRrgHin7x_r-Um4fCNFCsxP6lgW4wE1rfM=",
+        stories: [
+            { type: "image", src: "img/endob13.jpeg"},
+            { type: "image", src: "img/endob9.jpeg"},
+            { type: "image", src: "img/endob10.jpeg"},
+            { type: "image", src: "img/endob4.jpeg"},
+            { type: "image", src: "img/endob3.jpeg"},
+            { type: "image", src: "img/endob2.jpeg"},
+            { type: "image", src: "img/endob7.jpeg"},
+            { type: "image", src: "img/endob8.jpeg"},
+            { type: "image", src: "img/endob11.jpeg"},
+            { type: "image", src: "img/endob2.jpeg"},
+            { type: "image", src: "img/endob5.jpeg"},
+            { type: "image", src: "img/endob6.jpeg" },
+            
+            { type: "video", src: "video/endo2.mp4" },
+            { type: "video", src: "video/endedontu.mp4" },
+            { type: "video", src: "video/endo5.mp4"},
+
+            { type: "video", src: "video/endo9.mp4" },
+             { type: "video", src: "video/endo10.mp4" },
+              { type: "video", src: "video/endo11.mp4" },
+              { type: "video", src: "video/endo12.mp4" }]
+    },
+    vinir: {
+        title: "Vinir",
+        // avatar: "https://blog.dentalchat.com/server/images/cms/Dental-Veneers-How-To-Improve-Your-Smile.jpg",
+        stories: [
+                   ]
+    },
+    restoration: {
+        title: "Estetik restavrasiya",
+        // avatar: "https://static.wixstatic.com/media/e17c8f_add554cad0dd408db70cd7e40966d98e~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e17c8f_add554cad0dd408db70cd7e40966d98e~mv2.png",
+        stories: [
+                        { type: "image", src: "img/restob4.jpeg" },
+                                    { type: "image", src: "img/restob1.jpeg" },
+                                                { type: "image", src: "img/restob3.jpeg" },            { type: "image", src: "img/restob2.jpeg" },
+                                                            { type: "image", src: "img/restob5.jpeg" },
+              { type: "image", src: "img/restob6.jpeg" },                                           { type: "image", src: "img/restob7.jpeg" },  
+               { type: "image", src: "img/restob8.jpeg" },
+                { type: "image", src: "img/restob9.jpeg" },
+                 { type: "image", src: "img/restob10.jpeg" },
+            { type: "image", src: "img/resto1.jpg" },
+            { type: "video", src: "video/resto1.mp4" },
+              { type: "video", src: "video/resto2.mp4" }
+        ]
+    },
+    orthopedic: {
+        title: "Ortopediya",
+        // avatar: "https://www.sanderslaser.com/wp-content/uploads/2012/07/15-ortopedia.jpg",
+        stories: [
+             { type: "video", src: "video/ortopedi2.mp4" },
+          
+            { type: "video", src: "video/ortopedi1.mp4" }
+      ]
+    },
+    orthodontic: {
+        title: "Ortodontiya",
+        avatar: "https://mdfrossard.com.br/images/7669bdff-4faa-45aa-b565-c3de3aa64ddf_Ortodontia.png",
+        stories: [
+                  ]
+    },
+    pediatric: {
+        title: "Pedodontiya",
+        avatar: "https://www.ze-dent.com/wp-content/uploads/2018/07/pedodonti.jpg",
+        stories: [
+            { type: "video", src: "video/endov1.mp4" },
+          
+            { type: "video", src: "video/pedonti1.mp4" }
+        ]
+    },
+    emergency: {
+        title: "Təcili tibbi yardım",
+        avatar: "https://www.kaspi.az/storage/posts/large/LWZGcF11zH9uTJob06mblmToT4kIpS01EJfV3ZDY.jpg",
+        stories: [
+         
+        ]
+    },
+    management: {
+        title: "Dental klinik idarəçiliyi",
+        avatar: "https://s3.amazonaws.com/utep-uploads/wp-content/uploads/healthcarembagwu/2020/09/29051437/GW-HCMBA_IMG-2_Sept-2020.jpg-500x333.jpg",
+        stories: [
+                  ]
+    },
+    satisfaction: {
+        title: "Xəstə məmnuniyyəti",
+        avatar: "https://i.pinimg.com/736x/ef/90/3f/ef903f6f67fd4b7ed389181b3fd319fa.jpg",
+        stories: [
+              { type: "img", src: "img/imagency.jpg" },
+            { type: "image", src: "img/imergance1.jpg" },
+            { type: "video", src: "video/imerceny.mp4" }        ]
+    }
+};
+
+
+let currentCategory = '';
+let currentStoryIndex = 0;
+let storyTimer;
+
+// DOM elements
+const storyViewer = document.getElementById('storyViewer');
+const storyContent = document.getElementById('storyContent');
+const storyVideo = document.getElementById('storyVideo');
+const storyAvatar = document.getElementById('storyAvatar');
+const storyUsername = document.getElementById('storyUsername');
+const storyProgress = document.getElementById('storyProgress');
+const categoryIndicator = document.getElementById('categoryIndicator');
+const closeButton = document.getElementById('closeStory');
+const prevButton = document.getElementById('prevStory');
+const nextButton = document.getElementById('nextStory');
+
+// --- Funksiya: Story açmaq ---
+function openStory(categoryId) {
+    currentCategory = categoryId;
+    currentStoryIndex = 0;
+    const categoryData = storiesData[categoryId];
+    if (!categoryData) return;
+
+    storyUsername.textContent = categoryData.title;
+    storyAvatar.src = categoryData.avatar;
+    categoryIndicator.textContent = categoryData.title;
+
+    createProgressBars(categoryData.stories.length);
+
+    storyViewer.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    loadStory(0);
+}
+
+// --- Funksiya: Progress bar yaratmaq ---
+function createProgressBars(count) {
+    storyProgress.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+        const bar = document.createElement('div');
+        bar.className = 'story-progress-bar';
+        bar.innerHTML = '<div class="story-progress-fill"></div>';
+        storyProgress.appendChild(bar);
+    }
+}
+
+// --- Funksiya: Story yükləmək ---
+function loadStory(index) {
+    const categoryData = storiesData[currentCategory];
+    if (!categoryData || index >= categoryData.stories.length) return;
+
+    currentStoryIndex = index;
+    const currentStory = categoryData.stories[index];
+
+    storyContent.style.display = 'none';
+    storyVideo.style.display = 'none';
+    storyVideo.pause();
+    storyVideo.currentTime = 0;
+
+    if (currentStory.type === 'video') {
+        storyVideo.src = currentStory.src;
+        storyVideo.style.display = 'block';
+        storyVideo.muted = false;
+        storyVideo.controls = false;
+        storyVideo.play();
+    } else {
+        storyContent.src = currentStory.src;
+        storyContent.style.display = 'block';
+    }
+
+    const fills = document.querySelectorAll('.story-progress-fill');
+    fills.forEach((fill, i) => {
+        fill.classList.remove('active');
+        fill.style.width = i < index ? '100%' : '0%';
+        fill.style.transition = 'none';
+    });
+
+    setTimeout(() => {
+        const fill = fills[index];
+        if (!fill) return;
+        fill.style.transition = `width ${currentStory.type === 'image' ? 3 : (storyVideo.duration || 3)}s linear`;
+        fill.style.width = '100%';
+    }, 50);
+
+    clearTimeout(storyTimer);
+    let duration = 6000;
+
+    if (currentStory.type === 'video') {
+        storyVideo.addEventListener('loadedmetadata', function() {
+            duration = Math.max(storyVideo.duration * 1000, 2000);
+            storyTimer = setTimeout(nextStory, duration);
+        }, { once: true });
+    } else {
+        storyTimer = setTimeout(nextStory, duration);
+    }
+}
+
+// --- Funksiya: Növbəti story ---
+function nextStory() {
+    const categoryData = storiesData[currentCategory];
+    if (currentStoryIndex < categoryData.stories.length - 1) loadStory(currentStoryIndex + 1);
+    else closeStory();
+}
+
+// --- Funksiya: Əvvəlki story ---
+function prevStory() {
+    if (currentStoryIndex > 0) loadStory(currentStoryIndex - 1);
+}
+
+// --- Funksiya: Story viewer-i bağlamaq ---
+function closeStory() {
+    storyViewer.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    clearTimeout(storyTimer);
+    storyVideo.pause();
+    storyVideo.currentTime = 0;
+    storyVideo.style.display = 'none';
+    storyContent.style.display = 'none';
+}
+
+// --- Event listener-lər ---
+closeButton.addEventListener('click', closeStory);
+nextButton.addEventListener('click', nextStory);
+prevButton.addEventListener('click', prevStory);
+
+// --- Click və touch ilə açmaq ---
+document.querySelectorAll('.story-item').forEach(item => {
+    item.addEventListener('click', () => openStory(item.dataset.story));
+    item.addEventListener('touchstart', () => openStory(item.dataset.story));
+});
+
+// --- Story viewer-də klikdən kənar bağlama ---
+storyViewer.addEventListener('click', e => {
+    if (e.target === storyViewer) closeStory();
+});
+
+// --- Keyboard navigation ---
+document.addEventListener('keydown', e => {
+    if (storyViewer.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') prevStory();
+        if (e.key === 'ArrowRight' || e.key === ' ') nextStory();
+        if (e.key === 'Escape') closeStory();
+    }
+});
+
+// --- Hover pause ---
+storyViewer.addEventListener('mouseenter', () => {
+    clearTimeout(storyTimer);
+    if (storyVideo.style.display === 'block') storyVideo.pause();
+});
+storyViewer.addEventListener('mouseleave', () => {
+    if (storyVideo.style.display === 'block') storyVideo.play();
+    storyTimer = setTimeout(nextStory, 1500);
+});
+
+// --- Mobile swipe support ---
+let touchStartX = 0;
+storyViewer.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].clientX);
+storyViewer.addEventListener('touchend', e => {
+    const touchEndX = e.changedTouches[0].clientX;
+    if (touchEndX - touchStartX > 50) prevStory();
+    if (touchStartX - touchEndX > 50) nextStory();
+});
+</script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Courses Carousel
+        $(document).ready(function(){
+    $(".courses-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 3000, // 3 saniyədən bir dəyişir
+      autoplayHoverPause: true,
+      nav: false,   // next/prev deaktiv
+      dots: false,  // nöqtələr deaktiv
+      responsive:{
+        0:{
+          items:1
+        },
+        768:{
+          items:2
+        },
+        1024:{
+          items:3
+        }
+      }
+    });
+  });
+
+        // Partners Carousel
+        $(".partners-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 2,
+            },
+            576: {
+              items: 3,
+            },
+            768: {
+              items: 4,
+            },
+            992: {
+              items: 5,
+            },
+            1200: {
+              items: 6,
+            },
+          },
+        });
+
+        // Calendar Day Click
+        $(".calendar-day").click(function () {
+          $(".calendar-day").removeClass("current");
+          $(this).addClass("current");
+        });
+
+        // Telimler Section
+        $(".telimler-dropdown button").click(function(e) {
+          e.preventDefault();
+          const target = $(this).data("target");
+          
+          // Show the telimler section
+          $(".telimler").show();
+          
+          // Scroll to the telimler section
+          $('html, body').animate({
+            scrollTop: $("#telimler").offset().top
+          }, 800);
+          
+          // Activate the corresponding button
+          $(".telim-btn").removeClass("active");
+          $(`.telim-btn[data-target="${target}"]`).addClass("active");
+          
+          // Show the corresponding content
+          $(".istirakci, .telimci, .partnyorlar").removeClass("active");
+          $(`.${target}`).addClass("active");
+        });
+        
+        // Telimler Button Click
+        $(".telim-btn").click(function() {
+          const target = $(this).data("target");
+          
+          // Activate the clicked button
+          $(".telim-btn").removeClass("active");
+          $(this).addClass("active");
+          
+          // Show the corresponding content
+          $(".istirakci, .telimci, .partnyorlar").removeClass("active");
+          $(`.${target}`).addClass("active");
+        });
+
+        // Stories Click
+       
+
+        // Language Selector
+        $(".dropdown-item").click(function (e) {
+          e.preventDefault();
+          const lang = $(this).data("lang");
+
+          // Remove active class and check mark from all items
+          $(".dropdown-item")
+            .removeClass("active")
+            .find("i")
+            .addClass("visibility-none");
+
+          // Add active class and show check mark for selected item
+          $(this).addClass("active").find("i").removeClass("visibility-none");
+
+          // Update the language selector text
+          const langText = $(this).text();
+          $(".language-selector").html(
+            `<i class="fas fa-globe"></i> ${langText}`
+          );
+
+          // Here you can add logic to change the website language
+          // For example: window.location.href = `/${lang}`;
+        });
+
+        // Application Form Submission
+        $("#applicationForm").submit(function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = {
+            academicTitle: $("#academicTitle").val(),
+            fullName: $("#fullName").val(),
+            phoneNumber: $("#phoneNumber").val(),
+            email: $("#email").val(),
+            medicalSpecialty: $("#medicalSpecialty").val(),
+            workExperience: $("#workExperience").val(),
+            preferredCourse: $("#preferredCourse").val(),
+            joinReason: $("#joinReason").val()
+          };
+          
+          // Here you would typically send the data to your server
+          console.log("Application submitted:", formData);
+          
+          // Show success message
+          alert("Müraciətiniz uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.");
+          
+          // Close modal and reset form
+          $("#applicationModal").modal("hide");
+          $("#applicationForm")[0].reset();
+        });
+
+        // Partnership Form Submission
+        $("#partnershipForm").submit(function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const partnershipData = {
+            organizationName: $("#organizationName").val(),
+            organizationType: $("#organizationType").val(),
+            website: $("#website").val(),
+            yearFounded: $("#yearFounded").val(),
+            contactPersonName: $("#contactPersonName").val(),
+            position: $("#position").val(),
+            partnerEmail: $("#partnerEmail").val(),
+            partnerPhone: $("#partnerPhone").val(),
+            partnershipInterests: $('input[type="checkbox"]:checked').map(function() {
+              return this.id;
+            }).get(),
+            partnershipProposal: $("#partnershipProposal").val()
+          };
+          
+          // Here you would typically send the data to your server
+          console.log("Partnership application submitted:", partnershipData);
+          
+          // Show success message
+          alert("Tərəfdaşlıq müraciətiniz uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.");
+          
+          // Close modal and reset form
+          $("#partnershipModal").modal("hide");
+          $("#partnershipForm")[0].reset();
+        });
+
+        // Participant Form Submission
+        $("#participantForm").submit(function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const participantData = {
+            fullName: $("#participantFullName").val(),
+            email: $("#participantEmail").val(),
+            phone: $("#participantPhone").val(),
+            profession: $("#participantProfession").val(),
+            specialRequests: $("#participantExperience").val(),
+            selectedCourses: $('input[type="checkbox"]:checked').map(function() {
+              return this.id;
+            }).get()
+          };
+
+          
+          // Show success message
+          
+          // Close modal and reset form
+          $("#participantModal").modal("hide");
+          $("#participantForm")[0].reset();
+        });
+      });
+    </script>
+
+    <!-- Dark/Light Mode Toggle -->
+    <script src="js/theme-toggle.js"></script>
+  </body>
+</html>

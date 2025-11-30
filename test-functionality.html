@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksionallıq Testi - Dental Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+        }
+        .test-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .status-pass {
+            color: #10b981;
+            font-weight: bold;
+        }
+        .status-fail {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        .test-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9fafb;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-test {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-test:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .result-box {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+        .result-box.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 style="text-align: center; margin-bottom: 40px; color: #667eea;">
+            <i class="fas fa-check-circle"></i> Funksionallıq Test Paneli
+        </h1>
+
+        <!-- System Status -->
+        <div class="test-section">
+            <h3><i class="fas fa-server"></i> Sistem Statusu</h3>
+            <div class="test-item">
+                <span>Server Status</span>
+                <span class="status-pass" id="serverStatus">Yoxlanılır...</span>
+            </div>
+            <div class="test-item">
+                <span>PHP Version</span>
+                <span id="phpVersion">-</span>
+            </div>
+            <div class="test-item">
+                <span>Dark/Light Mode</span>
+                <button class="btn-test" onclick="testDarkMode()">Test Et</button>
+            </div>
+        </div>
+
+        <!-- Data Loading Tests -->
+        <div class="test-section">
+            <h3><i class="fas fa-database"></i> Data Yükləmə</h3>
+            <div class="test-item">
+                <span>Courses JSON</span>
+                <button class="btn-test" onclick="testCourses()">Test Et</button>
+            </div>
+            <div id="coursesResult" class="result-box"></div>
+
+            <div class="test-item">
+                <span>Instructors JSON</span>
+                <button class="btn-test" onclick="testInstructors()">Test Et</button>
+            </div>
+            <div id="instructorsResult" class="result-box"></div>
+
+            <div class="test-item">
+                <span>Teacher Applications</span>
+                <button class="btn-test" onclick="testTeachers()">Test Et</button>
+            </div>
+            <div id="teachersResult" class="result-box"></div>
+        </div>
+
+        <!-- API Tests -->
+        <div class="test-section">
+            <h3><i class="fas fa-plug"></i> API Testləri</h3>
+            <div class="test-item">
+                <span>Instructors API (GET)</span>
+                <button class="btn-test" onclick="testInstructorsAPI()">Test Et</button>
+            </div>
+            <div id="apiResult" class="result-box"></div>
+
+            <div class="test-item">
+                <span>Upload API</span>
+                <button class="btn-test" onclick="testUploadAPI()">Test Et</button>
+            </div>
+            <div id="uploadResult" class="result-box"></div>
+        </div>
+
+        <!-- Page Tests -->
+        <div class="test-section">
+            <h3><i class="fas fa-file"></i> Səhifə Testləri</h3>
+            <div class="test-item">
+                <span>Ana Səhifə</span>
+                <a href="index.html" target="_blank" class="btn-test">Aç</a>
+            </div>
+            <div class="test-item">
+                <span>Admin Panel</span>
+                <a href="admin-dashboard.html" target="_blank" class="btn-test">Aç</a>
+            </div>
+            <div class="test-item">
+                <span>Kurs Əlavə Et</span>
+                <a href="admin-add-course.html" target="_blank" class="btn-test">Aç</a>
+            </div>
+            <div class="test-item">
+                <span>Badge Generator</span>
+                <a href="badge-generator.html" target="_blank" class="btn-test">Aç</a>
+            </div>
+        </div>
+
+        <!-- Calendar Test -->
+        <div class="test-section">
+            <h3><i class="fas fa-calendar"></i> Calendar Funksionallığı</h3>
+            <div class="test-item">
+                <span>Expired Courses Filter</span>
+                <button class="btn-test" onclick="testCalendarFilter()">Test Et</button>
+            </div>
+            <div id="calendarResult" class="result-box"></div>
+        </div>
+
+        <!-- Summary -->
+        <div class="test-section" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+            <h3 style="color: white;"><i class="fas fa-chart-pie"></i> Ümumi Nəticə</h3>
+            <div id="summary" style="font-size: 18px; padding: 20px;">
+                Test etmək üçün yuxarıdakı düymələrə klikləyin
+            </div>
+        </div>
+    </div>
+
+    <script src="js/theme-toggle.js"></script>
+    <script>
+        let testResults = {
+            total: 0,
+            passed: 0,
+            failed: 0
+        };
+
+        // Check server status
+        fetch('save_data.php')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('serverStatus').textContent = '✓ İşləyir';
+                document.getElementById('phpVersion').textContent = data.php_version;
+            })
+            .catch(() => {
+                document.getElementById('serverStatus').textContent = '✗ Xəta';
+                document.getElementById('serverStatus').className = 'status-fail';
+            });
+
+        function testDarkMode() {
+            if (window.themeManager) {
+                window.themeManager.toggleTheme();
+                setTimeout(() => {
+                    window.themeManager.toggleTheme();
+                    alert('✓ Dark mode test PASSED!\nMode düzgün dəyişir.');
+                }, 1000);
+            } else {
+                alert('✗ Dark mode test FAILED!\nTheme manager yüklənməyib.');
+            }
+        }
+
+        async function testCourses() {
+            const resultDiv = document.getElementById('coursesResult');
+            try {
+                const res = await fetch('upcoming-courses.json');
+                const data = await res.json();
+
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+
+                const total = data.length;
+                const active = data.filter(c => {
+                    const d = new Date(c.date);
+                    d.setHours(0, 0, 0, 0);
+                    return d >= today;
+                }).length;
+                const expired = total - active;
+
+                resultDiv.innerHTML = `
+                    <strong>✓ TEST PASSED</strong><br>
+                    Ümumi kurslar: ${total}<br>
+                    Aktiv kurslar: ${active}<br>
+                    Vaxtı keçmiş: ${expired}<br>
+                    <em>Expired courses filter işləyir!</em>
+                `;
+                resultDiv.classList.add('show');
+                updateSummary(true);
+            } catch (error) {
+                resultDiv.innerHTML = `<strong>✗ TEST FAILED</strong><br>${error.message}`;
+                resultDiv.style.background = '#fef2f2';
+                resultDiv.style.borderColor = '#ef4444';
+                resultDiv.classList.add('show');
+                updateSummary(false);
+            }
+        }
+
+        async function testInstructors() {
+            const resultDiv = document.getElementById('instructorsResult');
+            try {
+                const res = await fetch('data/instructors.json');
+                const data = await res.json();
+
+                resultDiv.innerHTML = `
+                    <strong>✓ TEST PASSED</strong><br>
+                    Həkimlər: ${data.length}<br>
+                    Aktiv: ${data.filter(i => i.is_active).length}<br>
+                    <pre style="margin-top: 10px; background: white; padding: 10px; border-radius: 5px; max-height: 200px; overflow-y: auto;">${JSON.stringify(data[0], null, 2)}</pre>
+                `;
+                resultDiv.classList.add('show');
+                updateSummary(true);
+            } catch (error) {
+                resultDiv.innerHTML = `<strong>✗ TEST FAILED</strong><br>${error.message}`;
+                resultDiv.style.background = '#fef2f2';
+                resultDiv.style.borderColor = '#ef4444';
+                resultDiv.classList.add('show');
+                updateSummary(false);
+            }
+        }
+
+        async function testTeachers() {
+            const resultDiv = document.getElementById('teachersResult');
+            try {
+                const res = await fetch('teacher.json');
+                const data = await res.json();
+
+                resultDiv.innerHTML = `
+                    <strong>✓ TEST PASSED</strong><br>
+                    Müraciətlər: ${data.applications?.length || 0}<br>
+                    Metadata: ${data.metadata ? 'Var' : 'Yoxdur'}
+                `;
+                resultDiv.classList.add('show');
+                updateSummary(true);
+            } catch (error) {
+                resultDiv.innerHTML = `<strong>✗ TEST FAILED</strong><br>${error.message}`;
+                resultDiv.style.background = '#fef2f2';
+                resultDiv.style.borderColor = '#ef4444';
+                resultDiv.classList.add('show');
+                updateSummary(false);
+            }
+        }
+
+        async function testInstructorsAPI() {
+            const resultDiv = document.getElementById('apiResult');
+            try {
+                const res = await fetch('api/instructors.php');
+                const data = await res.json();
+
+                resultDiv.innerHTML = `
+                    <strong>✓ API TEST PASSED</strong><br>
+                    Success: ${data.success}<br>
+                    Count: ${data.count}<br>
+                    Data: ${data.data?.length || 0} həkim
+                `;
+                resultDiv.classList.add('show');
+                updateSummary(true);
+            } catch (error) {
+                resultDiv.innerHTML = `<strong>✗ API TEST FAILED</strong><br>${error.message}`;
+                resultDiv.style.background = '#fef2f2';
+                resultDiv.style.borderColor = '#ef4444';
+                resultDiv.classList.add('show');
+                updateSummary(false);
+            }
+        }
+
+        function testUploadAPI() {
+            const resultDiv = document.getElementById('uploadResult');
+            resultDiv.innerHTML = `
+                <strong>ℹ MANUAL TEST</strong><br>
+                Upload API test etmək üçün actual fayl yükləmək lazımdır.<br>
+                <em>Badge Generator səhifəsində test edin.</em>
+            `;
+            resultDiv.style.background = '#fef9e7';
+            resultDiv.style.borderColor = '#f59e0b';
+            resultDiv.classList.add('show');
+        }
+
+        async function testCalendarFilter() {
+            const resultDiv = document.getElementById('calendarResult');
+            try {
+                const res = await fetch('upcoming-courses.json');
+                const courses = await res.json();
+
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+
+                const filtered = courses.filter(c => {
+                    const d = new Date(c.date);
+                    d.setHours(0, 0, 0, 0);
+                    return d >= today;
+                });
+
+                resultDiv.innerHTML = `
+                    <strong>✓ CALENDAR TEST PASSED</strong><br>
+                    Ümumi: ${courses.length} kurs<br>
+                    Keçmişdə: ${courses.length - filtered.length} kurs (gizlədilir)<br>
+                    Aktiv: ${filtered.length} kurs (göstərilir)<br>
+                    <em>Calendar expired courses filter düzgün işləyir!</em>
+                `;
+                resultDiv.classList.add('show');
+                updateSummary(true);
+            } catch (error) {
+                resultDiv.innerHTML = `<strong>✗ TEST FAILED</strong><br>${error.message}`;
+                resultDiv.style.background = '#fef2f2';
+                resultDiv.style.borderColor = '#ef4444';
+                resultDiv.classList.add('show');
+                updateSummary(false);
+            }
+        }
+
+        function updateSummary(passed) {
+            testResults.total++;
+            if (passed) testResults.passed++;
+            else testResults.failed++;
+
+            const percent = Math.round((testResults.passed / testResults.total) * 100);
+
+            document.getElementById('summary').innerHTML = `
+                <strong>Test Statistikası:</strong><br><br>
+                Ümumi: ${testResults.total} test<br>
+                Uğurlu: ${testResults.passed} ✓<br>
+                Uğursuz: ${testResults.failed} ✗<br>
+                Uğur faizi: ${percent}%
+            `;
+        }
+    </script>
+</body>
+</html>

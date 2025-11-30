@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Kurs Əlavə Et - Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --purple-dark: #1a388b;
+            --purple-medium: #7c4585;
+            --pink: #c95792;
+            --gold: #f8b55f;
+        }
+        body {
+            background: white;
+            min-height: 100vh;
+            padding: 40px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .admin-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .admin-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--purple-medium);
+        }
+        .admin-header h1 {
+            color: var(--purple-dark);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .form-label {
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 8px;
+        }
+        .form-control, .form-select {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 12px;
+            transition: all 0.3s;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: var(--purple-medium);
+            box-shadow: 0 0 0 0.2rem rgba(124, 69, 133, 0.25);
+        }
+        .schedule-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px dashed #dee2e6;
+        }
+        .btn-add-schedule {
+            background: var(--purple-medium);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-add-schedule:hover {
+            background: var(--purple-dark);
+            transform: translateY(-2px);
+        }
+        .btn-remove {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        .btn-submit {
+            background: linear-gradient(135deg, var(--purple-medium), var(--pink));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 30px;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(124, 69, 133, 0.4);
+        }
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #c3e6cb;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #f5c6cb;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .lang-group {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .upload-area {
+            border: 3px dashed var(--purple-medium);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .upload-area:hover {
+            border-color: var(--pink);
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            transform: translateY(-2px);
+        }
+        .upload-area i {
+            font-size: 48px;
+            color: var(--purple-medium);
+            margin-bottom: 15px;
+        }
+        .upload-area p {
+            margin: 0;
+            color: #6c757d;
+            font-weight: 600;
+        }
+        .upload-preview {
+            display: none;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 300px;
+            margin: 20px auto 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .upload-preview img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h1><i class="fas fa-graduation-cap"></i> Yeni Kurs Əlavə Et</h1>
+                <p class="text-muted">Bütün sahələri doldurun və kursu JSON faylına əlavə edin</p>
+            </div>
+
+            <form id="courseForm">
+                <!-- Course ID -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-hashtag"></i> Kurs ID</label>
+                    <input type="number" class="form-control" id="courseId" required placeholder="3">
+                    <small class="text-muted">Unikal nömrə verin</small>
+                </div>
+
+                <!-- Category (Multi-language) -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-tag"></i> Kateqoriya</label>
+                    <div class="lang-group">
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="categoryAz" required placeholder="Azərbaycanca">
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="categoryEn" required placeholder="English">
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="categoryRu" required placeholder="Русский">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Title (Multi-language) -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-heading"></i> Başlıq</label>
+                    <div class="lang-group">
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="titleAz" required placeholder="Azərbaycanca">
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="titleEn" required placeholder="English">
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="titleRu" required placeholder="Русский">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location (Multi-language) -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-map-marker-alt"></i> Məkan</label>
+                    <div class="lang-group">
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="locationAz" required placeholder="Bakı, Ibis Hotel">
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="locationEn" required placeholder="Baku, Ibis Hotel">
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="text" class="form-control" id="locationRu" required placeholder="Баку, Отель Ибис">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-calendar"></i> Tarix</label>
+                    <input type="date" class="form-control" id="courseDate" required>
+                </div>
+
+                <!-- Day (Multi-language) -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-calendar-day"></i> Gün</label>
+                    <div class="lang-group">
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <select class="form-select" id="dayAz" required>
+                                    <option value="">Seçin</option>
+                                    <option value="Bazar ertəsi">Bazar ertəsi</option>
+                                    <option value="Çərşənbə axşamı">Çərşənbə axşamı</option>
+                                    <option value="Çərşənbə">Çərşənbə</option>
+                                    <option value="Cümə axşamı">Cümə axşamı</option>
+                                    <option value="Cümə">Cümə</option>
+                                    <option value="Şənbə">Şənbə</option>
+                                    <option value="Bazar">Bazar</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <select class="form-select" id="dayEn" required>
+                                    <option value="">Select</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <select class="form-select" id="dayRu" required>
+                                    <option value="">Выберите</option>
+                                    <option value="Понедельник">Понедельник</option>
+                                    <option value="Вторник">Вторник</option>
+                                    <option value="Среда">Среда</option>
+                                    <option value="Четверг">Четверг</option>
+                                    <option value="Пятница">Пятница</option>
+                                    <option value="Суббота">Суббота</option>
+                                    <option value="Воскресенье">Воскресенье</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-money-bill-wave"></i> Ödəniş</label>
+                    <input type="text" class="form-control" id="payment" required placeholder="300 AZN">
+                    <small class="text-muted">Bütün dillər üçün eynidir</small>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-image"></i> Kurs Şəkli</label>
+                    <div class="upload-area" onclick="document.getElementById('imageUpload').click()">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Şəkil yükləmək üçün klikləyin</p>
+                        <small class="text-muted">JPG, PNG, GIF - Max 5MB</small>
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                    </div>
+                    <div id="imagePreviewContainer" class="upload-preview">
+                        <img id="imagePreview" src="" alt="Preview">
+                    </div>
+                    <input type="hidden" id="imageUrl" required>
+                </div>
+
+                <!-- Participants -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-users"></i> İştirakçılar (vergüllə ayırın)</label>
+                    <input type="text" class="form-control" id="participants" required placeholder="Dr. John Doe, Dr. Jane Smith">
+                </div>
+
+                <!-- Description (Multi-language) -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-align-left"></i> Təsvir</label>
+                    <div class="lang-group">
+                        <div class="mb-2">
+                            <textarea class="form-control" id="descriptionAz" rows="2" required placeholder="Azərbaycanca təsvir"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <textarea class="form-control" id="descriptionEn" rows="2" required placeholder="English description"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <textarea class="form-control" id="descriptionRu" rows="2" required placeholder="Описание на русском"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seats -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-chair"></i> Yer sayı</label>
+                    <input type="number" class="form-control" id="seats" required placeholder="20">
+                </div>
+
+                <!-- Schedule -->
+                <div class="mb-4">
+                    <label class="form-label"><i class="fas fa-clock"></i> Cədvəl</label>
+                    <div id="scheduleContainer">
+                        <div class="schedule-item">
+                            <div class="row">
+                                <div class="col-md-3 mb-2">
+                                    <input type="text" class="form-control schedule-time" placeholder="09:00 - 10:00" required>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <input type="text" class="form-control schedule-topic-az" placeholder="Mövzu (AZ)" required>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <input type="text" class="form-control schedule-topic-en" placeholder="Topic (EN)" required>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <input type="text" class="form-control schedule-topic-ru" placeholder="Тема (RU)" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-add-schedule mt-2" onclick="addScheduleItem()">
+                        <i class="fas fa-plus"></i> Cədvəl Əlavə Et
+                    </button>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-save"></i> Kursu Yadda Saxla
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle fa-2x mb-2"></i><br>
+                Kurs uğurla əlavə edildi!
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-circle fa-2x mb-2"></i><br>
+                <span id="errorText">Xəta baş verdi!</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication
+        if (sessionStorage.getItem('adminLoggedIn') !== 'true') {
+            alert('Admin giriş tələb olunur!');
+            window.location.href = 'admin-login.html';
+        }
+
+        let scheduleCount = 1;
+        let uploadedImagePath = null;
+
+        // Handle image upload
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            // Check file size (max 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                alert('Şəkil ölçüsü 5MB-dan böyük ola bilməz!');
+                return;
+            }
+
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('imagePreview');
+                const container = document.getElementById('imagePreviewContainer');
+                preview.src = e.target.result;
+                container.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+
+            // Upload to server
+            const formData = new FormData();
+            formData.append('image', file);
+
+            fetch('api/upload.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    uploadedImagePath = data.path;
+                    document.getElementById('imageUrl').value = data.path;
+                    console.log('Şəkil yükləndi:', data.path);
+                } else {
+                    alert('Xəta: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Upload error:', error);
+                alert('Şəkil yüklənərkən xəta baş verdi');
+            });
+        }
+
+        function addScheduleItem() {
+            scheduleCount++;
+            const scheduleHtml = `
+                <div class="schedule-item" id="schedule-${scheduleCount}">
+                    <div class="row">
+                        <div class="col-md-3 mb-2">
+                            <input type="text" class="form-control schedule-time" placeholder="09:00 - 10:00" required>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <input type="text" class="form-control schedule-topic-az" placeholder="Mövzu (AZ)" required>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <input type="text" class="form-control schedule-topic-en" placeholder="Topic (EN)" required>
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <input type="text" class="form-control schedule-topic-ru" placeholder="Тема (RU)" required>
+                        </div>
+                        <div class="col-md-1 mb-2">
+                            <button type="button" class="btn-remove" onclick="removeScheduleItem(${scheduleCount})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('scheduleContainer').insertAdjacentHTML('beforeend', scheduleHtml);
+        }
+
+        function removeScheduleItem(id) {
+            document.getElementById(`schedule-${id}`).remove();
+        }
+
+        document.getElementById('courseForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Collect schedule data
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            const schedule = [];
+            scheduleItems.forEach(item => {
+                const time = item.querySelector('.schedule-time').value;
+                const topicAz = item.querySelector('.schedule-topic-az').value;
+                const topicEn = item.querySelector('.schedule-topic-en').value;
+                const topicRu = item.querySelector('.schedule-topic-ru').value;
+
+                schedule.push({
+                    time: time,
+                    topic: {
+                        az: topicAz,
+                        en: topicEn,
+                        ru: topicRu
+                    }
+                });
+            });
+
+            // Build course object
+            const courseData = {
+                id: parseInt(document.getElementById('courseId').value),
+                category: {
+                    az: document.getElementById('categoryAz').value,
+                    en: document.getElementById('categoryEn').value,
+                    ru: document.getElementById('categoryRu').value
+                },
+                title: {
+                    az: document.getElementById('titleAz').value,
+                    en: document.getElementById('titleEn').value,
+                    ru: document.getElementById('titleRu').value
+                },
+                location: {
+                    az: document.getElementById('locationAz').value,
+                    en: document.getElementById('locationEn').value,
+                    ru: document.getElementById('locationRu').value
+                },
+                date: document.getElementById('courseDate').value,
+                day: {
+                    az: document.getElementById('dayAz').value,
+                    en: document.getElementById('dayEn').value,
+                    ru: document.getElementById('dayRu').value
+                },
+                payment: {
+                    az: document.getElementById('payment').value,
+                    en: document.getElementById('payment').value,
+                    ru: document.getElementById('payment').value
+                },
+                image: document.getElementById('imageUrl').value,
+                participants: document.getElementById('participants').value.split(',').map(p => p.trim()),
+                description: {
+                    az: document.getElementById('descriptionAz').value,
+                    en: document.getElementById('descriptionEn').value,
+                    ru: document.getElementById('descriptionRu').value
+                },
+                seat: parseInt(document.getElementById('seats').value),
+                schedule: schedule
+            };
+
+            // Send to PHP backend
+            try {
+                const response = await fetch('add-course.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(courseData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('courseForm').reset();
+
+                    setTimeout(() => {
+                        document.getElementById('successMessage').style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error(result.message || 'Bilinməyən xəta');
+                }
+            } catch (error) {
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorText').textContent = error.message;
+                document.getElementById('successMessage').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

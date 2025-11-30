@@ -1,0 +1,3434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Porfolio - Dental Academy</title>
+   <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+      <!-- jQuery və Owl Carousel JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Owl Carousel -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+  --purple-dark: #1a388b;
+  --purple-medium: #7c4585;
+  --pink: #c95792;
+  --gold: #f8b55f;
+  --white: #ffffff;
+  --gray-light: #EFF6FF;
+  --gray: #888888;
+  --black: #333333;
+  --transition: all 0.3s ease;
+  --orange : #f2994a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  background-color: #EEF6FF;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--purple-dark);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--purple-medium);
+  border-color: var(--purple-medium);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--purple-dark);
+}
+
+.btn-secondary:hover {
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.has-dropdown .btn-secondary:after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+  vertical-align: middle;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center;
+  color: white;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold));
+}
+
+/* TOP BAR RESPONSIVE */
+.top-bar {
+  background-color: #1a388b;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 30%;
+  right: 0;
+  z-index: 1200;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  transform: skew(-20deg);
+  transform-origin: top;
+}
+
+.top-bar .container {
+  transform: skew(20deg);
+}
+
+.top-bar a {
+  color: var(--white);
+  margin-right: 5px;
+}
+
+.drop_a{
+  color: var(--black);
+  margin-right: 5px;
+  text-decoration: none;
+}
+.top-bar a:hover {
+  color: var(--gold);
+}
+
+.top-bar-right {
+  text-align: right;
+}
+
+.top-bar i {
+  margin-right: 15px;
+}
+
+.top-bar .dropdown {
+  position: relative;
+}
+
+
+
+/* MAIN HEADER RESPONSIVE */
+.main-header {
+  margin: 100px 90px 30px 90px;
+  background-color: #ffffff;
+  padding: 10px 30px 5px;
+  z-index: 200;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  transform: skew(-20deg);
+  transform-origin: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  z-index: -1;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #1c3e97;
+}
+
+.logo-slogan {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #4c4c4c;
+  margin-top: -10px;
+  font-style: italic;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--purple-dark);
+  padding: 13px 18px;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  background-color: #3366FF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover:after,
+.navbar-nav .nav-link.active:after {
+  transform: scaleX(1);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #3366FF;
+}
+/* Desktop versiyada normal navbar */
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+  
+  .navbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Tablet və mobile versiyalarda hamburger menu */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block !important;
+    border: none;
+    padding: 4px 8px;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-toggler-icon {
+    background: none;
+    color: var(--purple-dark);
+    font-size: 1.2rem;
+  }
+  
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(51, 102, 255, 0.1);
+  }
+  
+ 
+}
+/* Bootstrap-in default navbar davranışını override et */
+@media (max-width: 1199px) {
+  .navbar-collapse {
+    display: none !important; /* Default olaraq gizli */
+  }
+  
+  .navbar-collapse.show {
+    display: block !important; /* Show class varsa göstər */
+  }
+  
+  .navbar-collapse.collapsing {
+    display: block !important; /* Transition zamanı */
+  }
+  
+  /* Hamburger toggle göstər */
+  .navbar-toggler {
+    display: block !important;
+    border: none;
+    padding: 4px 8px;
+    background: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    background: none;
+    color: var(--purple-dark);
+    font-size: 1.2rem;
+  }
+  
+  /* Collapse açıldıqda styling */
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Desktop versiyada normal göstər */
+@media (min-width: 1200px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+  
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+/* Kiçik ekranlar üçün əlavə düzəlişlər */
+@media (max-width: 576px) {
+  .main-header {
+    margin: 15px;
+    border-radius: 20px;
+    padding: 12px 15px 8px;
+  }
+  
+  .logo-text .logo-title {
+    font-size: 1.2rem;
+  }
+  
+  .logo-text .logo-slogan {
+    font-size: 0.6rem;
+  }
+}
+
+/* Page Header */
+        .page-header {
+            background-color: var(--purple-dark);
+            padding: 60px 0;
+            position: relative;
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: 0;
+            font-size: 2.5rem;
+        }
+        
+        .page-header .breadcrumb {
+            background: transparent;
+            margin-bottom: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        
+        .page-header .breadcrumb-item a {
+            color: var(--gold);
+        }
+        
+        .page-header .breadcrumb-item.active {
+            color: var(--white);
+        }
+        
+        .page-header .breadcrumb-item + .breadcrumb-item::before {
+            color: var(--white);
+        }
+
+/* INSTAGRAM STYLE STORY VIEWER */
+.story-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-container {
+  position: relative;
+  width: 400px;
+  height: 700px;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.story-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.story-progress {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+
+.story-progress-bar {
+  flex: 1;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.story-progress-fill {
+  height: 100%;
+  background-color: white;
+  width: 0%;
+  transition: width 3s linear;
+}
+
+.story-progress-fill.active {
+  width: 100%;
+}
+
+.story-user-info {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.story-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 12px;
+}
+
+.story-username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.story-time {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: auto;
+}
+
+.story-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.story-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.story-navigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.story-nav-prev {
+  left: 0;
+}
+
+.story-nav-next {
+  right: 0;
+}
+
+.story-category-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* MULTIPLE STORIES PER CATEGORY */
+.story-circle[data-stories-count]:after {
+  content: attr(data-stories-count);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--pink);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.story-circle.has-multiple-stories {
+  background: linear-gradient(135deg, #00FFDE, #0B99FE, #2233FB, #4300FF, #FF1744, #FF9800);
+  padding: 3px;
+}
+
+.story-circle.viewed {
+  background: linear-gradient(135deg, #ccc, #999);
+  opacity: 0.6;
+}
+
+/* RESPONSIVE STORY VIEWER */
+@media (max-width: 768px) {
+  .story-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  
+  .story-content {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-header {
+    padding: 10px 15px;
+  }
+  
+  .story-user-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .story-username {
+    font-size: 13px;
+  }
+  
+  .story-time {
+    font-size: 11px;
+  }
+  
+  .story-close {
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+  }
+}
+
+/* STORIES SECTION - UPDATED TO BE BELOW MENU */
+.stories-section {
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.stories-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px 20px;
+  width: max-content;
+  min-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stories-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.stories-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.stories-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.stories-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.story-item:hover {
+  transform: translateY(-5px);
+}
+
+.story-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--purple-dark);
+  text-align: center;
+  margin-top: 10px;
+  max-width: 100px;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+}
+
+.story-item:hover .story-title {
+  color: #3366FF;
+}
+
+.story-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding: 3px;
+  background: linear-gradient(45deg, #3366FF, #5C85FF);
+  margin-bottom: 8px;
+  box-shadow: 0 4px 15px rgba(51, 102, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.story-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(51, 102, 255, 0.3);
+}
+
+.story-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.story-item:hover .story-circle-inner {
+  border-color: #3366FF;
+}
+
+.story-circle-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE ADJUSTMENTS FOR STORIES */
+@media (max-width: 768px) {
+  .stories-section {
+    padding: 15px 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .stories-wrapper {
+    gap: 15px;
+    padding: 10px 15px;
+  }
+  
+  .story-item {
+    min-width: 80px;
+  }
+  
+  .story-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .story-title {
+    font-size: 11px;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stories-section {
+    padding: 10px 0;
+  }
+  
+  .stories-wrapper {
+    gap: 12px;
+    padding: 8px 10px;
+  }
+  
+  .story-item {
+    min-width: 70px;
+  }
+  
+  .story-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .story-title {
+    font-size: 10px;
+    max-width: 70px;
+    margin-top: 6px;
+  }
+}
+/* THREE COLUMN SECTION RESPONSIVE */
+.three-col-section {
+  background-color: var(--gray-light);
+  padding: 30px 0;
+  margin-bottom: -120px;
+  margin-top: -130px;
+  position: relative;
+  z-index: 2;
+}
+
+.calendar-day.prev-month,
+.calendar-day.next-month {
+  color: #b0b0b0;
+}
+
+.calendar-day.current {
+  background-color: #3366FF;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.calendar-wrapper {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 
+              0 -3px 8px rgba(0, 0, 0, 0.05); 
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+}
+
+.calendar-nav button {
+  background: none;
+  border: none;
+  color: var(--purple-medium);
+  cursor: pointer;
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.calendar-nav button:hover {
+  color: var(--pink);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--purple-medium);
+  padding: 5px 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.calendar-day:hover {
+  background-color: rgba(201, 87, 146, 0.1);
+}
+
+.calendar-day.current {
+  background-color: var(--pink);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.calendar-day.has-event {
+  position: relative;
+  font-weight: 600;
+}
+
+.calendar-day.has-event:after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--gold);
+}
+
+.calendar-day.highlighted {
+  border: 2px solid var(--gold);
+  font-weight: 600;
+}
+
+.courses-wrapper {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 
+              0 -3px 8px rgba(0, 0, 0, 0.05); 
+}
+
+#courses-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding-right: 5px;
+}
+
+.courses-wrapper h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+}
+
+.course-item-mini {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+}
+
+.course-item-mini:last-child {
+  border-bottom: none;
+}
+
+.course-date-mini {
+  color: #7c4585;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.course-title-mini {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.course-title-mini a {
+  color: var(--purple-dark);
+}
+
+.course-title-mini a:hover {
+  color: var(--pink);
+}
+
+.course-info-mini {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.course-info-mini i {
+  margin-right: 5px;
+  color: var(--pink);
+}
+
+.course-info-mini span {
+  margin-right: 15px;
+}
+
+.form-wrapper {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 
+              0 -3px 8px rgba(0, 0, 0, 0.05); 
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.form-wrapper h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--purple-dark);
+}
+
+.form-control {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--pink);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.form-col {
+  flex: 1;
+}
+/* COURSES SLIDER SECTION RESPONSIVE */
+.courses-slider-section {
+  padding: 130px 0 60px 0;
+  background-color: #1a388b;
+}
+
+.courses-slider-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: var(--gray-light);
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin: 15px;
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-thumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.course-card:hover .course-thumb img {
+  transform: scale(1.1);
+}
+
+.course-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--gold);
+  color: var(--purple-dark);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-instructor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.instructor-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.instructor-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instructor-name {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.instructor-name strong {
+  display: block;
+  color: var(--purple-dark);
+  font-size: 16px;
+}
+
+.course-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.course-title a {
+  color: var(--purple-dark);
+}
+
+.course-title a:hover {
+  color: var(--pink);
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.course-detail {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.course-detail i {
+  margin-right: 5px;
+  color: var(--pink);
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(61, 54, 92, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.course-card:hover .course-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.course-btn {
+  background-color: var(--gold);
+  color: var(--purple-dark);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.course-btn:hover {
+  background-color: var(--white);
+  color: var(--purple-dark);
+  transform: scale(1.05);
+}
+
+/* PARTNERS SECTION RESPONSIVE */
+.partners-section {
+  padding: 60px 0;
+  background-color: var(--gray-light);
+}
+
+.partner-item {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-item:hover {
+  transform: translateY(-5px);
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 100px;
+  opacity: 0.6;
+}
+
+.partner-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* TELIMLER SECTION RESPONSIVE */
+.telimler-dropdown {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .telimler-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.has-dropdown:hover .telimler-dropdown {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.telimler-dropdown button:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.telimler {
+  width: 100%;
+  padding: 2rem;
+}
+
+.telimler > div:first-child {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.telimler > div:first-child h1 {
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.telimler > div:first-child h1:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #0066cc;
+}
+
+.telimler > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.telimler button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--purple-dark);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.telimler button:hover {
+  background-color: var(--pink);
+  transform: translateY(-3px);
+}
+
+.telimler button.active {
+  background-color: var(--gold);
+  color: var(--purple-dark);
+}
+
+.istirakci, .telimci, .partnyorlar {
+  display: none;
+  flex-direction: row;
+  gap: 30px;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color:#fff;
+  align-items: center;
+}
+
+.istirakci.active, .telimci.active, .partnyorlar.active {
+  display: flex;
+}
+
+.istirakci > div, .telimci > div, .partnyorlar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.istirakci > div:first-child, .telimci > div:first-child, .partnyorlar > div:first-child {
+  flex: 0 0 40%;
+}
+
+.istirakci > div:last-child, .telimci > div:last-child, .partnyorlar > div:last-child {
+  flex: 0 0 60%;
+}
+
+.istirakci img, .telimci img, .partnyorlar img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.istirakci h2, .telimci h2, .partnyorlar h2 {
+  margin-bottom: 1rem;
+  color: var(--purple-dark);
+}
+
+.istirakci p, .telimci p, .partnyorlar p {
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+.istirakci .btn, .telimci .btn, .partnyorlar .btn {
+  width: auto;
+  padding: 8px 20px;
+  font-size: 13px;
+  align-self: flex-start;
+}
+
+.telimler-dropdown button {
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  text-align: center;
+  color: var(--purple-dark);
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: 500;
+  position: relative;
+  font-size: 14px;
+}
+
+.telimler-dropdown button:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.telimler-dropdown button:hover {
+  background-color: rgba(201, 87, 146, 0.1);
+  color: var(--pink);
+}
+
+.telimler-dropdown button::after {
+  content: '→';
+  position: absolute;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.telimler-dropdown button:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* FOOTER RESPONSIVE */
+.footer {
+  background-color: var(--purple-dark);
+  color: var(--white);
+  padding: 70px 0 0;
+}
+
+.footer-widget {
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-height: 50px;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background-color: var(--pink);
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.footer-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--gold);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-links a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+  padding-left: 20px;
+}
+
+.footer-contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.footer-contact-icon {
+  margin-right: 15px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.footer-contact-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact-text a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+}
+
+.footer-contact-text a:hover {
+  color: var(--gold);
+}
+
+.footer-newsletter p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.footer-newsletter-form {
+  position: relative;
+}
+
+.footer-newsletter-form input {
+  width: 100%;
+  padding: 12px 15px;
+  padding-right: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+.footer-newsletter-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-newsletter-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: var(--gold);
+  color: var(--purple-dark);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  transition: var(--transition);
+}
+
+.footer-newsletter-form button:hover {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: var(--gold);
+  transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--pink);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Large screens - 1200px and up */
+@media (max-width: 1200px) {
+  .main-header {
+    margin: 100px 50px 30px 50px;
+    border-radius: 60px;
+  }
+  
+  .hero-section {
+    height: 60vh;
+    margin-top: -100px;
+  }
+  
+  .hero-content {
+    max-width: 60%;
+    padding: 1.5rem;
+  }
+}
+
+/* Medium screens - 992px and down */
+@media (max-width: 992px) {
+  .top-bar {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+  
+  .main-header {
+    margin: 90px 30px 20px 30px;
+    border-radius: 40px;
+    padding: 8px 15px;
+  }
+  
+  .logo-img {
+    width: 50px;
+  }
+  
+  .logo-title {
+    font-size: 1.4rem;
+  }
+  
+  .logo-slogan {
+    font-size: 0.6rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .hero-section {
+    height: 50vh;
+    margin-top: -80px;
+  }
+  
+  .hero-content {
+    max-width: 70%;
+    bottom: 10%;
+    left: 15%;
+    right: 15%;
+    padding: 1.2rem;
+  }
+  
+  .hero-staff {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .three-col-section {
+    margin-top: -100px;
+    margin-bottom: -80px;
+    padding: 20px 0;
+  }
+  
+  .courses-slider-section {
+    padding: 100px 0 50px 0;
+  }
+  
+  .courses-slider-section:before {
+    height: 80px;
+  }
+  
+  .course-card {
+    margin: 10px;
+  }
+  
+  .course-content {
+    padding: 15px;
+  }
+  
+  .course-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .instructor-name strong {
+    font-size: 14px;
+  }
+  
+  .course-thumb img {
+    height: 140px;
+  }
+  
+  .course-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  
+  .telimler {
+    padding: 0.8rem;
+  }
+  
+  .telimler > div:first-child {
+    margin-bottom: 1.5rem;
+  }
+  
+  .telimler > div:first-child h1 {
+    font-size: 1.5rem;
+  }
+  
+  .telimler > div:nth-child(2) {
+    gap: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .telimler button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  .istirakci, .telimci, .partnyorlar {
+    padding: 0.8rem;
+    gap: 10px;
+  }
+  
+  .istirakci h2, .telimci h2, .partnyorlar h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .istirakci p, .telimci p, .partnyorlar p {
+    font-size: 13px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .istirakci .btn, .telimci .btn, .partnyorlar .btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens - 480px and down */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .hero-content h1,
+  .hero-staff h2 {
+    font-size: 1rem;
+  }
+  
+  .hero-content h1 span,
+  .hero-staff h2 span {
+    font-size: 1.3rem;
+  }
+  
+  .hero-content p,
+  .hero-staff p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Modal responsive adjustments */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 15px;
+    max-width: none;
+  }
+  
+  .modal-lg {
+    max-width: 95%;
+  }
+  
+  .modal-xl {
+    max-width: 95%;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .table-responsive {
+    font-size: 12px;
+  }
+  
+  .form-check-label {
+    font-size: 13px;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-body {
+    padding: 10px;
+  }
+  
+  .modal-title {
+    font-size: 16px;
+  }
+  
+  .table-responsive {
+    font-size: 11px;
+  }
+  
+  .form-label {
+    font-size: 13px;
+  }
+  
+  .form-control {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  .btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}.about-section {
+    padding: 60px 0;
+}
+
+.about-section .row {
+    display: flex;
+    align-items: stretch;
+}
+
+.about-section .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+}
+/* Image Animation Effects - Working Version */
+.about-img {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    animation: slideUpZoom 1.2s ease-out 0.3s forwards;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    max-height: 750px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.about-img .experience {
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
+    background-color: var(--gold);
+    color: var(--purple-dark);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    z-index: 10;
+    opacity: 0;
+    transform: scale(0);
+    animation: bounceIn 0.8s ease-out 1.5s forwards;
+    transition: all 0.3s ease;
+}
+
+.about-img .experience .number {
+    font-size: 3rem;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFade 0.6s ease-out 2.1s forwards;
+}
+
+.about-img .experience .text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFade 0.6s ease-out 2.3s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes slideUpZoom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effects */
+.about-img:hover {
+    transform: translateY(-5px) scale(1.02);
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.about-img:hover .experience {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+/* Alternative scroll-triggered animation */
+.about-img.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 1.2s ease-out;
+}
+
+.about-img.scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.about-img.scroll-animate.in-view .experience {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.8s ease-out 0.6s;
+}
+
+/* Responsive Animation Adjustments */
+@media (min-width: 1200px) {
+    .about-img {
+        max-width: 700px;
+        animation-duration: 1.4s;
+    }
+    
+    .about-img img {
+        min-height: 650px;
+        max-height: 800px;
+    }
+    
+    .about-img .experience {
+        width: 160px;
+        height: 160px;
+        right: 40px;
+    }
+    
+    .about-img .experience .number {
+        font-size: 3.5rem;
+    }
+    
+    .about-img .experience .text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-img {
+        padding-top: 20px;
+        margin-bottom: 40px;
+        max-width: 600px;
+        width: 100%;
+        animation-duration: 1s;
+    }
+    
+    .about-img img {
+        min-height: 480px;
+        max-height: 580px;
+    }
+    
+    .about-img .experience {
+        width: 130px;
+        height: 130px;
+        right: 25px;
+        bottom: -18px;
+        animation-delay: 1.2s;
+    }
+    
+    .about-img .experience .number {
+        font-size: 2.8rem;
+        animation-delay: 1.6s;
+    }
+    
+    .about-img .experience .text {
+        animation-delay: 1.8s;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-img {
+        padding-top: 15px;
+        max-width: 500px;
+        margin-bottom: 30px;
+        animation-duration: 0.8s;
+    }
+    
+    .about-img img {
+        min-height: 380px;
+        max-height: 480px;
+    }
+    
+    .about-img .experience {
+        width: 110px;
+        height: 110px;
+        right: 20px;
+        bottom: -15px;
+        animation-delay: 1s;
+    }
+    
+    .about-img .experience .number {
+        font-size: 2.2rem;
+        animation-delay: 1.3s;
+    }
+    
+    .about-img .experience .text {
+        font-size: 0.85rem;
+        animation-delay: 1.5s;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-img {
+        padding-top: 10px;
+        max-width: 100%;
+        margin-bottom: 25px;
+        animation-duration: 0.6s;
+    }
+    
+    .about-img img {
+        min-height: 320px;
+        max-height: 420px;
+    }
+    
+    .about-img .experience {
+        width: 95px;
+        height: 95px;
+        right: 15px;
+        bottom: -12px;
+        animation-delay: 0.8s;
+    }
+    
+    .about-img .experience .number {
+        font-size: 1.8rem;
+        animation-delay: 1.1s;
+    }
+    
+    .about-img .experience .text {
+        font-size: 0.75rem;
+        animation-delay: 1.3s;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .about-img,
+    .about-img .experience,
+    .about-img .experience .number,
+    .about-img .experience .text {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+.about-img .experience {
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
+    background-color: var(--gold);
+    color: var(--purple-dark);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.about-img .experience .number {
+    font-size: 3rem;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-img .experience .text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.about-content h2 {
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+
+.about-list li:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--pink);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .about-section .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-img {
+        margin-bottom: 40px;
+        max-width: 600px;
+    }
+    
+    .about-img img {
+        min-height: 400px;
+    }
+    
+    .about-img .experience {
+        width: 120px;
+        height: 120px;
+        right: 20px;
+        bottom: -15px;
+    }
+    
+    .about-img .experience .number {
+        font-size: 2.5rem;
+    }
+    
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-img img {
+        min-height: 300px;
+    }
+    
+    .about-img .experience {
+        width: 100px;
+        height: 100px;
+        right: 15px;
+        bottom: -12px;
+    }
+    
+    .about-img .experience .number {
+        font-size: 2rem;
+    }
+    
+    .about-img .experience .text {
+        font-size: 0.8rem;
+    }
+    
+    .about-content {
+        padding: 15px 0;
+    }
+    
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-img img {
+        min-height: 250px;
+    }
+    
+    .about-img .experience {
+        width: 85px;
+        height: 85px;
+        right: 10px;
+        bottom: -10px;
+    }
+    
+    .about-img .experience .number {
+        font-size: 1.6rem;
+    }
+    
+    .about-img .experience .text {
+        font-size: 0.7rem;
+    }
+    
+    .about-content {
+        padding: 10px 0;
+    }
+    
+    .about-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .about-content p {
+        font-size: 14px;
+    }
+    
+    .about-list li {
+        font-size: 14px;
+        padding-left: 25px;
+    }
+}
+/* Text Zoom Animation Effects */
+.about-content h2 {
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: var(--purple-dark);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomInText 0.8s ease-out 0.2s forwards;
+}
+
+.about-content h3 {
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    color: var(--purple-dark);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomInText 0.8s ease-out 0.4s forwards;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: var(--black);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomInText 0.6s ease-out 0.6s forwards;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomInText 0.8s ease-out 0.8s forwards;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--black);
+    opacity: 0;
+    transform: translateX(-20px) scale(0.9);
+    animation: slideZoomIn 0.6s ease-out calc(1s + var(--item-delay, 0s)) forwards;
+}
+
+.about-list li:nth-child(1) { --item-delay: 0s; }
+.about-list li:nth-child(2) { --item-delay: 0.1s; }
+.about-list li:nth-child(3) { --item-delay: 0.2s; }
+.about-list li:nth-child(4) { --item-delay: 0.3s; }
+.about-list li:nth-child(5) { --item-delay: 0.4s; }
+
+.btn {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomInButton 0.8s ease-out 1.5s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes zoomInText {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideZoomIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px) scale(0.9);
+    }
+    50% {
+        transform: translateX(5px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes zoomInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hover Effects for Enhanced Interaction */
+.about-content h2:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.about-content h3:hover {
+    transform: scale(1.02);
+    color: var(--pink);
+    transition: all 0.3s ease;
+}
+
+.about-content p:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+}
+
+.about-list li:hover {
+    transform: translateX(5px) scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.about-list li:hover:before {
+    color: var(--gold);
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* Scroll-triggered animation alternative */
+.about-content.animate-on-scroll h2,
+.about-content.animate-on-scroll h3,
+.about-content.animate-on-scroll p,
+.about-content.animate-on-scroll .about-list,
+.about-content.animate-on-scroll .btn {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+}
+
+.about-content.animate-on-scroll.in-view h2 {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+
+.about-content.animate-on-scroll.in-view h3 {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.4s;
+}
+
+.about-content.animate-on-scroll.in-view p {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.6s;
+}
+
+.about-content.animate-on-scroll.in-view .about-list {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.8s;
+}
+
+.about-content.animate-on-scroll.in-view .btn {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1.2s;
+}
+
+/* Responsive adjustments for animations */
+@media (max-width: 768px) {
+    .about-content h2,
+    .about-content h3,
+    .about-content p,
+    .about-list,
+    .btn {
+        animation-duration: 0.6s;
+    }
+    
+    .about-list li {
+        animation-duration: 0.4s;
+    }
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .about-content h2,
+    .about-content h3,
+    .about-content p,
+    .about-list,
+    .about-list li,
+    .btn {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+        /* Team Section */
+        .team-section {
+            padding: 60px 0;
+            background-color: var(--gray-light);
+        }
+        
+        .team-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .team-thumb {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-thumb img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover .team-thumb img {
+            transform: scale(1.1);
+        }
+        
+        .team-social {
+            position: absolute;
+            top: 20px;
+            right: -50px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover .team-social {
+            right: 20px;
+        }
+        
+        .team-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: var(--white);
+            color: var(--purple-dark);
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            background-color: var(--gold);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .team-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .team-name {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .team-position {
+            color: var(--pink);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 60px 0;
+            background-color: var(--purple-dark);
+            color: var(--white);
+        }
+        
+        .stat-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+        
+        .testimonial-item {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 15px;
+            transition: var(--transition);
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .testimonial-content {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-content:before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+            color: var(--pink);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author-info h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author-info p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        anguage-selector {
+    color: var(--white);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.language-selector:hover {
+    color: var(--gold);
+}
+
+.dropdown {
+    position: relative;
+    z-index: 1100;
+}
+
+.dropdown-menu {
+    min-width: 120px;
+    background-color: var(--white);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 8px 0;
+}
+
+.dropdown-item {
+    padding: 8px 15px;
+    color: var(--purple-dark) !important;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(201, 87, 146, 0.1);
+    color: var(--pink) !important;
+}
+
+.dropdown-item.active {
+    display: none; /* Hide active language from dropdown */
+}
+
+.dropdown-item i {
+    font-size: 12px;
+    width: 12px;
+}
+        
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .instructor-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .instructor-profile-img {
+                margin-right: 0;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .instructor-profile-info .instructor-social-modal {
+                justify-content: center;
+            }
+            
+            .footer-widget {
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .top-bar {
+                text-align: center;
+            }
+            
+            .top-bar-right {
+                text-align: center;
+                margin-top: 5px;
+            }
+            
+            .page-banner h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+       <!-- Top Bar -->
+  <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="mailto:info@dentalacademy.com"
+              ><i class="fas fa-envelope"></i> info@dentalacademy.com</a
+            >
+            <a href="tel:+994773263223"
+              ><i class="fas fa-phone"></i> 0773263223</a
+            >
+            <a href="tel:+994503263223"
+              ><i class="fas fa-phone"></i> 0503263223</a
+            >
+          </div>
+          <div class="col-md-6 top-bar-right">
+            <a href="https://www.facebook.com/dentaluxacademy/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/dentalux_academy/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="dropdown d-inline-block ms-3">
+              <a href="#" class="dropdown-toggle language-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-globe"></i>
+                  <span id="current-lang-text">English</span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item active drop_a" href="#"  style="color: #000;" data-lang="en">English</a></li>
+                  <li><a class="dropdown-item drop_a" style="color: #000;" href="#" data-lang="az">Azərbaycanca</a></li>
+                  <li><a class="dropdown-item drop_a"  style="color: #000;"href="#" data-lang="ru">Русский</a></li>
+              </ul>
+          </div>
+          
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="img/IMG_2764_2.pdf-removebg-preview.png" alt="Dental Academy" class="logo-img" />
+            <div class="logo-text ms-3">
+              <div class="logo-title">Dentalux Academy</div>
+              <div class="logo-slogan">Dental Professionals Advancement Platform</div>
+            </div>
+          </div>
+        
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav rounded-pill px-4 py-2  " >
+              <li class="nav-item mx-3" style="white-space: nowrap;">
+                <a id="nave_home_page" class="nav-link " href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_portfolio" class="nav-link active" href="about.html">Portfolio</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_courses" class="nav-link" href="course.html">Courses</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_instr" class="nav-link" href="Instructors.html">Instructors</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_gallery" class="nav-link" href="Gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a id="nav_contact" class="nav-link" href="contact.html">Contact</a>
+              </li>
+              
+             
+
+
+              </ul>
+                
+            </ul>
+          </div>
+          
+        </nav>
+      </div>
+    </header>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Porfolio</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Porfolio</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="img/img13.jpg" alt="About Dental Academy">
+                        <div class="experience">
+                            <div class="number">4+</div>
+                            <div class="text">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>The First Private Dentistry Training Center in Azerbaijan</h2>
+                        <p>Founded in 2021, <strong style="color:var(--purple-dark); font-size:20px">Dentalux Academy</strong> in Baku has quickly become a leading institution for dental continuing education in Azerbaijan. Our mission is to provide dental professionals with cutting-edge knowledge and practical skills through hands-on training programs.</p>
+                        
+                        <h3>Courses</h3>
+                        <p>We have conducted over <strong style="color:var(--purple-dark); font-size:20px">20 specialized courses</strong>, including implant-supported prosthetics, endodontics, aesthetic restoration, tooth design, and other dental specialties. Our courses combine theoretical knowledge with practical experience, allowing participants to work on models and real patients.</p>
+                        
+                        <h3>Masterclasses & Seminars</h3>
+                        <p>We collaborate with local and international experts to offer masterclasses and seminars, enhancing participants' practical skills and knowledge.</p>
+                        
+                        <ul class="about-list">
+                            <li>State-of-the-art dental equipment</li>
+                            <li>Small classes for personalized learning</li>
+                            <li>Hands-on training on models and real patients</li>
+                            <li>Internationally recognized certifications</li>
+                            <li>Workshops with expert dentists</li>
+                        </ul>
+                        
+                        <a href="courses.html" class="btn btn-primary">Explore Our Courses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-text">Graduates</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-number">8+</div>
+                        <div class="stat-text">Expert Instructors</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="stat-number">20+</div>
+                        <div class="stat-text">Courses Offered</div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-number">45+</div>
+                        <div class="stat-text">Countries Reached</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--purple-dark);">What Our Google Reviews Say</h2>
+            <div class="row">
+                <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+              <script src="https://elfsightcdn.com/platform.js" async></script>
+              <div class="elfsight-app-0c595c8a-f361-4a5c-a7fd-793cbbbeacff" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html">
+                  <!-- <img src="img/IMG_2764_2.pdf-removebg-preview.png" alt="Dental Academy" /> -->
+                   <h3 style="color: white; font-family: 'DM Sans', sans-serif; ">Dentalux Academy </h3>
+                </a>
+              </div>
+              <div class="footer-text">
+                The first private dentistry training center in AZERBAİJAN. We
+                provide high-quality continuing dental education with a focus on
+                practical skills.
+              </div>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+<!-- 
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h3 class="footer-title">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Our Courses</a></li>
+                <li><a href="#">Our Instructors</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div> -->
+
+          <div class="col-lg-4 col-md-2">
+            <div class="footer-widget">
+              <h3 class="footer-title">Newsletter</h3>
+              <div class="footer-newsletter">
+                <p>
+                  Subscribe to our newsletter to receive updates about upcoming
+                  courses and events.
+                </p>
+                <div class="footer-newsletter-form">
+                  <input type="email" placeholder="Your Email" />
+                  <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-12 order-lg-1 order-md-1 order-1">
+            <div class="footer-widget">
+              <h3 class="footer-title">Contact Info</h3>
+              <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="footer-contact-text">
+                   Dentallux , Hazi aslanov, BAKU, AZERBAİJAN
+                </div>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="footer-contact-text">
+                  <a href="tel:+994773263223">0773263223</a>
+                </div>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="footer-contact-text">
+                  <a href="tel:+994503263223 ">0503263223 </a>
+                </div>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="footer-contact-text">
+                  <a href="mailto:info@dentalacademy.com"
+                    >info@dentalacademy.com</a
+                  >
+                </div>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="footer-contact-text">
+                  Mon-Fri: 9:00 AM - 6:00 PM<br />
+                  Sat-Sun: Closed
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            © 2025 Dental Academy. All Rights Reserved. Designed with
+            <i class="fas fa-heart"></i> by <a href="#">YourName</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- About.html-ə əlavə edin (</body> etiketindən əvvəl) -->
+<script>
+// Dil sistemini qur
+let currentLang = localStorage.getItem('selectedLang') || 'az';
+
+// Dil mətnləri
+const staticTexts = {
+    en: { 
+        nave_home_page: "Home",
+        nav_portfolio: "Portfolio",
+        nav_courses: "Courses",
+        nav_instr: "Instructors",
+        nav_gallery: "Gallery",
+        nav_contact: "Contact",
+        page_title: "Portfolio",
+        breadcrumb_home: "Home",
+        breadcrumb_about: "Portfolio",
+        about_title: "The First Private Dentistry Training Center in Azerbaijan",
+        about_subtitle_courses: "Courses",
+        about_text_courses: "We have conducted over <strong>20 specialized courses</strong>, including implant-supported prosthetics, endodontics, aesthetic restoration, tooth design, and other dental specialties.",
+        about_subtitle_master: "Masterclasses & Seminars",
+        about_text_master: "We collaborate with local and international experts to offer masterclasses and seminars, enhancing participants' practical skills and knowledge.",
+        about_list_1: "State-of-the-art dental equipment",
+        about_list_2: "Small classes for personalized learning",
+        about_list_3: "Hands-on training on models and real patients",
+        about_list_4: "Internationally recognized certifications",
+        about_list_5: "Workshops with expert dentists",
+        about_btn: "Explore Our Courses",
+        exp_years: "4+",
+        exp_text: "Years Experience",
+        stats_graduates: "Graduates",
+        stats_instructors: "Expert Instructors",
+        stats_courses: "Courses Offered",
+        testimonials_title: "What Our Google Reviews Say",
+         footer_text: "The first private dentistry training center in AZERBAIJAN. We provide high-quality continuing dental education with a focus on practical skills.",
+        footer_newsletter_title: "Newsletter",
+        footer_newsletter_text: "Subscribe to our newsletter to receive updates about upcoming courses and events.",
+        footer_email_placeholder: "Your Email",
+        footer_contact_title: "Contact Info",
+        footer_hours: "Mon-Fri: 9:00 AM - 6:00 PM<br />Sat-Sun: Closed",
+        footer_copyright: "© 2025 Dental Academy. All Rights Reserved. Designed with <i class='fas fa-heart'></i> by <a href='#'>YourName</a>"
+
+    },
+    az: {
+        nave_home_page: "Ana səhifə",
+        nav_portfolio: "Portfolio",
+        nav_courses: "Kurslar",
+        nav_instr: "Təlimçilər",
+        nav_gallery: "Qalereya",
+        nav_contact: "Əlaqə",
+        page_title: "Portfolio",
+        breadcrumb_home: "Ana səhifə",
+        breadcrumb_about: "Portfolio",
+        about_title: "Azərbaycanda İlk Özəl Stomatologiya Təlim Mərkəzi",
+        about_subtitle_courses: "Kurslar",
+        about_text_courses: "İmplant dəstəkli protezlər, endodontiya, estetik restavrasiya, diş dizaynı və digər dental ixtisaslar daxil olmaqla <strong>20-dən çox ixtisaslaşdırılmış kurs</strong> keçirmişik.",
+        about_subtitle_master: "Masterklasslar və Seminarlar",
+        about_text_master: "İştirakçıların praktiki bacarıqlarını və biliklərini artırmaq üçün yerli və beynəlxalq ekspertlərlə əməkdaşlıq edərək masterklas və seminarlar təşkil edirik.",
+        about_list_1: "Ən müasir stomatologiya avadanlıqları",
+        about_list_2: "Fərdi təlim üçün kiçik qruplar",
+        about_list_3: "Model və real xəstələr üzərində praktiki təlim",
+        about_list_4: "Beynəlxalq tanınan sertifikatlar",
+        about_list_5: "Mütəxəssis diş həkimləri ilə seminarlar",
+        about_btn: "Kurslarımızı Kəşf Edin",
+        exp_years: "4+",
+        exp_text: "İllik Təcrübə",
+        stats_graduates: "Məzunlar",
+        stats_instructors: "Ekspert Təlimçilər",
+        stats_courses: "Təklif olunan Kurslar",
+        testimonials_title: "Google Rəylərimiz Nə Deyir",
+          footer_text: "Azərbaycanda ilk özəl stomatologiya təlim mərkəzi. Praktiki bacarıqlara diqqət yetirərək yüksək keyfiyyətli stomatologiya təhsili təqdim edirik.",
+        footer_newsletter_title: "Xəbər Bülleteni",
+        footer_newsletter_text: "Qarşıdan gələn kurslar və tədbirlər haqqında yenilikləri almaq üçün xəbər bülletenimizə abunə olun.",
+        footer_email_placeholder: "Email ünvanınız",
+        footer_contact_title: "Əlaqə Məlumatları",
+        footer_hours: "B.e-Cü: 9:00 - 18:00<br />Şənbə-Bazar: Bağlı",
+        footer_copyright: "© 2025 Dental Academy. Bütün hüquqlar qorunur. <i class='fas fa-heart'></i> ilə hazırlandı <a href='#'>YourName</a>"
+ 
+    },
+    ru: {
+        nave_home_page: "Главная",
+        nav_portfolio: "Портфолио",
+        nav_courses: "Курсы",
+        nav_instr: "Инструкторы",
+        nav_gallery: "Галерея",
+        nav_contact: "Контакты",
+        page_title: "Портфолио",
+        breadcrumb_home: "Главная",
+        breadcrumb_about: "Портфолио",
+        about_title: "Первый Частный Учебный Центр Стоматологии в Азербайджане",
+        about_subtitle_courses: "Курсы",
+        about_text_courses: "Мы провели более <strong>20 специализированных курсов</strong>, включая протезирование с опорой на имплантаты, эндодонтию, эстетическую реставрацию, дизайн зубов и другие стоматологические специальности.",
+        about_subtitle_master: "Мастер-классы и Семинары",
+        about_text_master: "Мы сотрудничаем с местными и международными экспертами для проведения мастер-классов и семинаров, повышая практические навыки и знания участников.",
+        about_list_1: "Современное стоматологическое оборудование",
+        about_list_2: "Малые классы для персонализированного обучения",
+        about_list_3: "Практическое обучение на моделях и реальных пациентах",
+        about_list_4: "Международно признанные сертификаты",
+        about_list_5: "Семинары с экспертами-стоматологами",
+        about_btn: "Изучите Наши Курсы",
+        exp_years: "4+",
+        exp_text: "Лет Опыта",
+        stats_graduates: "Выпускников",
+        stats_instructors: "Экспертов-Инструкторов",
+        stats_courses: "Предлагаемых Курсов",
+        testimonials_title: "Что Говорят Наши Отзывы Google",
+         // Footer
+        footer_text: "Первый частный учебный центр стоматологии в Азербайджане. Мы предоставляем высококачественное стоматологическое образование с акцентом на практические навыки.",
+        footer_newsletter_title: "Рассылка",
+        footer_newsletter_text: "Подпишитесь на нашу рассылку, чтобы получать обновления о предстоящих курсах и мероприятиях.",
+        footer_email_placeholder: "Ваш Email",
+        footer_contact_title: "Контактная Информация",
+        footer_hours: "Пн-Пт: 9:00 - 18:00<br />Сб-Вс: Закрыто",
+        footer_copyright: "© 2025 Dental Academy. Все права защищены. Разработано с <i class='fas fa-heart'></i> <a href='#'>YourName</a>"
+
+    }
+};
+
+// Statik yazıları yeniləmə funksiyası
+function updateStaticTexts() {
+    // Navigation
+    const navElements = {
+        'nave_home_page': 'nave_home_page',
+        'nav_portfolio': 'nav_portfolio',
+        'nav_courses': 'nav_courses',
+        'nav_instr': 'nav_instr',
+        'nav_gallery': 'nav_gallery',
+        'nav_contact': 'nav_contact'
+    };
+    
+    Object.keys(navElements).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = staticTexts[currentLang][navElements[id]];
+    });
+    
+    // Page Header
+    const pageTitle = document.querySelector('.page-header h1');
+    if (pageTitle) pageTitle.textContent = staticTexts[currentLang].page_title;
+    
+    const breadcrumbHome = document.querySelector('.breadcrumb-item a');
+    if (breadcrumbHome) breadcrumbHome.textContent = staticTexts[currentLang].breadcrumb_home;
+    
+    const breadcrumbAbout = document.querySelector('.breadcrumb-item.active');
+    if (breadcrumbAbout) breadcrumbAbout.textContent = staticTexts[currentLang].breadcrumb_about;
+    
+    // About Section
+    const aboutTitle = document.querySelector('.about-content h2');
+    if (aboutTitle) aboutTitle.textContent = staticTexts[currentLang].about_title;
+    
+    const aboutSubtitles = document.querySelectorAll('.about-content h3');
+    if (aboutSubtitles[0]) aboutSubtitles[0].textContent = staticTexts[currentLang].about_subtitle_courses;
+    if (aboutSubtitles[1]) aboutSubtitles[1].textContent = staticTexts[currentLang].about_subtitle_master;
+    
+    const aboutTexts = document.querySelectorAll('.about-content > p');
+    if (aboutTexts[1]) aboutTexts[1].innerHTML = staticTexts[currentLang].about_text_courses;
+    if (aboutTexts[2]) aboutTexts[2].textContent = staticTexts[currentLang].about_text_master;
+    
+    const aboutList = document.querySelectorAll('.about-list li');
+    if (aboutList[0]) aboutList[0].textContent = staticTexts[currentLang].about_list_1;
+    if (aboutList[1]) aboutList[1].textContent = staticTexts[currentLang].about_list_2;
+    if (aboutList[2]) aboutList[2].textContent = staticTexts[currentLang].about_list_3;
+    if (aboutList[3]) aboutList[3].textContent = staticTexts[currentLang].about_list_4;
+    if (aboutList[4]) aboutList[4].textContent = staticTexts[currentLang].about_list_5;
+    
+    const aboutBtn = document.querySelector('.about-content .btn');
+    if (aboutBtn) aboutBtn.textContent = staticTexts[currentLang].about_btn;
+    // Footer
+    const footerText = document.querySelector('.footer-text');
+    if (footerText) footerText.textContent = staticTexts[currentLang].footer_text;
+    
+    const footerTitles = document.querySelectorAll('.footer-title');
+    if (footerTitles[0]) footerTitles[0].textContent = staticTexts[currentLang].footer_newsletter_title;
+    if (footerTitles[1]) footerTitles[1].textContent = staticTexts[currentLang].footer_contact_title;
+    
+    const footerNewsText = document.querySelector('.footer-newsletter p');
+    if (footerNewsText) footerNewsText.textContent = staticTexts[currentLang].footer_newsletter_text;
+    
+    const footerEmailInput = document.querySelector('.footer-newsletter-form input');
+    if (footerEmailInput) footerEmailInput.placeholder = staticTexts[currentLang].footer_email_placeholder;
+    
+    const footerHours = document.querySelectorAll('.footer-contact-text');
+    if (footerHours[footerHours.length - 1]) {
+        footerHours[footerHours.length - 1].innerHTML = staticTexts[currentLang].footer_hours;
+    }
+    
+    const footerCopyright = document.querySelector('.footer-bottom p');
+    if (footerCopyright) footerCopyright.innerHTML = staticTexts[currentLang].footer_copyright;
+
+    // Experience Badge
+    const expNumber = document.querySelector('.experience .number');
+    const expText = document.querySelector('.experience .text');
+    if (expNumber) expNumber.textContent = staticTexts[currentLang].exp_years;
+    if (expText) expText.textContent = staticTexts[currentLang].exp_text;
+    
+    // Stats Section
+    const statTexts = document.querySelectorAll('.stat-text');
+    if (statTexts[0]) statTexts[0].textContent = staticTexts[currentLang].stats_graduates;
+    if (statTexts[1]) statTexts[1].textContent = staticTexts[currentLang].stats_instructors;
+    if (statTexts[2]) statTexts[2].textContent = staticTexts[currentLang].stats_courses;
+    
+    // Testimonials
+    const testimonialsTitle = document.querySelector('.testimonials-section .section-title');
+    if (testimonialsTitle) testimonialsTitle.textContent = staticTexts[currentLang].testimonials_title;
+}
+
+// Dil display-ni yenilə
+function updateLanguageDisplay(lang) {
+    const langNames = {
+        en: 'English',
+        az: 'Azərbaycanca',
+        ru: 'Русский'
+    };
+    
+    const langText = langNames[lang] || 'English';
+    const langSelector = document.getElementById('current-lang-text');
+    
+    if (langSelector) {
+        langSelector.textContent = langText;
+    }
+    
+    // Dropdown active state
+    document.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
+        item.classList.remove('active');
+        if (item.dataset.lang === lang) {
+            item.classList.add('active');
+        }
+    });
+}
+
+// Dili tətbiq edən funksiya
+function applyLanguage(lang) {
+    currentLang = lang;
+    updateStaticTexts();
+}
+
+// Səhifə yükləndikdə
+document.addEventListener('DOMContentLoaded', function() {
+    applyLanguage(currentLang);
+    updateLanguageDisplay(currentLang);
+});
+
+// Dil seçimi event listener
+document.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const selectedLang = this.dataset.lang;
+        
+        if (selectedLang) {
+            // Dili saxla
+            localStorage.setItem('selectedLang', selectedLang);
+            currentLang = selectedLang;
+            
+            // Dili tətbiq et
+            applyLanguage(selectedLang);
+            updateLanguageDisplay(selectedLang);
+        }
+    });
+});
+</script>
+    <script>
+            $('.dropdown-item').click(function(e) {
+        e.preventDefault();
+        const lang = $(this).data('lang');
+        
+        // Remove active class and check mark from all items
+        $('.dropdown-item').removeClass('active').find('i').addClass('visibility-none');
+        
+        // Add active class and show check mark for selected item
+        $(this).addClass('active').find('i').removeClass('visibility-none');
+        
+        // Update the language selector text
+        const langText = $(this).text();
+        $('.language-selector').html(`<i class="fas fa-globe"></i> ${langText}`);
+        
+        // Here you can add logic to change the website language
+        // For example: window.location.href = `/${lang}`;
+    });
+    </script>
+</body>
+</html>

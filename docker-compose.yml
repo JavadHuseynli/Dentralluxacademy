@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # Dental Academy Web Server
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dental-academy-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./logs:/var/www/html/logs
+      - ./data:/var/www/html/data
+      - ./uploads:/var/www/html/uploads
+    environment:
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_MAX_EXECUTION_TIME=300
+      - TZ=Asia/Baku
+    networks:
+      - dental-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # MySQL Database (optional - for production)
+  # Uncomment when ready to migrate from JSON to MySQL
+  # db:
+  #   image: mysql:8.0
+  #   container_name: dental-academy-db
+  #   restart: unless-stopped
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: dental_root_2025
+  #     MYSQL_DATABASE: dental_academy
+  #     MYSQL_USER: dental_user
+  #     MYSQL_PASSWORD: dental_pass_2025
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - db-data:/var/lib/mysql
+  #     - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+  #   networks:
+  #     - dental-network
+
+networks:
+  dental-network:
+    driver: bridge
+
+# volumes:
+#   db-data:
+#     driver: local

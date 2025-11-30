@@ -1,0 +1,262 @@
+[
+    {
+        "id": 3,
+        "category": {
+            "az": "a",
+            "en": "a",
+            "ru": "a"
+        },
+        "title": {
+            "az": "a",
+            "en": "a",
+            "ru": "a"
+        },
+        "location": {
+            "az": "a",
+            "en": "a",
+            "ru": "a"
+        },
+        "date": "2025-12-06",
+        "day": {
+            "az": "Bazar",
+            "en": "Sunday",
+            "ru": "Воскресенье"
+        },
+        "payment": {
+            "az": "300 azn",
+            "en": "300 azn",
+            "ru": "300 azn"
+        },
+        "image": "",
+        "participants": [
+            "dr aç dr b"
+        ],
+        "description": {
+            "az": "a",
+            "en": "a",
+            "ru": "a"
+        },
+        "seat": 23,
+        "schedule": [
+            {
+                "time": "09 00 -100 ",
+                "topic": {
+                    "az": "a",
+                    "en": "a",
+                    "ru": "a"
+                }
+            },
+            {
+                "time": "10 00 - 11-30",
+                "topic": {
+                    "az": "b",
+                    "en": "b",
+                    "ru": "b"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "category": {
+            "en": "Endodonty",
+            "az": "Endodentiya",
+            "ru": "Эндодонтия"
+        },
+        "title": {
+            "en": "Rediscover Endodontics",
+            "az": "Endodontiyanı Yenidən Kəşf Et",
+            "ru": "Откройте Эндодонтию Заново"
+        },
+        "location": {
+            "en": "Baku , Ibis Hotel",
+            "az": "Bakı, Ibis Hotel",
+            "ru": "Баку, Ibis Отель"
+        },
+        "date": "2025-11-29",
+        "day": {
+            "en": "Saturday",
+            "az": "Şənbə",
+            "ru": "Суббота"
+        },
+        "payment": {
+            "en": "300 AZN",
+            "az": "300 AZN",
+            "ru": "300 AZN"
+        },
+        "image": "img\/docs\/docs.png",
+        "participants": [
+            "Dos. Dr. Ayfer Atav",
+            "Dr. Emre Övsay"
+        ],
+        "description": {
+            "en": "Modern approach to endodontics with practical skills.",
+            "az": "Endodontiyanın müasir yanaşması və praktiki bacarıqlar.",
+            "ru": "Современный подход к эндодонтии и практические навыки."
+        },
+        "seat": 20,
+        "schedule": [
+            {
+                "time": "09:00 - 10:00",
+                "topic": {
+                    "en": "Introduction & Anatomy",
+                    "az": "Giriş & Anatomiyası",
+                    "ru": "Введение & Анатомия"
+                }
+            },
+            {
+                "time": "10:15 - 12:00",
+                "topic": {
+                    "en": "Surgical Techniques",
+                    "az": "Cərrahi Texnikalar",
+                    "ru": "Хирургические техники"
+                }
+            },
+            {
+                "time": "13:00 - 15:00",
+                "topic": {
+                    "en": "Hands-on Practice",
+                    "az": "Praktik Təcrübə",
+                    "ru": "Практическое занятие"
+                }
+            },
+            {
+                "time": "15:15 - 17:00",
+                "topic": {
+                    "en": "Prosthetic Planning",
+                    "az": "Protez Planlaşdırılması",
+                    "ru": "Протезирование"
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": {
+            "en": "Orthodontics",
+            "az": "Ortodontiya",
+            "ru": "Ортодонтия"
+        },
+        "title": {
+            "en": "Next-generation orthodontics",
+            "az": "Yeni nəsil ortodontiya",
+            "ru": "Ортодонтия нового поколения"
+        },
+        "location": {
+            "en": "Baku ,  Ibis Hotel",
+            "az": "Bakı, İbis Otel  ",
+            "ru": "Баку, Отель Ибис"
+        },
+        "date": "2025-11-08",
+        "day": {
+            "en": "Saturday",
+            "az": "Şənbə",
+            "ru": "Суббота"
+        },
+        "payment": {
+            "en": "300 AZN",
+            "az": "300 AZN",
+            "ru": "300 AZN"
+        },
+        "image": "img\/docs\/gozdecoban.png",
+        "participants": [
+            "Dr. Gözde Çoban"
+        ],
+        "description": {
+            "en": "Transparent aligner treatments for effective orthodontic care.",
+            "az": "Səmərəli ortodontik müalicə üçün şəffaf plak müalicələri.",
+            "ru": "Лечение с использованием прозрачных элайнеров для эффективной ортодонтической терапии."
+        },
+        "seat": 25,
+        "schedule": [
+            {
+                "time": "09:00 - 09:30",
+                "topic": {
+                    "en": "Registration and Welcome",
+                    "az": "Qeydiyyat və Qarşılama",
+                    "ru": "Регистрация и Приветствие"
+                }
+            },
+            {
+                "time": "09:30 - 10:30",
+                "topic": {
+                    "en": "ClinCheck Review Guide",
+                    "az": "ClinCheck İcmal Bələdçisi",
+                    "ru": "Руководство по обзору ClinCheck"
+                }
+            },
+            {
+                "time": "10:30 - 11:30",
+                "topic": {
+                    "en": "Biomechanics and Attachment Selection",
+                    "az": "Biomekanika və Atasman Seçimi",
+                    "ru": "Биомеханика и выбор аттачментов"
+                }
+            },
+            {
+                "time": "11:30 - 12:00",
+                "topic": {
+                    "en": "☕ Coffee Break",
+                    "az": "☕ Qəhvə Fasiləsi",
+                    "ru": "☕ Кофе-брейк"
+                }
+            },
+            {
+                "time": "12:00 - 13:00",
+                "topic": {
+                    "en": "Invisalign First",
+                    "az": "Invisalign First",
+                    "ru": "Invisalign First"
+                }
+            },
+            {
+                "time": "13:00 - 14:00",
+                "topic": {
+                    "en": "🍽 Lunch",
+                    "az": "🍽 Nahar",
+                    "ru": "🍽 Обед"
+                }
+            },
+            {
+                "time": "14:00 - 15:00",
+                "topic": {
+                    "en": "Transversal Treatment Protocols",
+                    "az": "Transversal Müalicə Protokolları",
+                    "ru": "Трансверсальные протоколы лечения"
+                }
+            },
+            {
+                "time": "15:00 - 16:00",
+                "topic": {
+                    "en": "Sagittal Treatment Protocols",
+                    "az": "Saggital Müalicə Protokolları",
+                    "ru": "Сагиттальные протоколы лечения"
+                }
+            },
+            {
+                "time": "16:00 - 16:30",
+                "topic": {
+                    "en": "☕ Coffee Break",
+                    "az": "☕ Qəhvə Fasiləsi",
+                    "ru": "☕ Кофе-брейк"
+                }
+            },
+            {
+                "time": "16:30 - 17:30",
+                "topic": {
+                    "en": "Vertical Treatment Protocols",
+                    "az": "Vertikal Müalicə Protokolları",
+                    "ru": "Вертикальные протоколы лечения"
+                }
+            },
+            {
+                "time": "17:30 - 18:15",
+                "topic": {
+                    "en": "Q&A Session",
+                    "az": "Sual-Cavab",
+                    "ru": "Вопросы и ответы"
+                }
+            }
+        ]
+    }
+]
