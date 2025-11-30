@@ -150,8 +150,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.15;
+            opacity: 0.2;
             z-index: 0;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
         }
 
         /* Decorative Border */
@@ -368,6 +370,12 @@
                 height: 210mm;
                 box-shadow: none;
                 page-break-inside: avoid;
+            }
+
+            .certificate-template-bg {
+                opacity: 0.3 !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
             }
         }
 
@@ -814,32 +822,86 @@
                 const bg = document.getElementById('templateBackground');
                 bg.src = uploadedTemplate;
                 bg.style.display = 'block';
-            }
 
-            // Show preview
-            document.getElementById('certificatePreview').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('certificatePreview').scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+                // Wait for image to load before showing
+                bg.onload = function() {
+                    document.getElementById('certificatePreview').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('certificatePreview').scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                };
+            } else {
+                // Show preview immediately if no template
+                document.getElementById('certificatePreview').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('certificatePreview').scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
         }
 
         function printCertificate() {
             window.print();
         }
 
-        function downloadCertificate() {
+        async function downloadCertificate() {
             const certificate = document.getElementById('certificateContent');
-            html2canvas(certificate, {
-                scale: 3,
-                backgroundColor: '#ffffff',
-                width: 1122, // A4 landscape width at 96 DPI
-                height: 793   // A4 landscape height at 96 DPI
-            }).then(canvas => {
-                const link = document.createElement('a');
-                link.download = 'certificate-' + document.getElementById('certId').textContent + '.png';
-                link.href = canvas.toDataURL();
-                link.click();
-            });
+            const certId = document.getElementById('certId').textContent;
+
+            // Show loading message
+            const originalBtn = event.target;
+            const originalText = originalBtn.innerHTML;
+            originalBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Hazırlanır...';
+            originalBtn.disabled = true;
+
+            try {
+                // Wait a bit to ensure all images are loaded
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                const canvas = await html2canvas(certificate, {
+                    scale: 3,
+                    backgroundColor: '#ffffff',
+                    useCORS: true,
+                    allowTaint: true,
+                    logging: false,
+                    width: 1122, // A4 landscape width at 96 DPI
+                    height: 793,  // A4 landscape height at 96 DPI
+                    imageTimeout: 15000,
+                    removeContainer: false,
+                    foreignObjectRendering: false,
+                    onclone: function(clonedDoc) {
+                        // Ensure template image is visible in clone
+                        const clonedTemplate = clonedDoc.getElementById('templateBackground');
+                        if (clonedTemplate && clonedTemplate.src) {
+                            clonedTemplate.style.display = 'block';
+                            clonedTemplate.style.opacity = '0.2';
+                        }
+                    }
+                });
+
+                // Convert to blob for better quality
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.download = 'sertifikat-' + certId + '.png';
+                    link.href = url;
+                    link.click();
+
+                    // Clean up
+                    setTimeout(() => URL.revokeObjectURL(url), 100);
+
+                    // Restore button
+                    originalBtn.innerHTML = originalText;
+                    originalBtn.disabled = false;
+                }, 'image/png', 1.0);
+
+            } catch (error) {
+                console.error('PNG yükləmə xətası:', error);
+                alert('PNG yüklənərkən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
+
+                // Restore button
+                originalBtn.innerHTML = originalText;
+                originalBtn.disabled = false;
+            }
         }
     </script>
 </body>
