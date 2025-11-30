@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Giriş - Dental Academy</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Admin Girişi - Dental Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -42,12 +41,12 @@
         .login-header h1 {
             font-size: 28px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .login-header p {
-            opacity: 0.9;
             font-size: 14px;
+            opacity: 0.9;
         }
 
         .login-body {
@@ -56,46 +55,37 @@
 
         .form-group {
             margin-bottom: 25px;
+            position: relative;
         }
 
-        .form-label {
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
             font-weight: 600;
             color: #1f2937;
-            margin-bottom: 8px;
-            display: block;
             font-size: 14px;
         }
 
-        .form-control-custom {
+        .form-group i {
+            position: absolute;
+            left: 15px;
+            top: 42px;
+            color: #9ca3af;
+        }
+
+        .form-control {
             width: 100%;
-            padding: 14px 18px;
+            padding: 12px 12px 12px 45px;
             border: 2px solid #e5e7eb;
             border-radius: 10px;
             font-size: 15px;
             transition: all 0.3s;
         }
 
-        .form-control-custom:focus {
+        .form-control:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .input-group {
-            position: relative;
-        }
-
-        .input-icon {
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #9ca3af;
-            font-size: 18px;
-        }
-
-        .input-group input {
-            padding-left: 50px;
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
         }
 
         .btn-login {
@@ -113,8 +103,9 @@
         }
 
         .btn-login:hover {
+            background: #1e3a8a;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
         }
 
         .btn-login:disabled {
@@ -147,110 +138,58 @@
             border: 1px solid #bbf7d0;
         }
 
-        .alert-info {
-            background: #eff6ff;
-            color: #1e40af;
-            border: 1px solid #bfdbfe;
-        }
-
-        .otp-section {
-            display: none;
-        }
-
-        .otp-section.show {
-            display: block;
-        }
-
-        .otp-input {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .otp-input input {
-            width: 50px;
-            height: 55px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: 700;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            transition: all 0.3s;
-        }
-
-        .otp-input input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .resend-otp {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #6b7280;
-        }
-
-        .resend-otp button {
-            background: none;
-            border: none;
-            color: #667eea;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .resend-otp button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
         .loader {
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
             border-radius: 50%;
             border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
+            animation: spin 0.8s linear infinite;
         }
 
         @keyframes spin {
             to { transform: rotate(360deg); }
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .back-link a:hover {
+            color: #1e40af;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
         <div class="login-header">
-            <i class="fas fa-shield-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
-            <h1>Admin Giriş</h1>
-            <p>Dental Academy İdarəetmə Paneli</p>
+            <h1><i class="fas fa-shield-alt"></i> Admin Panel</h1>
+            <p>Dentalux Academy</p>
         </div>
 
         <div class="login-body">
-            <!-- Alert Messages -->
             <div id="alertBox" class="alert-custom"></div>
 
-            <!-- Login Form -->
-            <form id="loginForm" class="login-section">
+            <form id="loginForm">
                 <div class="form-group">
-                    <label class="form-label">İstifadəçi Adı</label>
-                    <div class="input-group">
-                        <i class="fas fa-user input-icon"></i>
-                        <input type="text" id="username" class="form-control-custom"
-                               placeholder="admin" autocomplete="username" required>
-                    </div>
+                    <label for="username"><i class="fas fa-user"></i> İstifadəçi Adı</label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" id="username" placeholder="İstifadəçi adı daxil edin" required autocomplete="username">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Parol</label>
-                    <div class="input-group">
-                        <i class="fas fa-lock input-icon"></i>
-                        <input type="password" id="password" class="form-control-custom"
-                               placeholder="••••••••" autocomplete="current-password" required>
-                    </div>
+                    <label for="password"><i class="fas fa-lock"></i> Parol</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" class="form-control" id="password" placeholder="Parolu daxil edin" required autocomplete="current-password">
                 </div>
 
                 <button type="submit" class="btn-login" id="loginBtn">
@@ -258,42 +197,13 @@
                 </button>
             </form>
 
-            <!-- OTP Verification -->
-            <div id="otpSection" class="otp-section">
-                <h3 style="text-align: center; margin-bottom: 15px; color: #1f2937;">
-                    OTP Doğrulama
-                </h3>
-                <p style="text-align: center; color: #6b7280; font-size: 14px; margin-bottom: 20px;">
-                    <strong>+994 50 412 21 60</strong> nömrəsinə göndərilən 6 rəqəmli kodu daxil edin
-                </p>
-
-                <div class="otp-input">
-                    <input type="text" maxlength="1" class="otp-digit" id="otp1" autocomplete="off">
-                    <input type="text" maxlength="1" class="otp-digit" id="otp2" autocomplete="off">
-                    <input type="text" maxlength="1" class="otp-digit" id="otp3" autocomplete="off">
-                    <input type="text" maxlength="1" class="otp-digit" id="otp4" autocomplete="off">
-                    <input type="text" maxlength="1" class="otp-digit" id="otp5" autocomplete="off">
-                    <input type="text" maxlength="1" class="otp-digit" id="otp6" autocomplete="off">
-                </div>
-
-                <button type="button" class="btn-login" id="verifyOtpBtn">
-                    <i class="fas fa-check-circle"></i> Təsdiqlə
-                </button>
-
-                <div class="resend-otp">
-                    Kod almadınız?
-                    <button type="button" id="resendOtpBtn" disabled>
-                        Yenidən göndər (<span id="countdown">60</span>s)
-                    </button>
-                </div>
+            <div class="back-link">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Ana səhifəyə qayıt</a>
             </div>
         </div>
     </div>
 
     <script>
-        let generatedOTP = '';
-        let countdownTimer;
-
         // Login form submit
         document.getElementById('loginForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -304,7 +214,7 @@
             // Clear previous alerts
             hideAlert();
 
-            // Check rate limiting FIRST
+            // Check rate limiting
             const rateLimitCheck = await checkRateLimit();
             if (rateLimitCheck.blocked) {
                 showAlert(`⛔ Çox sayda yanlış cəhd! ${Math.ceil(rateLimitCheck.remaining_time / 60)} dəqiqə gözləyin.`, 'error');
@@ -331,188 +241,23 @@
             loginBtn.disabled = true;
             loginBtn.innerHTML = '<span class="loader"></span> Yoxlanılır...';
 
-            // Generate OTP
-            generatedOTP = generateOTP();
+            // Record successful login
+            await recordSuccessfulLogin();
 
-            // Send OTP via SMS
-            const otpSent = await sendOTP(generatedOTP, '+994504122160');
+            // Show success
+            showAlert('Giriş uğurlu! Yönləndirilirsiniz...', 'success');
 
-            loginBtn.disabled = false;
-            loginBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Daxil Ol';
+            // Save session
+            sessionStorage.setItem('adminLoggedIn', 'true');
+            sessionStorage.setItem('loginTime', new Date().getTime());
 
-            if (otpSent) {
-                // Show OTP section
-                document.getElementById('loginForm').style.display = 'none';
-                document.getElementById('otpSection').classList.add('show');
-
-                showAlert('OTP kod telefonunuza göndərildi!', 'success');
-
-                // Start countdown
-                startCountdown();
-
-                // Focus first OTP input
-                document.getElementById('otp1').focus();
-            } else {
-                showAlert('OTP göndərilmədi. Yenidən cəhd edin.', 'error');
-            }
-        });
-
-        // OTP input handling
-        document.querySelectorAll('.otp-digit').forEach((input, index) => {
-            input.addEventListener('input', function(e) {
-                if (this.value.length === 1) {
-                    // Move to next input
-                    if (index < 5) {
-                        document.getElementById('otp' + (index + 2)).focus();
-                    }
-                }
-            });
-
-            input.addEventListener('keydown', function(e) {
-                if (e.key === 'Backspace' && this.value === '') {
-                    // Move to previous input
-                    if (index > 0) {
-                        document.getElementById('otp' + index).focus();
-                    }
-                }
-            });
-
-            // Allow only numbers
-            input.addEventListener('keypress', function(e) {
-                if (!/[0-9]/.test(e.key)) {
-                    e.preventDefault();
-                }
-            });
-        });
-
-        // Verify OTP
-        document.getElementById('verifyOtpBtn').addEventListener('click', async function() {
-            const otp = getOTPValue();
-
-            if (otp.length !== 6) {
-                showAlert('6 rəqəmli kodu daxil edin!', 'error');
-                return;
-            }
-
-            if (otp === generatedOTP) {
-                showAlert('Giriş uğurlu! Yönləndirilirsiniz...', 'success');
-
-                // Record successful login (clear failed attempts)
-                await recordSuccessfulLogin();
-
-                // Save session
-                sessionStorage.setItem('adminLoggedIn', 'true');
-                sessionStorage.setItem('loginTime', new Date().getTime());
-
-                // Redirect to dashboard
-                setTimeout(() => {
-                    window.location.href = 'admin-dashboard.html';
-                }, 1500);
-            } else {
-                showAlert('OTP kod yanlışdır!', 'error');
-                clearOTPInputs();
-            }
-        });
-
-        // Resend OTP
-        document.getElementById('resendOtpBtn').addEventListener('click', async function() {
-            generatedOTP = generateOTP();
-            const sent = await sendOTP(generatedOTP, '+994504122160');
-
-            if (sent) {
-                showAlert('Yeni OTP kod göndərildi!', 'info');
-                startCountdown();
-                clearOTPInputs();
-            } else {
-                showAlert('Xəta baş verdi!', 'error');
-            }
+            // Redirect to dashboard
+            setTimeout(() => {
+                window.location.href = 'admin-dashboard.html';
+            }, 1000);
         });
 
         // Helper functions
-        function generateOTP() {
-            return Math.floor(100000 + Math.random() * 900000).toString();
-        }
-
-        async function sendOTP(otp, phone) {
-            try {
-                const response = await fetch('api/send-otp.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        phone: phone,
-                        otp: otp
-                    })
-                });
-
-                const data = await response.json();
-
-                // Show OTP in console with prominent styling
-                console.log('%c═══════════════════════════════════════', 'color: #7c4585; font-weight: bold; font-size: 14px');
-                console.log('%c🔐 DENTAL ACADEMY ADMIN OTP', 'color: #c95792; font-size: 18px; font-weight: bold');
-                console.log('%c═══════════════════════════════════════', 'color: #7c4585; font-weight: bold; font-size: 14px');
-                console.log('%c📱 Phone: ' + phone, 'color: #667eea; font-weight: bold; font-size: 14px');
-                console.log('%c🔑 OTP CODE: ' + otp, 'color: #059669; font-size: 24px; font-weight: bold; background: #d1fae5; padding: 10px; border-radius: 5px');
-                console.log('%c⏰ Time: ' + new Date().toLocaleTimeString('az-AZ'), 'color: #6b7280; font-size: 12px');
-                console.log('%c⚠️  Valid for 5 minutes', 'color: #ef4444; font-weight: bold; font-size: 13px');
-                console.log('%c═══════════════════════════════════════', 'color: #7c4585; font-weight: bold; font-size: 14px');
-                console.log('%c💡 Also check: logs/otp-log.txt', 'color: #f59e0b; font-style: italic; font-size: 12px');
-                console.log('%c═══════════════════════════════════════', 'color: #7c4585; font-weight: bold; font-size: 14px');
-
-                // Alert user to check console
-                showAlert('✅ OTP göndərildi! Console-a baxın (F12) və ya logs/otp-log.txt açın. OTP: ' + otp, 'success');
-
-                return data.success;
-            } catch (error) {
-                console.error('OTP Error:', error);
-
-                // Fallback - show OTP prominently
-                console.log('%c═══════════════════════════════════════', 'color: #ef4444; font-weight: bold; font-size: 14px');
-                console.log('%c⚠️  SMS GÖNDƏRILƏ BİLMƏDİ', 'color: #ef4444; font-size: 16px; font-weight: bold');
-                console.log('%c🔑 OTP CODE: ' + otp, 'color: #059669; font-size: 24px; font-weight: bold; background: #d1fae5; padding: 10px; border-radius: 5px');
-                console.log('%c═══════════════════════════════════════', 'color: #ef4444; font-weight: bold; font-size: 14px');
-
-                showAlert('⚠️ Console-da OTP-ni görə bilərsiniz (F12). OTP: ' + otp, 'warning');
-
-                return true; // Return true in development mode
-            }
-        }
-
-        function getOTPValue() {
-            let otp = '';
-            for (let i = 1; i <= 6; i++) {
-                otp += document.getElementById('otp' + i).value;
-            }
-            return otp;
-        }
-
-        function clearOTPInputs() {
-            for (let i = 1; i <= 6; i++) {
-                document.getElementById('otp' + i).value = '';
-            }
-            document.getElementById('otp1').focus();
-        }
-
-        function startCountdown() {
-            let seconds = 60;
-            const resendBtn = document.getElementById('resendOtpBtn');
-            const countdownEl = document.getElementById('countdown');
-
-            resendBtn.disabled = true;
-
-            countdownTimer = setInterval(() => {
-                seconds--;
-                countdownEl.textContent = seconds;
-
-                if (seconds <= 0) {
-                    clearInterval(countdownTimer);
-                    resendBtn.disabled = false;
-                    resendBtn.innerHTML = 'Yenidən göndər';
-                }
-            }, 1000);
-        }
-
         function showAlert(message, type) {
             const alertBox = document.getElementById('alertBox');
             alertBox.textContent = message;
@@ -524,121 +269,41 @@
             alertBox.className = 'alert-custom';
         }
 
-        // Check if already logged in
-        if (sessionStorage.getItem('adminLoggedIn') === 'true') {
-            const loginTime = sessionStorage.getItem('loginTime');
-            const currentTime = new Date().getTime();
-            const hoursPassed = (currentTime - loginTime) / (1000 * 60 * 60);
-
-            // Session expires after 8 hours
-            if (hoursPassed < 8) {
-                window.location.href = 'admin-dashboard.html';
-            } else {
-                sessionStorage.removeItem('adminLoggedIn');
-                sessionStorage.removeItem('loginTime');
-            }
-        }
-
-        // ═══════════════════════════════════════════════════════════════
-        // RATE LIMITING & BRUTE FORCE PROTECTION
-        // ═══════════════════════════════════════════════════════════════
-
+        // Rate limiting functions
         async function checkRateLimit() {
             try {
                 const response = await fetch('api/rate-limiter.php?action=check');
-                const data = await response.json();
-
-                if (data.blocked) {
-                    return {
-                        blocked: true,
-                        remaining_time: data.remaining_time
-                    };
-                }
-
-                return {blocked: false};
+                return await response.json();
             } catch (error) {
                 console.error('Rate limit check error:', error);
-                return {blocked: false}; // Allow login if rate limiter fails
+                return { blocked: false };
             }
         }
 
         async function recordFailedAttempt() {
             try {
-                await fetch('api/rate-limiter.php?action=record', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({success: false})
-                });
+                await fetch('api/rate-limiter.php?action=fail', { method: 'POST' });
             } catch (error) {
-                console.error('Failed to record attempt:', error);
+                console.error('Failed attempt record error:', error);
             }
         }
 
         async function recordSuccessfulLogin() {
             try {
-                await fetch('api/rate-limiter.php?action=record', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({success: true})
-                });
+                await fetch('api/rate-limiter.php?action=success', { method: 'POST' });
             } catch (error) {
-                console.error('Failed to record success:', error);
+                console.error('Success record error:', error);
             }
         }
 
         async function getRemainingAttempts() {
             try {
-                const response = await fetch('api/rate-limiter.php?action=check');
+                const response = await fetch('api/rate-limiter.php?action=remaining');
                 const data = await response.json();
-                return data.remaining_attempts || 0;
+                return data.remaining || 0;
             } catch (error) {
-                return 5; // Default
-            }
-        }
-
-        // ═══════════════════════════════════════════════════════════════
-        // ALTERNATIVE AUTHENTICATION METHODS
-        // ═══════════════════════════════════════════════════════════════
-
-        // Check if TOTP is enabled
-        function isTOTPEnabled() {
-            return localStorage.getItem('totp_secret') !== null;
-        }
-
-        // Verify with TOTP (Google Authenticator)
-        async function verifyWithTOTP(code) {
-            const secret = localStorage.getItem('totp_secret');
-            if (!secret) return false;
-
-            try {
-                const response = await fetch('api/totp.php?action=verify', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({secret: secret, code: code})
-                });
-
-                const data = await response.json();
-                return data.success;
-            } catch (error) {
-                console.error('TOTP verification error:', error);
-                return false;
-            }
-        }
-
-        // Verify with Backup Code
-        async function verifyWithBackupCode(code) {
-            try {
-                const response = await fetch('api/backup-codes.php?action=verify', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({username: 'admin', code: code})
-                });
-
-                const data = await response.json();
-                return data.success;
-            } catch (error) {
-                console.error('Backup code verification error:', error);
-                return false;
+                console.error('Remaining attempts error:', error);
+                return 0;
             }
         }
     </script>
